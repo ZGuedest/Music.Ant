@@ -60,5 +60,7 @@ main{
     width: 20rem;
     border: solid 1px;
 }
-.col-xl-6{
+.galeriaenproducto img{
+    max-width: 20%;
+
 }
