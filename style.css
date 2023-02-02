@@ -122,3 +122,15 @@ main{
 .checkboxcatalogo{
     margin-bottom: 2rem;
 }
+.linealeft{
+    border-top: 1px;
+    width: 20rem;
+}
+.linearight{
+    border-top: 1px;
+    width: 20rem;
+}
+.linea{
+    display: flex;
+    flex-direction: row;
+}
