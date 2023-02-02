@@ -119,11 +119,22 @@ main{
     padding: 1.5rem;
     height: 5rem;
     border: 2px solid #387373;
+    padding-right: 15rem;
 }
 .checkboxcatalogo{
-    margin: 2rem;
+    margin: 2rem 0rem 2rem 5.9rem;
 
 }
+.productocard{
+    height: 30rem;
+    width: 20rem;
+    border: solid 1px;
+}
+.galeriaenproducto img{
+    max-width: 20%;
+
+}
+    
 
 .logo{
     background-image: url("./img/logo.png");
