@@ -151,15 +151,3 @@ header{
     background-size: cover;
     height: 500px;
 }
-.linealeft{
-    border-top: 1px;
-    width: 20rem;
-}
-.linearight{
-    border-top: 1px;
-    width: 20rem;
-}
-.linea{
-    display: flex;
-    flex-direction: row;
-}
