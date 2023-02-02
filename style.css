@@ -45,10 +45,27 @@ main{
   
 }
 .radiocatalogo {
-    padding-top: 1.5rem;
+    padding: 1.5rem;
     height: 5rem;
     border: 2px solid #387373;
 }
 .checkboxcatalogo{
-    margin-bottom: 2rem;
+    margin: 2rem;
+
+}
+
+.logo{
+    background-image: url("./img/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 3rem; 
+    width: 10%;
+}
+
+header{
+    background-image: url("./img/fondo7.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
 }
