@@ -15,12 +15,13 @@ img{
 
 .img{
     width: 80%;
-    height: 15rem;
+    height: 10rem;
     background-position: center;
     background-color: white;
     background-repeat: no-repeat;
     background-size: contain;
     margin: 2rem;
+    background-image: url("./img/guitarra1.jpg");
 }
 
 #img1{
