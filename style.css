@@ -42,4 +42,12 @@ main{
     background-image: url("");
     background-repeat: no-repeat;
     background-size: cover;
+  
+}
+.radiocatalogo {
+    padding-top: 2rem;
+    height: 10rem;
+}
+.checkboxcatalogo{
+    margin-bottom: 2rem;
 }
