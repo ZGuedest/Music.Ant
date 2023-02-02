@@ -6,7 +6,7 @@ img{
 }
 
 .btn{
-    background-color: aqua;
+    background-color:#387373;
 }
 
 .btn:hover{
@@ -45,8 +45,9 @@ main{
   
 }
 .radiocatalogo {
-    padding-top: 2rem;
-    height: 10rem;
+    padding-top: 1.5rem;
+    height: 5rem;
+    border: 2px solid #387373;
 }
 .checkboxcatalogo{
     margin-bottom: 2rem;
