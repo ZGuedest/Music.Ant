@@ -6,7 +6,7 @@ img{
 }
 
 .btn{
-    background-color: aqua;
+    background-color:#387373;
 }
 
 .btn:hover{
@@ -25,7 +25,6 @@ img{
 
 #img1{
     background-image: url("./img/guitarra1.jpg");
-
 }
 
 #img2{
@@ -39,6 +38,12 @@ img{
 
 }
 
+main{
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
 .radiocatalogo {
     padding-top: 2rem;
     height: 10rem;
