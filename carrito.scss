@@ -1,0 +1,27 @@
+//VARIABLES
+$color_verdeCl:#E4F2E7;
+$color_VerdeOsc:#387373;
+$color_gris:#827a7c;
+$color_negro:black;
+$color_gris:white;
+
+
+//MIXINS
+@mixin button ($bg-color:$color_VerdeOsc){
+    background-color: $bg-color;
+}
+
+@mixin img ($url:url("./img/guitarra1.jpg")){
+
+    background-image: $url;
+
+    width: 80%;
+    height: 15rem;
+    background-position: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 2rem;
+}
+
+
