@@ -151,3 +151,8 @@ header{
     background-size: cover;
     height: 500px;
 }
+#prodguit{
+    max-width: 250px;
+    /* width: 400px;
+    height: 200px; */
+}
