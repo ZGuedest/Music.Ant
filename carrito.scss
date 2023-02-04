@@ -45,8 +45,8 @@ $color_blanco:white;
 
 
 
-#encabezado{
-    #flecha, #mundo{
+#cr_encabezado{
+    #cr_flecha, #cr_mundo{
         @extend %iconos;
         padding-left: 0.5rem;
         padding-right: 0.5rem;   }

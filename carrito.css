@@ -3,11 +3,11 @@
   font-size: large;
 }
 
-#cr_comprar_pedido #cr_visa, #cr_comprar_pedido #cr_paypal, #cr_comprar_pedido #cr_mastercard, #cr_comprar_pedido #cr_carrito, #cr_caja_producto #cr_basura, #cr_caja_producto #cr_corazon, #encabezado #flecha, #encabezado #mundo {
+#cr_comprar_pedido #cr_visa, #cr_comprar_pedido #cr_paypal, #cr_comprar_pedido #cr_mastercard, #cr_comprar_pedido #cr_carrito, #cr_caja_producto #cr_basura, #cr_caja_producto #cr_corazon, #cr_encabezado #cr_flecha, #cr_encabezado #cr_mundo {
   font-size: 1.5em;
 }
 
-#encabezado #flecha, #encabezado #mundo {
+#cr_encabezado #cr_flecha, #cr_encabezado #cr_mundo {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
