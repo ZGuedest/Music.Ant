@@ -1,9 +1,9 @@
-#cr_caja_producto #cr_precio_cantidad, #cr_caja_producto #cr_precio_producto {
+#cr_comprar_pedido #cr_precio_total, #cr_caja_producto #cr_precio_cantidad, #cr_caja_producto #cr_precio_producto {
   font-weight: bold;
   font-size: large;
 }
 
-#cr_caja_producto #cr_corazon, #cr_caja_producto #cr_basura {
+#cr_comprar_pedido #cr_visa, #cr_comprar_pedido #cr_paypal, #cr_comprar_pedido #cr_mastercard, #cr_comprar_pedido #cr_carrito, #cr_caja_producto #cr_basura, #cr_caja_producto #cr_corazon {
   font-size: 1.5em;
 }
 
@@ -19,4 +19,21 @@
   background-repeat: no-repeat;
   background-size: contain;
   margin: 2rem;
+}
+#cr_comprar_pedido {
+  height: 225px;
+  width: 40%;
+}
+#cr_comprar_pedido #cr_precio_total {
+  color: #387373;
+}
+#cr_comprar_pedido #cr_comprar_ahora {
+  background-color: #387373;
+  width: 12rem;
+  color: white;
+  font-weight: bold;
+}
+#cr_comprar_pedido #cr_comprar_ahora:hover {
+  background-color: #E4F2E7;
+  color: black;
 }/*# sourceMappingURL=carrito.css.map */

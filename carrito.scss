@@ -11,6 +11,11 @@ $color_blanco:white;
     background-color: $bg-color;
     width: $wth;
     color: $colorletra ;
+
+    &:hover{
+        background-color: $color_verdeCl;
+        color: $color_negro ;
+    }
 }
 
 @mixin img ($url:url("./img/guitarra1.jpg"),$wth:100%,$hght: 15rem){
@@ -44,23 +49,45 @@ $color_blanco:white;
 
     #cr_imagen_producto{
 
-        @include img($wth:80%,$hght: 10rem)
+        @include img($wth:80%,$hght: 10rem);
     }
 
     #cr_precio_producto{
-        @extend %precio
+        @extend %precio;
     }
     #cr_precio_cantidad{
-        @extend %precio
+        @extend %precio;
     }
 
-    #cr_basura{
-        @extend %iconos
-    }
-
-    #cr_corazon{
-        @extend %iconos
+    #cr_basura,#cr_corazon{
+        @extend %iconos;
     }
    
+}
+
+#cr_comprar_pedido{
+    
+    height:225px;
+    width: 40% ;
+
+    #cr_carrito{
+        @extend %iconos;
+    }
+
+    #cr_precio_total{
+        @extend %precio;
+        color:$color_VerdeOsc;
+
+    }
+
+    #cr_comprar_ahora{
+        @include button ( $wth: 12rem);
+        font-weight: bold;
+
+    }
+
+    #cr_visa, #cr_paypal,#cr_mastercard{
+        @extend %iconos;
+    }
 }
 
