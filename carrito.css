@@ -1,3 +1,22 @@
+#cr_caja_producto #cr_precio_cantidad, #cr_caja_producto #cr_precio_producto {
+  font-weight: bold;
+  font-size: large;
+}
 
+#cr_caja_producto #cr_corazon, #cr_caja_producto #cr_basura {
+  font-size: 1.5em;
+}
 
-/*# sourceMappingURL=carrito.css.map */
+#cr_caja_producto {
+  width: 60%;
+}
+#cr_caja_producto #cr_imagen_producto {
+  background-image: url("./img/guitarra1.jpg");
+  width: 80%;
+  height: 10rem;
+  background-position: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}/*# sourceMappingURL=carrito.css.map */

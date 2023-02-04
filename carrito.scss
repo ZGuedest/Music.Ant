@@ -13,7 +13,7 @@ $color_blanco:white;
     color: $colorletra ;
 }
 
-@mixin img ($url:url("./img/guitarra1.jpg"),$wth:80%,$hght: 15rem){
+@mixin img ($url:url("./img/guitarra1.jpg"),$wth:100%,$hght: 15rem){
 
     background-image: $url;
 
@@ -25,3 +25,42 @@ $color_blanco:white;
     background-size: contain;
     margin: 2rem;
 }
+
+
+//CLASES
+
+%precio{
+    font-weight: bold;
+    font-size: large;
+}
+
+%iconos{
+    font-size: 1.5em;
+}
+
+
+#cr_caja_producto{
+    width: 60%;
+
+    #cr_imagen_producto{
+
+        @include img($wth:80%,$hght: 10rem)
+    }
+
+    #cr_precio_producto{
+        @extend %precio
+    }
+    #cr_precio_cantidad{
+        @extend %precio
+    }
+
+    #cr_basura{
+        @extend %iconos
+    }
+
+    #cr_corazon{
+        @extend %iconos
+    }
+   
+}
+
