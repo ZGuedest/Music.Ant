@@ -1,16 +1,19 @@
-.checkboxcatalogo {
-  margin: 2rem 0rem 2rem 6rem;
+main {
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .radiocatalogo {
   padding: 1.5rem;
   height: 5rem;
-  border: 2px solid #387373;
+  border: 0.2px solid #070707;
   padding-right: 15rem;
+  margin: 2rem;
 }
 
-.checkboxcatalogo {
-  margin: 2rem 0rem 2rem 7.2rem;
+.containerRadioCheck {
+  border: 4px solid #387373;
 }
 
 .productocard {
@@ -21,21 +24,56 @@
 
 .galeriaenproducto img {
   max-width: 20%;
-}/*# sourceMappingURL=catalogo.css.map */
-img{
+} /*# sourceMappingURL=catalogo.css.map */
+img {
   width: 50%;
   /* height: 5rem; */
 }
 
-.btn{
-  background-color:#387373;
+.btn {
+  background-color: #387373;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: rgb(84, 7, 82);
 }
 
-.img{
+.checkboxcatalogo {
+  margin: 2rem 0rem 2rem 7.1rem;
+}
+
+.productocard {
+  height: 30rem;
+  width: 20rem;
+  border: solid 1px;
+}
+
+.galeriaenproducto img {
+  max-width: 20%;
+}
+
+.logo {
+  background-image: url("./img/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 3rem;
+  width: 10%;
+}
+
+header {
+  background-image: url("./img/fondo7.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+#prodguit {
+  /* max-width: 250px; */
+  width: 400px;
+}
+
+.img {
   width: 80%;
   height: 10rem;
   background-position: center;
@@ -46,134 +84,74 @@ img{
   background-image: url("./img/guitarra1.jpg");
 }
 
-#img1{
+#img1 {
   background-image: url("./img/guitarra1.jpg");
 }
 
-#img2{
+#img2 {
   background-image: url("./img/piano.jpeg");
-
 }
 
-#img3{
+#img3 {
   background-image: url("./img/tambor.jpeg");
-  
-
 }
-#img1{
+
+#img1 {
   background-image: url("./img/guitarra1.jpg");
 }
 
-#img2{
+#img2 {
   background-image: url("./img/piano.jpeg");
-
 }
 
-#img3{
+#img3 {
   background-image: url("./img/tambor.jpeg");
-  
-
 }
-#img4{
+
+#img4 {
   background-image: url("./img/img4.jpg");
 }
 
-#img5{
+#img5 {
   background-image: url("./img/img5.jpg");
-
 }
 
-#img6{
+#img6 {
   background-image: url("./img/img6.jpg");
-  
-
 }
-#img7{
+
+#img7 {
   background-image: url("./img/img7.jpg");
 }
 
-#img8{
+#img8 {
   background-image: url("./img/img8.jpg");
-
 }
 
-#img9{
+#img9 {
   background-image: url("./img/img9.jpg");
-  
-
 }
-#img10{
+
+#img10 {
   background-image: url("./img/img10.jpg");
 }
 
-#img11{
+#img11 {
   background-image: url("./img/img11.jpg");
-
 }
 
-#img12{
+#img12 {
   background-image: url("./img/img12.jpg");
-  
-
 }
-#img13{
+
+#img13 {
   background-image: url("./img/img13.jpg");
 }
 
-#img14{
+#img14 {
   background-image: url("./img/img14.jpg");
-
 }
 
-#img15{
+#img15 {
   background-image: url("./img/img15.jpg");
-  
-
-}
-
-main{
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-.radiocatalogo {
-  padding: 1.5rem;
-  height: 5rem;
-  border: 2px solid #387373;
-  padding-right: 15rem;
-}
-.checkboxcatalogo{
-  margin: 2rem 0rem 2rem 5.9rem;
-
-}
-.productocard{
-  height: 30rem;
-  width: 20rem;
-  border: solid 1px;
-}
-.galeriaenproducto img{
-  max-width: 20%;
-
-}
-  
-
-.logo{
-  background-image: url("./img/logo.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 3rem; 
-  width: 10%;
-}
-
-header{
-  background-image: url("./img/fondo7.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-}
-#prodguit{
-  /* max-width: 250px; */
-  width: 400px;
-}
+}/*# sourceMappingURL=catalogo.css.map */
