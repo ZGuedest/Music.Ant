@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 main {
   background-image: url("");
   background-repeat: no-repeat;
@@ -154,4 +155,102 @@ header {
 
 #img15 {
   background-image: url("./img/img15.jpg");
+=======
+header nav #menu-iconers i {
+  font-size: 1.5em;
+}
+
+header {
+  background-image: linear-gradient(rgb(56, 115, 115), rgba(56, 115, 115, 0.8), rgba(255, 255, 255, 0.5)), url("./img/fondo2.jpg");
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+  background-size: cover;
+}
+header nav {
+  background-color: transparent;
+  font-weight: 900;
+}
+header nav #logo, header nav #logo2 {
+  background-image: url("./img/logo.png");
+  width: 20%;
+  height: 5rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+  background-color: transparent;
+  margin: 0rem;
+}
+header nav #buscador {
+  width: 17rem;
+  height: 2rem;
+}
+header nav #menu-interior {
+  width: 40%;
+}
+header nav #menu-iconers {
+  width: 15%;
+}
+header #frase_nav {
+  padding-left: 20rem;
+  padding-top: 7rem;
+}
+header #frase_nav p {
+  font-size: 45px;
+  font-family: Blackadder ITC;
+}
+
+footer {
+  padding-top: 4rem;
+  background-color: #387373;
+}
+footer .btn {
+  background-color: #387373;
+  width: 7rem;
+  color: white;
+  font-weight: 900;
+}
+footer .btn:hover {
+  background-color: #E4F2E7;
+  color: black;
+}
+footer #appel-store {
+  background-image: url("./img/appel.png");
+  width: 35%;
+  height: 7rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 1rem;
+}
+footer #play-store {
+  background-image: url("./img/play-store.png");
+  width: 35%;
+  height: 7rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 1rem;
+}
+footer #copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#cont-radio-check {
+  border: 2px solid #387373;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+#cont-radio-check #checkboxcatalogo {
+  padding: 2rem;
+>>>>>>> 56898081dfbee261c4178c3801377ff8ac21af21
 }/*# sourceMappingURL=catalogo.css.map */

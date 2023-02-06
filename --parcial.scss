@@ -5,6 +5,7 @@ $color_gris:#827a7c;
 $color_negro:black;
 $color_blanco:white;
 $tipografía: sans-serif,Arial, Verdana, Tahoma;
+
 $fontSizeGeneral: 17px;
 $fontSizeH2: 27px;
 
@@ -104,11 +105,11 @@ footer{
     }
 
     #appel-store{
-        @include img($url:url("./img/appel.png"),$wth:30%,$hght: 7rem,$margin: 1rem );
+        @include img($url:url("./img/appel.png"),$wth:35%,$hght: 7rem,$margin: 1rem );
    
     }
     #play-store{
-        @include img($url:url("./img/play-store.png"),$wth:30%,$hght: 7rem,$margin: 1rem );
+        @include img($url:url("./img/play-store.png"),$wth:35%,$hght: 7rem,$margin: 1rem );
   
     }
 
@@ -116,8 +117,8 @@ footer{
         background-color: rgba(0, 0, 0, 0.2);
     }
 
-    @include img($url: (linear-gradient(rgb(255, 255, 255,0.5), rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8)),
-    url("")), $wth:100%,$hght: auto,$margin:0rem);
-    // background-color: $color_VerdeOsc;
+    // @include img($url: (linear-gradient(rgb(255, 255, 255,0.5), rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8)),
+    // url("")), $wth:100%,$hght: auto,$margin:0rem);
+    background-color: $color_VerdeOsc;
 }
  

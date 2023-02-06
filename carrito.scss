@@ -1,27 +1,64 @@
-//VARIABLES
-$color_verdeCl:#E4F2E7; //Este es el verde clarito
-$color_VerdeOsc:#387373;
-$color_gris:#827a7c;
-$color_negro:black;
-$color_blanco:white;
+@import "--parcial";
 
+//CLASES
 
-//MIXINS
-@mixin button ($bg-color:$color_VerdeOsc, $wth: 30rem, $colorletra:$color_blanco){
-    background-color: $bg-color;
-    width: $wth;
-    color: $colorletra ;
+%precio{
+    font-weight: bold;
+    font-size: large;
 }
 
-@mixin img ($url:url("./img/guitarra1.jpg"),$wth:80%,$hght: 15rem){
+header{   
+    @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgb(255, 255, 255,0.5)),
+    url("")), $wth:100%,$hght: 100px,$margin:0rem);
+ }
 
-    background-image: $url;
+ #cr_contenedor_principal{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    #cr_caja_producto{
+        #cr_imagen_producto{
+    
+            @include img($wth:80%,$hght: 10rem);
+        }
+    
+        #cr_precio_producto{
+            @extend %precio;
+        }
+        #cr_precio_cantidad{
+            @extend %precio;
+        }
+    
+        #cr_basura,#cr_corazon{
+            @extend %iconos;
+        }
+       
+    }
+    
+    #cr_comprar_pedido{
+        
+        height:225px;
+        #cr_carrito{
+            @extend %iconos;
+        }
+    
+        #cr_precio_total{
+            @extend %precio;
+            color:$color_VerdeOsc;
+        }
+    
+        #cr_comprar_ahora{
+            @include button ( $wth: 12rem);
+            font-weight: bold;
+        }
+    
+        #cr_visa, #cr_paypal,#cr_mastercard{
+            @extend %iconos;
+        }
+    }
+ }
 
-    width: $wth;
-    height: $hght;
-    background-position: center;
-    background-color: $color_blanco;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 2rem;
-}
+
+
+
+
+
