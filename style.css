@@ -11,6 +11,8 @@ img{
 
 .btn:hover{
     background-color: rgb(84, 7, 82);
+    font-size: 1.8rem;
+    
 }
 
 .img{
@@ -113,6 +115,7 @@ main{
     background-image: url("");
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
   
 }
 .radiocatalogo {
@@ -150,4 +153,9 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
+}
+.centrar-line{
+    display: grid;
+    justify-content: center;
+    padding: 2rem;
 }
