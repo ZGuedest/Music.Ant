@@ -1,0 +1,41 @@
+i {
+  font-size: 1.5em;
+}
+
+* {
+  font-family: sans-serif, Arial, Verdana, Tahoma;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+#hm_logo {
+  background-image: url("./img/logo.png");
+  width: 30%;
+  height: 5rem;
+  background-position: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+  background-color: transparent;
+  margin: 0rem;
+}
+
+.linea1 {
+  border-top: 0.1rem solid gray;
+  width: 22rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.linea2 {
+  border-top: 0.1rem solid gray;
+  width: 22rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}/*# sourceMappingURL=home.css.map */

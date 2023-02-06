@@ -1,0 +1,76 @@
+//VARIABLES
+$color_verdeCl:#E4F2E7; //Este es el verde clarito
+$color_VerdeOsc:#387373;
+$color_gris:#827a7c;
+$color_negro:black;
+$color_blanco:white;
+$tipografía: sans-serif,Arial, Verdana, Tahoma;
+$fontSizeGeneral: 17px;
+$fontSizeH2: 27px;
+
+//CLASES
+
+
+
+%iconos{
+    font-size: 1.5em;
+}
+
+//MIXINS
+@mixin button ($bg-color:$color_VerdeOsc, $wth: 30rem, $colorletra:$color_blanco){
+    background-color: $bg-color;
+    width: $wth;
+    color: $colorletra ;
+}
+
+@mixin img ($url:url("./img/guitarra1.jpg"),$wth:80%,$hght: 15rem){
+
+    background-image: $url;
+    width: $wth;
+    height: $hght;
+    background-position: center;
+    background-color: $color_blanco;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 2rem;
+}
+
+@mixin lineas($marginR: 1rem,$marginL: 1rem){
+    border-top: 0.1rem solid gray;
+    width: 22rem;
+    margin-right: $marginR;
+    margin-left:$marginL;
+}
+
+*{
+    font-family:$tipografía;
+    font-size: $fontSizeGeneral;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-size: $fontSizeH2;
+}
+i{
+    @extend %iconos;
+}
+
+#hm_logo{
+    @include img ($url:url("./img/logo.png"),$wth:30%,$hght: 5rem);
+    background-color: transparent;
+    margin: 0rem;
+
+}
+
+
+.linea1 {
+@include lineas();
+// margin-right: 1rem;
+}
+
+.linea2 {
+    @include lineas();
+
+// margin-left: 1rem;
+}
