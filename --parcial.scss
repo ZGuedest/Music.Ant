@@ -1,0 +1,123 @@
+//VARIABLES
+$color_verdeCl:#E4F2E7; //Este es el verde clarito
+$color_VerdeOsc:#387373;
+$color_gris:#827a7c;
+$color_negro:black;
+$color_blanco:white;
+$tipografía: sans-serif,Arial, Verdana, Tahoma;
+$fontSizeGeneral: 17px;
+$fontSizeH2: 27px;
+
+
+$fontWGeneral: 900;
+$fontWH2:600;
+
+//CLASES
+%iconos{
+    font-size: 1.5em;
+}
+
+//MIXINS
+@mixin button ($bg-color:$color_VerdeOsc, $wth: 30rem, $colorletra:$color_blanco){
+    background-color: $bg-color;
+    width: $wth;
+    color: $colorletra ;
+    font-weight: $fontWGeneral;
+
+    &:hover{
+        background-color: $color_verdeCl;
+        color: $color_negro ;
+    }
+}
+
+@mixin img ($url:url("./img/guitarra1.jpg"),$wth:80%,$hght: 15rem,$margin: 2rem){
+
+    background-image: $url;
+    width: $wth;
+    height: $hght;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: $margin;
+}
+
+@mixin lineas($marginR: 1rem,$marginL: 1rem){
+    border-top: 0.1rem solid gray;
+    width: 22rem;
+    margin-right: $marginR;
+    margin-left:$marginL;
+}
+
+
+header{
+       
+    @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgb(255, 255, 255,0.5)),
+    url("./img/fondo2.jpg")), $wth:100%,$hght: 500px,$margin:0rem);
+    background-size: cover;
+
+
+    nav{
+       background-color:transparent;
+       font-weight: $fontWGeneral;
+    
+        #logo,#logo2{
+            @include img ($url:url("./img/logo.png"),$wth:20%,$hght: 5rem);
+            background-color: transparent;
+            margin: 0rem;
+        }
+
+        #buscador{
+            width: 17rem;
+            height: 2rem;
+        }
+
+        #menu-interior{
+            width: 40%;
+        }
+        #menu-iconers{
+            width: 15%;
+            i{
+                @extend %iconos;
+            }
+        }
+
+    }
+
+    #frase_nav{
+        padding-left: 20rem;
+        padding-top: 7rem;
+
+        p{
+            font-size: 45px; 
+            font-family: Blackadder ITC;
+        }
+    }
+}
+
+
+footer{
+    padding-top: 4rem;
+
+    .btn{
+        @include button( $wth: 10rem);    
+    }
+
+    #appel-store{
+        @include img($url:url("./img/appel.png"),$wth:30%,$hght: 7rem,$margin: 1rem );
+   
+    }
+    #play-store{
+        @include img($url:url("./img/play-store.png"),$wth:30%,$hght: 7rem,$margin: 1rem );
+  
+    }
+
+    #copyright{
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    @include img($url: (linear-gradient(rgb(255, 255, 255,0.5), rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8)),
+    url("")), $wth:100%,$hght: auto,$margin:0rem);
+    // background-color: $color_VerdeOsc;
+}
+ 

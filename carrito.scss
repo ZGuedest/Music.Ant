@@ -1,36 +1,4 @@
-//VARIABLES
-$color_verdeCl:#E4F2E7; //Este es el verde clarito
-$color_VerdeOsc:#387373;
-$color_gris:#827a7c;
-$color_negro:black;
-$color_blanco:white;
-
-
-//MIXINS
-@mixin button ($bg-color:$color_VerdeOsc, $wth: 30rem, $colorletra:$color_blanco){
-    background-color: $bg-color;
-    width: $wth;
-    color: $colorletra ;
-
-    &:hover{
-        background-color: $color_verdeCl;
-        color: $color_negro ;
-    }
-}
-
-@mixin img ($url:url("./img/guitarra1.jpg"),$wth:100%,$hght: 15rem){
-
-    background-image: $url;
-
-    width: $wth;
-    height: $hght;
-    background-position: center;
-    background-color: $color_blanco;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 2rem;
-}
-
+@import "--parcial";
 
 //CLASES
 
@@ -39,64 +7,58 @@ $color_blanco:white;
     font-size: large;
 }
 
-%iconos{
-    font-size: 1.5em;
-}
+header{   
+    @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgb(255, 255, 255,0.5)),
+    url("")), $wth:100%,$hght: 100px,$margin:0rem);
+ }
 
-
-
-#cr_encabezado{
-    #cr_flecha, #cr_mundo{
-        @extend %iconos;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;   }
-
-}
-
-#cr_caja_producto{
-    width: 60%;
-
-    #cr_imagen_producto{
-
-        @include img($wth:80%,$hght: 10rem);
-    }
-
-    #cr_precio_producto{
-        @extend %precio;
-    }
-    #cr_precio_cantidad{
-        @extend %precio;
-    }
-
-    #cr_basura,#cr_corazon{
-        @extend %iconos;
-    }
-   
-}
-
-#cr_comprar_pedido{
+ #cr_contenedor_principal{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    #cr_caja_producto{
+        #cr_imagen_producto{
     
-    height:225px;
-    width: 40% ;
-
-    #cr_carrito{
-        @extend %iconos;
+            @include img($wth:80%,$hght: 10rem);
+        }
+    
+        #cr_precio_producto{
+            @extend %precio;
+        }
+        #cr_precio_cantidad{
+            @extend %precio;
+        }
+    
+        #cr_basura,#cr_corazon{
+            @extend %iconos;
+        }
+       
     }
-
-    #cr_precio_total{
-        @extend %precio;
-        color:$color_VerdeOsc;
-
+    
+    #cr_comprar_pedido{
+        
+        height:225px;
+        #cr_carrito{
+            @extend %iconos;
+        }
+    
+        #cr_precio_total{
+            @extend %precio;
+            color:$color_VerdeOsc;
+        }
+    
+        #cr_comprar_ahora{
+            @include button ( $wth: 12rem);
+            font-weight: bold;
+        }
+    
+        #cr_visa, #cr_paypal,#cr_mastercard{
+            @extend %iconos;
+        }
     }
+ }
 
-    #cr_comprar_ahora{
-        @include button ( $wth: 12rem);
-        font-weight: bold;
 
-    }
 
-    #cr_visa, #cr_paypal,#cr_mastercard{
-        @extend %iconos;
-    }
-}
+
+
 
