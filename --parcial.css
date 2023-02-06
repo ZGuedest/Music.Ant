@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-/*# sourceMappingURL=carrito.css.map */
-=======
-#cr_contenedor_principal #cr_comprar_pedido #cr_visa, #cr_contenedor_principal #cr_comprar_pedido #cr_paypal, #cr_contenedor_principal #cr_comprar_pedido #cr_mastercard, #cr_contenedor_principal #cr_comprar_pedido #cr_carrito, #cr_contenedor_principal #cr_caja_producto #cr_basura, #cr_contenedor_principal #cr_caja_producto #cr_corazon, header nav #menu-iconers i {
+header nav #menu-iconers i {
   font-size: 1.5em;
 }
 
@@ -52,6 +49,7 @@ header #frase_nav p {
 }
 
 footer {
+  padding-top: 4rem;
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgb(56, 115, 115), rgba(56, 115, 115, 0.8)), url("");
   width: 100%;
   height: auto;
@@ -60,6 +58,16 @@ footer {
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0rem;
+}
+footer .btn {
+  background-color: #387373;
+  width: 7rem;
+  color: white;
+  font-weight: 900;
+}
+footer .btn:hover {
+  background-color: #E4F2E7;
+  color: black;
 }
 footer #appel-store {
   background-image: url("./img/appel.png");
@@ -83,53 +91,4 @@ footer #play-store {
 }
 footer #copyright {
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-#cr_contenedor_principal #cr_comprar_pedido #cr_precio_total, #cr_contenedor_principal #cr_caja_producto #cr_precio_cantidad, #cr_contenedor_principal #cr_caja_producto #cr_precio_producto {
-  font-weight: bold;
-  font-size: large;
-}
-
-header {
-  background-image: linear-gradient(rgb(56, 115, 115), rgba(56, 115, 115, 0.8), rgba(255, 255, 255, 0.5)), url("");
-  width: 100%;
-  height: 100px;
-  background-position: center;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 0rem;
-}
-
-#cr_contenedor_principal {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-#cr_contenedor_principal #cr_caja_producto #cr_imagen_producto {
-  background-image: url("./img/guitarra1.jpg");
-  width: 80%;
-  height: 10rem;
-  background-position: center;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 2rem;
-}
-#cr_contenedor_principal #cr_comprar_pedido {
-  height: 225px;
-}
-#cr_contenedor_principal #cr_comprar_pedido #cr_precio_total {
-  color: #387373;
-}
-#cr_contenedor_principal #cr_comprar_pedido #cr_comprar_ahora {
-  background-color: #387373;
-  width: 12rem;
-  color: white;
-  font-weight: 900;
-  font-weight: bold;
-}
-#cr_contenedor_principal #cr_comprar_pedido #cr_comprar_ahora:hover {
-  background-color: #E4F2E7;
-  color: black;
-}/*# sourceMappingURL=carrito.css.map */
->>>>>>> 7cfc6a953fb0fc00e4369a34c1c783825663e6a8
+}/*# sourceMappingURL=--parcial.css.map */
