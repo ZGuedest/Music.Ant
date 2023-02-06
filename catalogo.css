@@ -92,6 +92,56 @@ footer #copyright {
   padding: 2rem;
   margin-top: 3rem;
 }
-#cont-radio-check #checkboxcatalogo {
-  padding: 4rem;
+
+#cuerda, #viento, #percusion, #electronico {
+  width: 15%;
+}
+
+#cheks-electronico {
+  width: 50%;
+}
+
+#ico-cuerda {
+  background-image: url("./img/ico-guitarra.jpeg");
+  width: 30%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+  background-size: cover;
+}
+
+#ico-viento {
+  background-image: url("./img/trompa-ico.jpg");
+  width: 30%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+}
+
+#ico-percusion {
+  background-image: url("./img/percusion-ico.jpg");
+  width: 20%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+}
+
+#ico-electronico {
+  background-image: url("./img/electronico1.webp");
+  width: 20%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
 }/*# sourceMappingURL=catalogo.css.map */

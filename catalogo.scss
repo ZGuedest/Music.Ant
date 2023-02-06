@@ -10,12 +10,28 @@
     border-radius: 1.5rem;
     padding: 2rem;
     margin-top: 3rem;
-
-    #checkboxcatalogo{
-        padding: 4rem;
-
-    }
-
  }
 
+ #cuerda,#viento,#percusion,#electronico{
+    width: 15%;
+}
 
+ #cheks-electronico{
+    width: 50%;
+ }
+
+    #ico-cuerda{
+        @include img($url:url("./img/ico-guitarra.jpeg"),$wth:30%,$hght: 50px,$margin:0rem);
+        background-size: cover;
+    }
+    #ico-viento{
+        @include img($url:url("./img/trompa-ico.jpg"),$wth:30%,$hght: 50px,$margin:0rem);
+    }
+
+    #ico-percusion{
+        @include img($url:url("./img/percusion-ico.jpg"),$wth:20%,$hght: 50px,$margin:0rem);
+    }
+
+    #ico-electronico{
+        @include img($url:url("./img/electronico1.webp"),$wth:20%,$hght: 50px,$margin:0rem);
+    }
