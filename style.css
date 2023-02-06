@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 img{
@@ -159,3 +160,26 @@ header{
     justify-content: center;
     padding: 2rem;
 }
+=======
+#img1 {
+  background-image: url("./img/guitarra2.jpg");
+  width: 50%;
+  height: 15rem;
+  background-position: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}
+
+#img3 {
+  background-image: url("./img/guitarra5.jpg");
+  width: 80%;
+  height: 15rem;
+  background-position: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> 0e67789af5f5bbd3e31e0fe67a7a084ba6b57e21

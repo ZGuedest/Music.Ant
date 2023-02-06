@@ -1,0 +1,64 @@
+@import "--parcial";
+
+//CLASES
+
+%precio{
+    font-weight: bold;
+    font-size: large;
+}
+
+header{   
+    @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgb(255, 255, 255,0.5)),
+    url("")), $wth:100%,$hght: 100px,$margin:0rem);
+ }
+
+ #cr_contenedor_principal{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    #cr_caja_producto{
+        #cr_imagen_producto{
+    
+            @include img($wth:80%,$hght: 10rem);
+        }
+    
+        #cr_precio_producto{
+            @extend %precio;
+        }
+        #cr_precio_cantidad{
+            @extend %precio;
+        }
+    
+        #cr_basura,#cr_corazon{
+            @extend %iconos;
+        }
+       
+    }
+    
+    #cr_comprar_pedido{
+        
+        height:225px;
+        #cr_carrito{
+            @extend %iconos;
+        }
+    
+        #cr_precio_total{
+            @extend %precio;
+            color:$color_VerdeOsc;
+        }
+    
+        #cr_comprar_ahora{
+            @include button ( $wth: 12rem);
+            font-weight: bold;
+        }
+    
+        #cr_visa, #cr_paypal,#cr_mastercard{
+            @extend %iconos;
+        }
+    }
+ }
+
+
+
+
+
+
