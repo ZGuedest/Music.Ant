@@ -21,6 +21,11 @@
             }
         }
 
+        .card{
+            margin: 3rem;
+            width: 18rem;
+        }
+
         .btn-primary{
             @include button( $wth: 10rem);    
         }
