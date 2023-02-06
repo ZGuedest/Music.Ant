@@ -49,6 +49,7 @@ header #frase_nav p {
 }
 
 footer {
+  padding-top: 4rem;
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgb(56, 115, 115), rgba(56, 115, 115, 0.8)), url("");
   width: 100%;
   height: auto;
@@ -57,6 +58,16 @@ footer {
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0rem;
+}
+footer .btn {
+  background-color: #387373;
+  width: 7rem;
+  color: white;
+  font-weight: 900;
+}
+footer .btn:hover {
+  background-color: #E4F2E7;
+  color: black;
 }
 footer #appel-store {
   background-image: url("./img/appel.png");
@@ -102,13 +113,13 @@ footer #copyright {
   margin-right: 1rem;
   margin-left: 1rem;
 }
-* body .btn {
+* body .btn-primary {
   background-color: #387373;
   width: 10rem;
   color: white;
   font-weight: 900;
 }
-* body .btn:hover {
+* body .btn-primary:hover {
   background-color: #E4F2E7;
   color: black;
 }

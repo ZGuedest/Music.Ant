@@ -21,7 +21,7 @@
             }
         }
 
-        .btn{
+        .btn-primary{
             @include button( $wth: 10rem);    
         }
         .corazon-vacio{
