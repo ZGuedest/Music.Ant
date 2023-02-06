@@ -1,9 +1,9 @@
 @import "--parcial";
 
-header{   
-    @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgb(255, 255, 255,0.5)),
-    url("")), $wth:100%,$hght: 100px,$margin:0rem);
- }
+// header{   
+//     @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgb(255, 255, 255,0.5)),
+//     url("")), $wth:100%,$hght: 100px,$margin:0rem);
+//  }
 
  #cont-radio-check{
     border: 2px solid $color_VerdeOsc;
