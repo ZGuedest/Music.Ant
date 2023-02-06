@@ -86,14 +86,3 @@ footer #copyright {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#ck_inputnombre, #ck_inputapellidos, #ck_inputTl, #ck_inputCity, #ck_inputdireccion, #ck_inputCp, #ck_inputEmail, #ck_inputPassword {
-  background-color: #E4F2E7;
-}
-
-#ck_btn-Tarjeta, #ck_btn-Bizum, #ck_btn-Paypal, #ck_btnpedido {
-  background-color: #387373;
-}
-
-#ck_imgBizum {
-  width: 15px;
-}/*# sourceMappingURL=ck.css.map */
