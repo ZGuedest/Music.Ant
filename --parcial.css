@@ -50,14 +50,7 @@ header #frase_nav p {
 
 footer {
   padding-top: 4rem;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgb(56, 115, 115), rgba(56, 115, 115, 0.8)), url("");
-  width: 100%;
-  height: auto;
-  background-position: center;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 0rem;
+  background-color: #387373;
 }
 footer .btn {
   background-color: #387373;
@@ -71,7 +64,7 @@ footer .btn:hover {
 }
 footer #appel-store {
   background-image: url("./img/appel.png");
-  width: 30%;
+  width: 35%;
   height: 7rem;
   background-position: center;
   background-color: transparent;
@@ -81,7 +74,7 @@ footer #appel-store {
 }
 footer #play-store {
   background-image: url("./img/play-store.png");
-  width: 30%;
+  width: 35%;
   height: 7rem;
   background-position: center;
   background-color: transparent;
