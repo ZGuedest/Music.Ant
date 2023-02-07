@@ -48,11 +48,21 @@ var violin2= {
     "src": "./img/violin2.jpg"
 }
 
-var violin3= {
+var violin3 = {
     "id":6,
     "name":"Yamaha YSV-104RD - Violin Eléctrico",
     "description":"El armazón se corresponde con la mayoría de los apoyos para el hombro estándar. Sistema: Studio Response Technology Powered System, para un carácter de sonido del violín y respuesta naturales. Preamplificador Control Box externo. Salida de auriculares. Entrada AUX. Pastilla piezo en el puente. Cuerpo hecho de pícea. Mástil de arce. Clavijas de ébano. Diapasón de composite. Cordal sintético con 4 afinaprimas. Cuerdas Daddario Zyex. Armazón de plástico. Peso: 490 g (sólo el instrumento). Peso: 70 g (Control Box). Color: Rojo",
     "precioDescription": "919 €",
     "precio": 919,
     "src": "./img/violin3.jpg"
+}
+
+var bajo1 ={
+    "id":7,
+    "name":"SCHECTER P-4 - Bajo Exótico",
+    "description":"Bajo de 4 cuerdas para personas diestras.Cuerpo fabricado en madera de fresno de pantano con tapa de madera de zebrano. Superficie del cuerpo plana en color Faded Vintage Sunburst. Cuello en forma de C delgada, fabricado en madera de arce tostado. Incluye varillas de refuerzo de fibra de carbono para mayor estabilidad. Diapasón de madera de arce tostado. Cuerdas calibre .045 - .105 de Ernie Ball 4 String Super Long. Compatible con estuche SGR-Universal Bass Hardcase (Se vende por separado). Dimensiones: 111,76 x 48,26 x 25,4 centímetros. Peso: 4,54 kg.",
+    "precioDescription": "919 €",
+    "precio": 919,
+    "src": "./img/violin3.jpg"
+
 }
