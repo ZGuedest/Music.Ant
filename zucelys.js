@@ -11,7 +11,7 @@ var guitarra1 = {
 var guitarra2 = {
 
     "id":2,
-    "name": "Ibanez GRG121DX-BKF Guitarra Eléctrica",
+    "name": "Ibanez GRG121DX-BKF - Guitarra Eléctrica",
     "description": "Cuerpo de álamo. Mástil de arce GRG .Diapasón de corazón púrpura. Inlays de 'Dientes de tiburón', 24 trastes Jumbo, 2 pastillas humbucker IBZ-6. Puente fijo. Herrajes negros. Acabado: Negro liso", 
     "precioDescription": "238 €",
     "precio": 238,
@@ -21,9 +21,19 @@ var guitarra2 = {
 var guitarra3 = {
 
     "id":3,
-    "name": "Schecter Diamond Omen 7 Extreme BCH Guitarra Eléctrica",
+    "name": "Schecter Diamond Omen 7 Extreme BCH - Guitarra Eléctrica",
     "description": "Cuerpo de caoba. Tapa de arce flameado. Mástil de arce. Diapasón de palisandro Griffbrett (Dalbergia latifolia), 24 trastes. Incrustaciones Vector. Medida: 26,5 (673 mm). Puente TOM. Paso de cuerdas a través del cuerpo, 2 pastillas Schecter Diamond Plus Humbucker. Color: Black Cherry", 
     "precioDescription": "629 €",
     "precio": 629,
     "src": "./img/guitarra3.jpg"
 };
+
+
+var violin1= {
+    "id":4,
+    "name":"Forenza F1151A - Conjunto de violín de tamaño completo",
+    "description":"Tamaño 4/4. Se suministra con el puente equipada, configurar listo para jugar. Clavijas y armarios integral de la pieza de cola afinadores. Incluye arco de madera con el bloque de colofonia. Caso de cremallera de peso ligero con asa y correas para los hombros",
+    "precioDescription": "94,21 €",
+    "precio": 94.21,
+    "src": "./img/violin1.jpg"
+}
