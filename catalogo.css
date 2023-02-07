@@ -1,161 +1,3 @@
-<<<<<<< HEAD
-main {
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.radiocatalogo {
-  padding: 1.5rem;
-  height: 5rem;
-  border: 0.2px solid #070707;
-  padding-right: 15rem;
-  margin: 2rem;
-}
-
-.containerRadioCheck {
-  border: 4px solid #387373;
-}
-
-.productocard {
-  height: 30rem;
-  width: 20rem;
-  border: solid 1px;
-}
-
-.galeriaenproducto img {
-  max-width: 20%;
-} /*# sourceMappingURL=catalogo.css.map */
-img {
-  width: 50%;
-  /* height: 5rem; */
-}
-
-.btn {
-  background-color: #387373;
-}
-
-.btn:hover {
-  background-color: rgb(84, 7, 82);
-}
-
-.checkboxcatalogo {
-  margin: 2rem 0rem 2rem 7.1rem;
-}
-
-.productocard {
-  height: 30rem;
-  width: 20rem;
-  border: solid 1px;
-}
-
-.galeriaenproducto img {
-  max-width: 20%;
-}
-
-.logo {
-  background-image: url("./img/logo.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 3rem;
-  width: 10%;
-}
-
-header {
-  background-image: url("./img/fondo7.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 500px;
-}
-
-#prodguit {
-  /* max-width: 250px; */
-  width: 400px;
-}
-
-.img {
-  width: 80%;
-  height: 10rem;
-  background-position: center;
-  background-color: white;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 2rem;
-  background-image: url("./img/guitarra1.jpg");
-}
-
-#img1 {
-  background-image: url("./img/guitarra1.jpg");
-}
-
-#img2 {
-  background-image: url("./img/piano.jpeg");
-}
-
-#img3 {
-  background-image: url("./img/tambor.jpeg");
-}
-
-#img1 {
-  background-image: url("./img/guitarra1.jpg");
-}
-
-#img2 {
-  background-image: url("./img/piano.jpeg");
-}
-
-#img3 {
-  background-image: url("./img/tambor.jpeg");
-}
-
-#img4 {
-  background-image: url("./img/img4.jpg");
-}
-
-#img5 {
-  background-image: url("./img/img5.jpg");
-}
-
-#img6 {
-  background-image: url("./img/img6.jpg");
-}
-
-#img7 {
-  background-image: url("./img/img7.jpg");
-}
-
-#img8 {
-  background-image: url("./img/img8.jpg");
-}
-
-#img9 {
-  background-image: url("./img/img9.jpg");
-}
-
-#img10 {
-  background-image: url("./img/img10.jpg");
-}
-
-#img11 {
-  background-image: url("./img/img11.jpg");
-}
-
-#img12 {
-  background-image: url("./img/img12.jpg");
-}
-
-#img13 {
-  background-image: url("./img/img13.jpg");
-}
-
-#img14 {
-  background-image: url("./img/img14.jpg");
-}
-
-#img15 {
-  background-image: url("./img/img15.jpg");
-=======
 header nav #menu-iconers i {
   font-size: 1.5em;
 }
@@ -250,7 +92,56 @@ footer #copyright {
   padding: 2rem;
   margin-top: 3rem;
 }
-#cont-radio-check #checkboxcatalogo {
-  padding: 2rem;
->>>>>>> 56898081dfbee261c4178c3801377ff8ac21af21
+
+#cuerda, #viento, #percusion, #electronico {
+  width: 15%;
+}
+
+#cheks-electronico {
+  width: 50%;
+}
+
+#ico-cuerda {
+  background-image: url("./img/ico-guitarra.jpeg");
+  width: 30%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+  background-size: cover;
+}
+
+#ico-viento {
+  background-image: url("./img/trompa-ico.jpg");
+  width: 30%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+}
+
+#ico-percusion {
+  background-image: url("./img/percusion-ico.jpg");
+  width: 20%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+}
+
+#ico-electronico {
+  background-image: url("./img/electronico1.webp");
+  width: 20%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
 }/*# sourceMappingURL=catalogo.css.map */
