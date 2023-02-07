@@ -1,0 +1,17 @@
+@import"--parcial.scss";
+#ck_inputnombre, #ck_inputapellidos, #ck_inputTl, #ck_inputCity, #ck_inputdireccion, #ck_inputCp, #ck_inputEmail, #ck_inputPassword {
+    background-color: $color_verdeCl;
+}
+#ck_btn-Tarjeta, #ck_btn-Bizum, #ck_btn-Paypal, #ck_btnpedido{
+    background-color: #387373
+    
+}
+
+#ck_imgBizum {
+    width: 15px;
+}
+#ck_imglogo {
+    @include img ($url:url("./img/logo.png"),$wth:20%,$hght: 5rem);
+            background-color: transparent;
+            margin: 0rem;
+}

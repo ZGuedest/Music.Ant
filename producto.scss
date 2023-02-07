@@ -47,25 +47,25 @@ $color_blanco:white;
     margin: 2rem 0rem 2rem 5.9rem;
 
 }
-.productocard{
-    height: 30rem;
-    width: 20rem;
-    border: solid 1px;
-}
+// .productocard{
+//     height: 30rem;
+//     width: 20rem;
+//     border: solid 1px;
+// }
 .galeriaenproducto img{
     max-width: 20%;
 
 }
-.img{
-    width: 50%;
-    /* height: 5rem; */
-}.btn{
+// .img{
+//     width: 50%;
+// }
+.btn{
     background-color:#387373;
 }
 
-.btn:hover{
-    background-color: rgb(84, 7, 82);
-}
+// .btn:hover{
+//     background-color: rgb(84, 7, 82);
+// }
 
 .img{
     width: 80%;
@@ -77,5 +77,6 @@ $color_blanco:white;
     margin: 2rem;
     background-image: url("./img/guitarra1.jpg");
 }
+
 
     
