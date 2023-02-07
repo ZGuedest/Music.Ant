@@ -41,9 +41,9 @@ var violin1= {
 
 var violin2= {
     "id":5,
-    "name":"Forenza F1151A - Conjunto de violín de tamaño completo",
-    "description":"Tamaño 4/4. Se suministra con el puente equipada, configurar listo para jugar. Clavijas y armarios integral de la pieza de cola afinadores. Incluye arco de madera con el bloque de colofonia. Caso de cremallera de peso ligero con asa y correas para los hombros",
-    "precioDescription": "94,21 €",
-    "precio": 94.21,
+    "name":"Stentor 1401FYE - Conjunto de violín arlequín",
+    "description":"Incluye: violín de tamaño 1/4, lazo de madera de color, funda ligera con interior ajustado y prácticas correas de transporte para mochila.Todo lo que necesitas para empezar: viene con todos los accesorios esenciales, incluyendo colofonia, reposamuñecas, un bolsillo externo para música y soportes para arco. Stentor Violín de 1/4 – Tallado de maderas sólidas con incrustaciones de morado, clavijas de madera dura Swartzia de calidad y diapasón Swartzia. Stentor Calidad: nuestros instrumentos ofrecen un rendimiento y tono fiables y consistentes, mejorando el proceso de aprendizaje para el estudiante. Tipo de cuerda: núcleo de cuerda de acero. Violín y lazo de madera de colores. Recomendado por estudiantes y profesores de todo el mundo. Ideal para niños de 5 a 7 años aprox",
+    "precioDescription": "120,38€",
+    "precio": 120.38,
     "src": "./img/violin2.jpg"
 }
