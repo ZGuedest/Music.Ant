@@ -6,21 +6,24 @@
 //     url("")), $wth:100%,$hght: 100px,$margin:0rem);
 //  }
 
- #cont-radio-check{
-    border: 2px solid $color_VerdeOsc;
-    border-radius: 1.5rem;
-    padding: 2rem;
-    margin-top: 3rem;
- }
-
- #cuerda,#viento,#percusion,#electronico{
-    width: 15%;
+#cheks-cuerda, #cheks-viento, #checks-percusion, #cheks-electronico{
+    display: none !important;
 }
 
- #cheks-electronico{
-    width: 50%;
- }
+    #cont-radio-check{
+        border: 2px solid $color_VerdeOsc;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        margin-top: 3rem;
+    }
 
+    #cuerda,#viento,#percusion,#electronico{
+        width: 15%;
+    }
+
+    #caja-radio-percusion, #caja-radio-electronico{
+        width: 10rem;
+    }
     #ico-cuerda{
         @include img($url:url("./img/ico-guitarra.jpeg"),$wth:30%,$hght: 50px,$margin:0rem);
         background-size: cover;
@@ -30,9 +33,11 @@
     }
 
     #ico-percusion{
-        @include img($url:url("./img/percusion-ico.jpg"),$wth:20%,$hght: 50px,$margin:0rem);
+        @include img($url:url("./img/percusion-ico.jpg"),$wth:18%,$hght: 50px,$margin:0rem);
     }
 
     #ico-electronico{
-        @include img($url:url("./img/electronico1.webp"),$wth:20%,$hght: 50px,$margin:0rem);
+        @include img($url:url("./img/electronico1.webp"),$wth:18%,$hght: 50px,$margin:0rem);
     }
+
+    

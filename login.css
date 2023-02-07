@@ -86,3 +86,13 @@ footer #copyright {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+lg_fondo {
+  background-image: linear-gradient(rgb(56, 115, 115), rgba(56, 115, 115, 0.8), rgba(255, 255, 255, 0.5)), url("");
+  width: 100%;
+  height: 100px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+}/*# sourceMappingURL=login.css.map */
