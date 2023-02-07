@@ -15,7 +15,7 @@ $fontWH2:600;
 
 //CLASES
 %iconos{
-    font-size: 1.5em;
+    font-size: 1em;
     color: $color_negro;
 }
 
@@ -51,6 +51,12 @@ $fontWH2:600;
     margin-left:$marginL;
 }
 
+*{
+    font-family:$tipografía;
+    font-size: $fontSizeGeneral;
+    
+    margin: 0;
+    padding: 0;
 
 header{
        
@@ -121,5 +127,6 @@ footer{
     // @include img($url: (linear-gradient(rgb(255, 255, 255,0.5), rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8)),
     // url("")), $wth:100%,$hght: auto,$margin:0rem);
     background-color: $color_VerdeOsc;
+}
 }
  

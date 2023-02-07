@@ -1,5 +1,6 @@
-header nav #menu-iconers i {
+header nav #menu-iconers a, header nav #menu-iconers i {
   font-size: 1.5em;
+  color: black;
 }
 
 header {
