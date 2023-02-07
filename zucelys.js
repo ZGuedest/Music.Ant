@@ -42,8 +42,17 @@ var violin1= {
 var violin2= {
     "id":5,
     "name":"Stentor 1401FYE - Conjunto de violín arlequín",
-    "description":"Incluye: violín de tamaño 1/4, lazo de madera de color, funda ligera con interior ajustado y prácticas correas de transporte para mochila.Todo lo que necesitas para empezar: viene con todos los accesorios esenciales, incluyendo colofonia, reposamuñecas, un bolsillo externo para música y soportes para arco. Stentor Violín de 1/4 – Tallado de maderas sólidas con incrustaciones de morado, clavijas de madera dura Swartzia de calidad y diapasón Swartzia. Stentor Calidad: nuestros instrumentos ofrecen un rendimiento y tono fiables y consistentes, mejorando el proceso de aprendizaje para el estudiante. Tipo de cuerda: núcleo de cuerda de acero. Violín y lazo de madera de colores. Recomendado por estudiantes y profesores de todo el mundo. Ideal para niños de 5 a 7 años aprox",
+    "description":"Incluye: violín de tamaño 1/4, lazo de madera de color, funda ligera con interior ajustado y prácticas correas de transporte para mochila.Todo lo que necesitas para empezar: viene con todos los accesorios esenciales, incluyendo colofonia, reposamuñecas, un bolsillo externo para música y soportes para arco. Stentor Violín de 1/4. Tallado de maderas sólidas con incrustaciones de morado, clavijas de madera dura Swartzia de calidad y diapasón Swartzia. Stentor Calidad: nuestros instrumentos ofrecen un rendimiento y tono fiables y consistentes, mejorando el proceso de aprendizaje para el estudiante. Tipo de cuerda: núcleo de cuerda de acero. Violín y lazo de madera de colores. Recomendado por estudiantes y profesores de todo el mundo. Ideal para niños de 5 a 7 años aprox",
     "precioDescription": "120,38€",
     "precio": 120.38,
     "src": "./img/violin2.jpg"
+}
+
+var violin3= {
+    "id":6,
+    "name":"Yamaha YSV-104RD - Violin Eléctrico",
+    "description":"El armazón se corresponde con la mayoría de los apoyos para el hombro estándar. Sistema: Studio Response Technology Powered System, para un carácter de sonido del violín y respuesta naturales. Preamplificador Control Box externo. Salida de auriculares. Entrada AUX. Pastilla piezo en el puente. Cuerpo hecho de pícea. Mástil de arce. Clavijas de ébano. Diapasón de composite. Cordal sintético con 4 afinaprimas. Cuerdas Daddario Zyex. Armazón de plástico. Peso: 490 g (sólo el instrumento). Peso: 70 g (Control Box). Color: Rojo",
+    "precioDescription": "919 €",
+    "precio": 919,
+    "src": "./img/violin3.jpg"
 }
