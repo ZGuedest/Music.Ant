@@ -86,10 +86,6 @@ footer #copyright {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#cheks-cuerda, #cheks-viento, #checks-percusion, #cheks-electronico {
-  display: none !important;
-}
-
 #cont-radio-check {
   border: 2px solid #387373;
   border-radius: 1.5rem;
@@ -101,8 +97,8 @@ footer #copyright {
   width: 15%;
 }
 
-#caja-radio-percusion, #caja-radio-electronico {
-  width: 10rem;
+#cheks-electronico {
+  width: 50%;
 }
 
 #ico-cuerda {
@@ -130,7 +126,7 @@ footer #copyright {
 
 #ico-percusion {
   background-image: url("./img/percusion-ico.jpg");
-  width: 18%;
+  width: 20%;
   height: 50px;
   background-position: center;
   background-color: transparent;
@@ -141,11 +137,15 @@ footer #copyright {
 
 #ico-electronico {
   background-image: url("./img/electronico1.webp");
-  width: 18%;
+  width: 20%;
   height: 50px;
   background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0rem;
-}/*# sourceMappingURL=catalogo.css.map */
+}
+
+#cheks-cuerda {
+  display: none !important;
+}/*# sourceMappingURL=juan.css.map */
