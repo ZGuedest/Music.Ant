@@ -13,8 +13,9 @@
 
 </head>
 <body>
+  <header>
     <div id="ck_contenedor" class="container-sm"> 
-      <div class="encabezado">
+      <div id="ck_header" class="encabezado">
       <img id="ck_imglogo" src="img/logo.png" class="object-fit-sm-contain border rounded "  alt="...">
   
     <p class="p-3 col-md-10 border-bottom border-5 text-end"> Seguir comprando  <i class="fa-solid fa-play"></i>
@@ -22,7 +23,7 @@
 
       <i class="fa-solid fa-earth-americas px-3"></i>
     </p>
-    
+  </header>
   
   </div>
   <!-- <div class="container overflow-hidden ">
@@ -34,19 +35,20 @@
 <h2 class=" p-3 col-md-12 border-bottom border-5">Seleccione el Tipo de Envio</h2>
 <ul class="list-group p-3 mb-2   col-md-12">
   <li class="list-group-item border border-0 border-bottom">
-    <input class="form-check-input me-1 " type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+    <input class="form-check-input me-1 " type="radio" name="listGroupRadio" value="" id="ck_firstRadio" checked>
     <label class="form-check-label" for="firstRadio"> <strong> Recogida en tienda </strong><br> Gratis   <small class="text-muted">(Puede recoger su pedido a partir del Jueves)</small>
 
     </label>
   </li>
   <li class="list-group-item border border-0 border-bottom">
-    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="ck_secondRadio">
     <label class="form-check-label" for="secondRadio"> <strong> Enviar a domicilio 72h </strong><br> 10€ <small class="text-muted">(Recibira su pedido entre las 9.00am y 2:00pm del Jueves) </small></label>
   </li>
   <li class="list-group-item border border-0 border-bottom">
-    <input class="form-check-input me-1 " type="radio" name="listGroupRadio" value="" id="thirdRadio">
+    <input class="form-check-input me-1 " type="radio" name="listGroupRadio" value="" id="ck_thirdRadio">
     <label class="form-check-label" for="thirdRadio"> <strong> Enviar a domicilio 24h</strong> <br>  20€ <small class="text-muted">(Recibirá su pedido entre las 9.00am y 2.00pm de Mañana) </small></label>
   </li>
+  
 </ul>
 </div>
 <!-- <div class="col-md-5">
@@ -69,7 +71,7 @@
 <h2 class=" p-3 col-md-6 border-bottom border-5">Datos del Cliente</h2>
 
 
-<form class="row g-3 p-3 mb-2  text-emphasis-dark col-md-6">
+<form action="" name="formulario" method="get" class="row g-3 p-3 mb-2  text-emphasis-dark col-md-6">
   
   <div id="ck_formulario" class="col-md-4 ">
     <label for="inputnombre" class="form-label"></label>
@@ -154,7 +156,7 @@
 <div class="col-md-12 pad-adjust">
     <div class="checkbox">
     <label>
-      <input type="checkbox" checked class="text-muted"> Guardar detalles para pagos rapidos <a href="#"> </a>
+      <input id="ck_pagorapido" type="checkbox" checked class="text-muted"> Guardar detalles para pagos rapidos <a href="#"> </a>
     </label>
   </div>
 </div>
