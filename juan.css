@@ -86,13 +86,66 @@ footer #copyright {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-lg_fondo {
-  background-image: linear-gradient(rgb(56, 115, 115), rgba(56, 115, 115, 0.8), rgba(255, 255, 255, 0.5)), url("");
-  width: 100%;
-  height: 100px;
+#cont-radio-check {
+  border: 2px solid #387373;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+#cuerda, #viento, #percusion, #electronico {
+  width: 15%;
+}
+
+#cheks-electronico {
+  width: 50%;
+}
+
+#ico-cuerda {
+  background-image: url("./img/ico-guitarra.jpeg");
+  width: 30%;
+  height: 50px;
   background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0rem;
-}/*# sourceMappingURL=login.css.map */
+  background-size: cover;
+}
+
+#ico-viento {
+  background-image: url("./img/trompa-ico.jpg");
+  width: 30%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+}
+
+#ico-percusion {
+  background-image: url("./img/percusion-ico.jpg");
+  width: 20%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+}
+
+#ico-electronico {
+  background-image: url("./img/electronico1.webp");
+  width: 20%;
+  height: 50px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+}
+
+#cheks-cuerda {
+  display: none !important;
+}/*# sourceMappingURL=juan.css.map */

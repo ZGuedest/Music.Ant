@@ -63,9 +63,9 @@ $color_blanco:white;
     background-color:#387373;
 }
 
-// .btn:hover{
-//     background-color: rgb(84, 7, 82);
-// }
+.btn:hover{
+    background-color: rgb(84, 7, 82);
+}
 
 .img{
     width: 80%;
@@ -77,6 +77,10 @@ $color_blanco:white;
     margin: 2rem;
     background-image: url("./img/guitarra1.jpg");
 }
-
-
+.cajaenvio-devol {
+    background-color: #387373;
+}
+.text-center {
+    background-color: #387373 ;
+}
     
