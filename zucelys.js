@@ -37,3 +37,13 @@ var violin1= {
     "precio": 94.21,
     "src": "./img/violin1.jpg"
 }
+
+
+var violin2= {
+    "id":5,
+    "name":"Forenza F1151A - Conjunto de violín de tamaño completo",
+    "description":"Tamaño 4/4. Se suministra con el puente equipada, configurar listo para jugar. Clavijas y armarios integral de la pieza de cola afinadores. Incluye arco de madera con el bloque de colofonia. Caso de cremallera de peso ligero con asa y correas para los hombros",
+    "precioDescription": "94,21 €",
+    "precio": 94.21,
+    "src": "./img/violin2.jpg"
+}
