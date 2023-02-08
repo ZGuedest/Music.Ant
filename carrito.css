@@ -112,7 +112,7 @@ header {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
-#cr_contenedor_principal #cr_caja_producto #cr_caja_contenedora_text_producto {
+#cr_contenedor_principal #cr_caja_producto {
   width: 40rem;
 }
 #cr_contenedor_principal #cr_caja_producto #cr_imagen_producto {
@@ -126,7 +126,8 @@ header {
   margin: 1.6rem;
 }
 #cr_contenedor_principal #cr_comprar_pedido {
-  height: 225px;
+  width: 20rem;
+  height: 250px;
 }
 #cr_contenedor_principal #cr_comprar_pedido #cr_precio_total {
   color: #387373;
