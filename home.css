@@ -46,13 +46,11 @@
 * header nav #menu-iconers {
   width: 15%;
 }
-* header #frase_nav {
-  padding-left: 20rem;
-  padding-top: 7rem;
-}
-* header #frase_nav p {
+* header #frase_imaginacion {
   font-size: 45px;
   font-family: Blackadder ITC;
+  padding-top: 10rem;
+  padding-left: 5rem;
 }
 * footer {
   padding-top: 4rem;
