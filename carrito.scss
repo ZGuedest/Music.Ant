@@ -16,9 +16,13 @@ header{
     padding-top: 6rem;
     padding-bottom: 6rem;
     #cr_caja_producto{
+
+        #cr_caja_contenedora_text_producto{
+            width: 40rem;
+        }
         #cr_imagen_producto{
     
-            @include img($wth:80%,$hght: 10rem);
+            @include img($wth:80%,$hght: 10rem, $margin:1.6rem);
         }
     
         #cr_precio_producto, #cr_precio_cantidad{

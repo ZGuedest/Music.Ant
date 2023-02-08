@@ -69,7 +69,7 @@ header{
        background-color:transparent;
        font-weight: $fontWGeneral;
     
-        #logo,#logo2{
+        #logo{
             @include img ($url:url("./img/logo.png"),$wth:20%,$hght: 5rem);
             background-color: transparent;
             margin: 0rem;
