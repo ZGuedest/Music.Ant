@@ -5,7 +5,17 @@ let gastosE = document.getElementById("ck_ge");
 let totatP = document.getElementById("ck_producto").value;
 let descuento = document.getElementById("ck_dto").value;
 let total = document.getElementById("ck_total");
-total = gastosE + totalP - descuento;
+let btnPedido = document.getElementById("ck_bntpedido");
+let dto = 0.21;
+//let sumar = 'ck_ge' + 'ck_producto'.value - 'ck_dto'.value;
+function calcular(){
+    let sumaP = Number(totalP.value);
+    let dtoT = sumaP * dto;
+    descuento = dtoT;
+    let dtoTotal = totalP + dtoT;
+     dtoTotal.value = ck_dto;
+
+}
 
 
 
@@ -26,29 +36,33 @@ function gastosDeEnvio(){
 
         if (document.getElementById('ck_firstRadio').checked)
         {
-            gastosE.innerHTML="0€"
+            gastosE.innerHTML="0"
             gastosE.value= parseFloat(0)
         }
         else if (document.getElementById('ck_secondRadio').checked)
         {
-            gastosE.innerHTML="10€"
+            gastosE.innerHTML="10"
             gastosE.value= parseFloat(10)
             
         }
         else
         {
-            gastosE.innerHTML="20€"
+            gastosE.innerHTML="20"
             gastosE.value= parseFloat(20)
 
         }
 
 
 }
-//function totalGastos(){
-    //total.innerHTML = "gastorE" + "totalP.value" - "descuento"
+function totalGastos(){
      
+     ck_total.innerHTML= "sumar"
+     ck_total.value = parseFloat(sumar)
+     
+}
+
+//function pagoTotal(){
+ //   sumar = parseInt(gastosE)+parseInt(totalP)-parseInt(descuento);
 //}
-
-
 
 
