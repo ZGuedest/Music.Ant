@@ -85,3 +85,248 @@ var bajo3 ={
     "src": "./img/bajo3.jpg"
 }
 
+var flauta1 ={
+    "id":10,
+    "name":"",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+
+var flauta2 ={
+    "id":11,
+    "name":" ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var flauta3 ={
+    "id":12,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var trompeta1 ={
+    "id":13,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var trompeta2 ={
+    "id":14,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var trompeta3 ={
+    "id":15,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var trompa1 ={
+    "id":16,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var trompa2 ={
+    "id":17,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var trompa3 ={
+    "id":18,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+
+var bateria1 ={
+    "id":19,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var bateria2 ={
+    "id":20,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var bateria3 ={
+    "id":21,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var bongo1 ={
+    "id":22,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var bongo2={
+    "id":23,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var bongo3 ={
+    "id":24,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var miscelanea1={
+    "id":25,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var miscelanea2={
+    "id":26,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var miscelanea3={
+    "id":27,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var mezcladora1={
+    "id":28,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var mezcladora2={
+    "id":29,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var mezcladora3={
+    "id":30,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var amplificador1={
+    "id":31,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var amplificador2={
+    "id":32,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var amplificador3={
+    "id":33,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var microfono1={
+    "id":34,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var microfono2={
+    "id":35,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
+var microfono3={
+    "id":36,
+    "name": " ",
+    "description":"",
+    "precioDescription": "",
+    "precio": 169,
+    "src": ""
+}
+
