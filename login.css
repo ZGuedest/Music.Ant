@@ -1,4 +1,4 @@
-* header nav #menu-iconers a, * header nav #menu-iconers i {
+#lg_fondo a, #lg_fondo i, * header nav #menu-iconers a, * header nav #menu-iconers i {
   font-size: 1em;
   color: black;
 }
@@ -102,7 +102,6 @@
   background-size: contain;
   margin: 0rem;
 }
-
 .card {
   background-color: transparent;
   border: none;

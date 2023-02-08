@@ -22,16 +22,13 @@
                     <input id="buscador" class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
                     <ul id="menu-interior"class="navbar-nav justify-content-around">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Home.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="catalogo.html">Catálogo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Novedades</a>
+                            <a class="nav-link" href="#novedades">Novedades</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Ofertas</a>
+                            <a class="nav-link" href="#ofertas">Ofertas</a>
                         </li>
                     </ul>
                 </div>
@@ -39,9 +36,9 @@
                 
                 <ul id="menu-iconers"class="nav justify-content-around">
                     <li ><i class="fa-solid fa-earth-americas"></i></li>
-                    <li ><i class="fa-regular fa-circle-user"></i></li>
+                    <li ><a href="login.html"><i class="fa-regular fa-circle-user"></i></a></li>
                     <li ><i class="fa-solid fa-heart"></i></li>
-                    <li ><i class="fa-solid fa-cart-shopping"></i></li>
+                    <li ><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>   
             </div>
           </nav>
@@ -53,10 +50,10 @@
     <main>
         <div class="container-sm">
 
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="caja-h2 d-flex flex-row align-items-center justify-content-center">
                     <div class="linea1"></div>
-                    <h2>Novedades</h2>
+                    <h2 id="novedades">Novedades</h2>
                     <div class="linea2"></div>
                 </div>
                 <div class="col-2 card">
@@ -102,10 +99,10 @@
         
                 
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="caja-h2 d-flex flex-row align-items-center justify-content-center">
                     <div class="linea1"></div>
-                    <h2>Ofertas</h2>
+                    <h2 id="ofertas">Ofertas</h2>
                     <div class="linea2"></div>
                 </div>
                 <div class="col-2 card">
@@ -148,11 +145,11 @@
                 
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
               
                 <div class="caja-h2 d-flex flex-row align-items-center justify-content-center">
                     <div class="linea1"></div>
-                    <h2>Mejores Marcas</h2>
+                    <h2 id="mejores-marcas">Mejores Marcas</h2>
                     <div class="linea2"></div>
                 </div>
                 
