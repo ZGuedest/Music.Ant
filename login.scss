@@ -8,9 +8,16 @@
 
 .card{
     background-color: transparent;
-    border:none
-    p{
-        font-size: 45px; 
-        font-family: Blackadder ITC;
-    }
+    border:none;
+    
+}
+
+h2{
+    font-size: 45px; 
+    font-family: Blackadder ITC;
+}
+
+.btn{
+    @include button ($bg-color:$color_VerdeOsc, $wth: 8rem, $colorletra:$color_blanco);
+
 }

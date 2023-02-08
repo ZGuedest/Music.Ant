@@ -105,8 +105,21 @@
 
 .card {
   background-color: transparent;
+  border: none;
 }
-.card border:none p {
+
+h2 {
   font-size: 45px;
   font-family: Blackadder ITC;
+}
+
+.btn {
+  background-color: #387373;
+  width: 8rem;
+  color: white;
+  font-weight: 900;
+}
+.btn:hover {
+  background-color: #E4F2E7;
+  color: black;
 }/*# sourceMappingURL=login.css.map */
