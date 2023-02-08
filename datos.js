@@ -61,8 +61,27 @@ var bajo1 ={
     "id":7,
     "name":"SCHECTER P-4 - Bajo Exótico",
     "description":"Bajo de 4 cuerdas para personas diestras.Cuerpo fabricado en madera de fresno de pantano con tapa de madera de zebrano. Superficie del cuerpo plana en color Faded Vintage Sunburst. Cuello en forma de C delgada, fabricado en madera de arce tostado. Incluye varillas de refuerzo de fibra de carbono para mayor estabilidad. Diapasón de madera de arce tostado. Cuerdas calibre .045 - .105 de Ernie Ball 4 String Super Long. Compatible con estuche SGR-Universal Bass Hardcase (Se vende por separado). Dimensiones: 111,76 x 48,26 x 25,4 centímetros. Peso: 4,54 kg.",
-    "precioDescription": "919 €",
-    "precio": 919,
-    "src": "./img/violin3.jpg"
+    "precioDescription": "1050 €",
+    "precio": 1050,
+    "src": "./img/bajo1.webp"
 
 }
+
+var bajo2 ={
+    "id":8,
+    "name":"Ibanez SR300EB-WK - Bajo Eléctrico 4 cuerdas",
+    "description":"Color: Negro desgastado (Weathered Black). Serie Soundgear. Cuerpo de caoba. Mástil 'SR4' de 5 piezas de arce/walnut, 24 trastes medium. Diapasón de jatoba. Inlays de puntos blancos. Ancho de la cejilla: 38mm. Escala de 864mm/34. Puente Accu-Cast B120. Herrajes negros. Pastillas de doble bobina PowerSpan. Electrónica Ibanez personalizada. Ecualizador de 3 bandas con interruptor 'Power Tap' de 3 posiciones",
+    "precioDescription": "377 €",
+    "precio": 377,
+    "src": "./img/bajo2.jpg"
+}
+
+var bajo3 ={
+    "id":9,
+    "name":"Harley Benton JB-75MN NA - Bajo Eléctrico Vintage",
+    "description":"Vintage Series. Cuerpo de fresno americano. Mástil de arce azucarero canadiense, con tira de 'mofeta' de roseacer. Montaje del mástil: Atornillado (bolt-on). Forma del mástil en 'D'. Diapasón de arce con incrustaciones de bloques en ABS negro. Fileteado del mástil en negro, 20 trastes Medium de alpaca (2,9 mm), Radio del diapasón de 305 mm (12), 2 controles de volumen. Control de tono. Puente Sung Il WB401CR con selletas de latón. Acabado de los herrajes: Cromo. Clavijas de afinación HB CB01-CR. Color: Natural (brillante). Cuerdas originales: D'Addario EXL165 .045 - .105 (artículo nº144505)",
+    "precioDescription": "169 €",
+    "precio": 169,
+    "src": "./img/bajo3.jpg"
+}
+
