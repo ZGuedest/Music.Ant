@@ -1,8 +1,15 @@
-header nav #menu-iconers i {
-  font-size: 1.5em;
+#lg_fondo a, #lg_fondo i, * header nav #menu-iconers a, * header nav #menu-iconers i {
+  font-size: 1em;
+  color: black;
 }
 
-header {
+* {
+  font-family: sans-serif, Arial, Verdana, Tahoma;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+}
+* header {
   background-image: linear-gradient(rgb(56, 115, 115), rgba(56, 115, 115, 0.8), rgba(255, 255, 255, 0.5)), url("./img/fondo2.jpg");
   width: 100%;
   height: 500px;
@@ -13,11 +20,11 @@ header {
   margin: 0rem;
   background-size: cover;
 }
-header nav {
+* header nav {
   background-color: transparent;
   font-weight: 900;
 }
-header nav #logo, header nav #logo2 {
+* header nav #logo {
   background-image: url("./img/logo.png");
   width: 20%;
   height: 5rem;
@@ -29,40 +36,37 @@ header nav #logo, header nav #logo2 {
   background-color: transparent;
   margin: 0rem;
 }
-header nav #buscador {
+* header nav #buscador {
   width: 17rem;
   height: 2rem;
 }
-header nav #menu-interior {
+* header nav #menu-interior {
   width: 40%;
 }
-header nav #menu-iconers {
+* header nav #menu-iconers {
   width: 15%;
 }
-header #frase_nav {
-  padding-left: 20rem;
-  padding-top: 7rem;
-}
-header #frase_nav p {
+* header #frase_imaginacion {
   font-size: 45px;
   font-family: Blackadder ITC;
+  padding-top: 6rem;
+  padding-left: 5rem;
 }
-
-footer {
+* footer {
   padding-top: 4rem;
   background-color: #387373;
 }
-footer .btn {
+* footer .btn {
   background-color: #387373;
   width: 7rem;
   color: white;
   font-weight: 900;
 }
-footer .btn:hover {
+* footer .btn:hover {
   background-color: #E4F2E7;
   color: black;
 }
-footer #appel-store {
+* footer #appel-store {
   background-image: url("./img/appel.png");
   width: 35%;
   height: 7rem;
@@ -72,7 +76,7 @@ footer #appel-store {
   background-size: contain;
   margin: 1rem;
 }
-footer #play-store {
+* footer #play-store {
   background-image: url("./img/play-store.png");
   width: 35%;
   height: 7rem;
@@ -82,17 +86,37 @@ footer #play-store {
   background-size: contain;
   margin: 1rem;
 }
-footer #copyright {
+* footer #copyright {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-lg_fondo {
+#lg_fondo {
   background-image: linear-gradient(rgb(56, 115, 115), rgba(56, 115, 115, 0.8), rgba(255, 255, 255, 0.5)), url("");
   width: 100%;
-  height: 100px;
+  height: 100vh;
   background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0rem;
+}
+.card {
+  background-color: transparent;
+  border: none;
+}
+
+h2 {
+  font-size: 45px;
+  font-family: Blackadder ITC;
+}
+
+.btn {
+  background-color: #387373;
+  width: 8rem;
+  color: white;
+  font-weight: 900;
+}
+.btn:hover {
+  background-color: #E4F2E7;
+  color: black;
 }/*# sourceMappingURL=login.css.map */

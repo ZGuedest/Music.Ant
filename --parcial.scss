@@ -15,7 +15,8 @@ $fontWH2:600;
 
 //CLASES
 %iconos{
-    font-size: 1.5em;
+    font-size: 1em;
+    color: $color_negro;
 }
 
 //MIXINS
@@ -50,6 +51,12 @@ $fontWH2:600;
     margin-left:$marginL;
 }
 
+*{
+    font-family:$tipografía;
+    font-size: $fontSizeGeneral;
+    
+    margin: 0;
+    padding: 0;
 
 header{
        
@@ -62,7 +69,7 @@ header{
        background-color:transparent;
        font-weight: $fontWGeneral;
     
-        #logo,#logo2{
+        #logo{
             @include img ($url:url("./img/logo.png"),$wth:20%,$hght: 5rem);
             background-color: transparent;
             margin: 0rem;
@@ -78,22 +85,24 @@ header{
         }
         #menu-iconers{
             width: 15%;
-            i{
+            a , i{
                 @extend %iconos;
             }
         }
 
     }
 
-    #frase_nav{
-        padding-left: 20rem;
-        padding-top: 7rem;
+    // #frase_nav{
+    //     padding-left: 20rem;
+    //     padding-top: 7rem;
 
-        p{
-            font-size: 45px; 
-            font-family: Blackadder ITC;
-        }
+    #frase_imaginacion{
+        font-size: 45px; 
+        font-family: Blackadder ITC;
+        padding-top: 6rem;
+        padding-left: 5rem;
     }
+    // }
 }
 
 
@@ -120,5 +129,6 @@ footer{
     // @include img($url: (linear-gradient(rgb(255, 255, 255,0.5), rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8)),
     // url("")), $wth:100%,$hght: auto,$margin:0rem);
     background-color: $color_VerdeOsc;
+}
 }
  

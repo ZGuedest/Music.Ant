@@ -8,6 +8,7 @@
         <script src="https://kit.fontawesome.com/8c655d3807.js" crossorigin="anonymous"></script>
         <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="carrito.css">
         
     </head>
@@ -18,16 +19,16 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
-                    <div id="logo2"></div>
+                    <div id="logo"></div>
                     
                     <div id="navbarNav" class="collapse navbar-collapse justify-content-around" >
                         <input id="buscador" class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <ul id="menu-interior"class="navbar-nav justify-content-around">
+                        <ul id="#menu-iconers"class="navbar-nav justify-content-around">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="Home.html">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="catalogoo.html">Catálogo</a>
+                                <a class="nav-link" href="catalogo.html">Catálogo</a>
                             </li>
                         </ul>
                     </div>
@@ -35,25 +36,24 @@
                     
                     <ul id="menu-iconers"class="nav justify-content-around">
                         <li ><i class="fa-solid fa-earth-americas"></i></li>
-                        <li ><i class="fa-regular fa-circle-user"></i></li>
+                        <li ><a href="login.html"><i class="fa-regular fa-circle-user"></i></a></li>
                         <li ><i class="fa-solid fa-heart"></i></li>
-                        <li ><i class="fa-solid fa-cart-shopping"></i></li>
                     </ul>   
                 </div>
               </nav>
     
         </header>
-        <main>
+        <main class="d-flex justify-content-center">
 
-            <div  id="cr_contenedor_principal" class="container-sm d-flex flex-row flex-wrap">
+            <div  id="cr_contenedor_principal" class="container-sm row justify-content-center">
                 
                 <!-- CAJA PRODUCTO -->
 
-                <div id="cr_caja_producto" class="card mb-3 row g-0 d-flex flex-row col-8" >
+                <div id="cr_caja_producto" class="card m-3 row g-0 d-flex flex-row col-7 mt-0" >
                         <div id="cr_caja_contenedora_imagen" class="col-md-4">
                             <div id="cr_imagen_producto"class="img  col-md-4"></div>
                         </div>
-                        <div id="cr_caja_contenedora_text_producto" class="col-md-8 p-4">
+                        <div id="cr_caja_contenedora_text_producto" class="col-md-8 p-3">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             
@@ -65,7 +65,7 @@
                                     <input type="text" style="height: 1.3rem; width: 2rem;" value="1">
                                     <button class= " d-flex justify-content-center align-items-center " style="height: 1.3rem; width: 1rem;">+</button>
                                 </div>
-                                <p class="card-text"> precio por cantidad: <small  id="cr_precio_cantidad"  class="text-muted">20€</small></p>
+                                <p class="card-text px-2"> precio por cantidad: <small  id="cr_precio_cantidad"  class="text-muted">20€</small></p>
                             </div>
                             <div class="d-flex gap-0 column-gap-3">
                                 <i id="cr_basura" class="fa-solid fa-trash"></i>
@@ -76,7 +76,7 @@
                 </div>
 
                 <!-- CAJA COMPRAR PEDIDO -->
-                <div id= "cr_comprar_pedido" class="card p-4 col-4">
+                <div id= "cr_comprar_pedido" class="card p-3 col-4">
                     <div class="Pedido">
                         <h5 class="card-title">Resumen del Pedido</h5>
                         <div class="d-flex  flex-column align-items-center gap-0 row-gap-3">
@@ -85,34 +85,10 @@
                                 <p id="cr_precio_total" class="card-text precios">  2368 €</p>
                             </div>
                             
-                           
-                            <!-- Button trigger modal -->
-<button id="cr_comprar_ahora" type="button" class="btn btn-primary  ml-10" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    COMPRAR AHORA
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">GRACIAS POR CONFIRAR EN NOSOTROS</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Tu compra ha sido realizada con exito.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+                            <a href="checkout.html" class="btn btn-primary" >COMPRAR</a>
                         </div>
                         
-                        <h5 class="card-title">Aceptamos</h5>
+                        <h5 class="card-title pt-4">Aceptamos</h5>
                         <div class="d-flex gap-0 column-gap-3">
                             <i id="cr_visa"class="fa-brands fa-cc-visa"></i>
                             <i id="cr_paypal"class="fa-brands fa-cc-paypal"></i>
@@ -124,22 +100,6 @@
                 </div> 
 
             </div>
-
-
-<!-------------------------VENTANA MODAL /POP UP CARRITO-----------(ERROR)------------------------------------------------->
-
-
-
-  
-
-
-
-
-
-
-
-
-
 
         </main>
         <!-- Footer -->

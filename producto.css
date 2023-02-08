@@ -32,6 +32,10 @@
   background-color: #387373;
 }
 
+.btn:hover {
+  background-color: rgb(84, 7, 82);
+}
+
 .img {
   width: 80%;
   height: 10rem;
@@ -41,4 +45,12 @@
   background-size: contain;
   margin: 2rem;
   background-image: url("./img/guitarra1.jpg");
+}
+
+.cajaenvio-devol {
+  background-color: #387373;
+}
+
+.text-center {
+  background-color: #387373;
 }/*# sourceMappingURL=producto.css.map */
