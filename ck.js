@@ -1,7 +1,13 @@
 let ck_primerradio = document.getElementById("ck_firstRadio");
 let ck_segundoradio = document.getElementById("ck_secondRadio");
 let ck_tercerradio = document.getElementById("ck_thirdRadio");
-let gastosE= document.getElementById("ck_ge");
+let gastosE = document.getElementById("ck_ge");
+let totatP = document.getElementById("ck_producto").value;
+let descuento = document.getElementById("ck_dto").value;
+let total = document.getElementById("ck_total");
+total = gastosE + totalP - descuento;
+
+
 
 ck_primerradio.addEventListener("change",()=>{
     gastosDeEnvio()
@@ -13,7 +19,7 @@ ck_segundoradio.addEventListener("change",()=>{
 
 ck_tercerradio.addEventListener("change",()=>{
     gastosDeEnvio()
-    
+
 })
 
 function gastosDeEnvio(){
@@ -38,6 +44,10 @@ function gastosDeEnvio(){
 
 
 }
+//function totalGastos(){
+    //total.innerHTML = "gastorE" + "totalP.value" - "descuento"
+     
+//}
 
 
 
