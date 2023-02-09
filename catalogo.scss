@@ -7,7 +7,7 @@
 //  }
 
 #cheks-cuerda, #cheks-viento, #checks-percusion, #cheks-electronico{
-    display: none !important;
+    display: none;
 }
 
     #cont-radio-check{
@@ -40,4 +40,4 @@
         @include img($url:url("./img/electronico1.webp"),$wth:18%,$hght: 50px,$margin:0rem);
     }
 
-    
+   

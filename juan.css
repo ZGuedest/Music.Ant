@@ -90,10 +90,6 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#cheks-cuerda {
-  visibility: hidden;
-}
-
 #cheks-viento {
   visibility: hidden;
 }
