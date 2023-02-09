@@ -53,21 +53,21 @@
                 <h2 class=" p-3 col-md-12 border-bottom border-2">Seleccione el Tipo de Envio</h2>
                 <ul class="list-group p-3 mb-2   col-md-12">
                     <li class="list-group-item border border-0 border-bottom">
-                        <input class="form-check-input me-1 " type="radio" name="listGroupRadio" value="" id="ck_firstRadio" checked>
+                        <input id="ck_firstRadio"  class="form-check-input me-1 " type="radio" name="listGroupRadio" value="" checked>
                         <label class="form-check-label" for="firstRadio"> 
                             <strong> Recogida en tienda </strong><br> Gratis   
                             <small class="text-muted">(Puede recoger su pedido a partir del Jueves)</small>
                         </label>
                     </li>
                     <li class="list-group-item border border-0 border-bottom">
-                        <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="ck_secondRadio">
+                        <input id="ck_secondRadio" class="form-check-input me-1" type="radio" name="listGroupRadio" value="" >
                         <label class="form-check-label" for="secondRadio"> 
                             <strong> Enviar a domicilio 72h </strong><br> 10€ 
                             <small class="text-muted">(Recibira su pedido entre las 9.00am y 2:00pm del Jueves) </small>
                         </label>
                     </li>
                     <li class="list-group-item border border-0 border-bottom">
-                        <input class="form-check-input me-1 " type="radio" name="listGroupRadio" value="" id="ck_thirdRadio">
+                        <input id="ck_thirdRadio" class="form-check-input me-1 " type="radio" name="listGroupRadio" value="" >
                         <label class="form-check-label" for="thirdRadio"> 
                             <strong> Enviar a domicilio 24h</strong> <br>  20€ 
                             <small class="text-muted">(Recibirá su pedido entre las 9.00am y 2.00pm de Mañana) </small>
@@ -229,10 +229,10 @@
             <section id="resumen-pedido">
                 <h5 class="h4 pb-2 mb-4 text-dark border-bottom border-munder m-4">Resumen del Pedido:</h5>
                 <ul>
-                    <li class="list-group-item">Precio total de los productos: <span class="badge text-bg-secondary m-3 px-4">0€</span></li>
-                    <li class="list-group-item">Precio de envio: <span class="badge text-bg-secondary m-3 px-4">0€</span></li>
-                    <li class="list-group-item">Descuento: <span class="badge text-bg-secondary m-3 px-4">0€</span></li>
-                    <li class="list-group-item"><strong>Total a Pagar: <span class="badge text-bg-secondary m-3  px-4">0€</span></li>
+                    <li class="list-group-item">Precio total de los productos: <span id="ck_producto" value = 0 class="badge text-bg-secondary m-3 px-4">20</span>€</li>
+                    <li class="list-group-item">Precio de envio: <span id="ck_ge" class="badge text-bg-secondary m-3 px-4">0</span>€</li>
+                    <li class="list-group-item">Descuento: <span id="ck_dto" value = 0 class="badge text-bg-secondary m-3 px-4">0</span>€</li>
+                    <li class="list-group-item"><strong>Total a Pagar: <span id="ck_total" class="badge text-bg-secondary m-3  px-4">0</span>€</li>
                 </ul>
 
             </section>
@@ -368,6 +368,7 @@
           </div>
       </div>           
     </footer>
+    <script src="ck.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8c655d3807.js" crossorigin="anonymous"></script>
   </body>
