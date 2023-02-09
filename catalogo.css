@@ -90,8 +90,8 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#cheks-cuerda, #cheks-viento, #checks-percusion, #cheks-electronico {
-  display: none !important;
+#checks-cuerda, #checks-viento, #checks-percusion, #checks-electronico {
+  display: none;
 }
 
 #cont-radio-check {
