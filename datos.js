@@ -87,11 +87,11 @@ var bajo3 ={
 
 var flauta1 ={
     "id":10,
-    "name":"",
-    "description":"",
-    "precioDescription": "",
-    "precio": 169,
-    "src": ""
+    "name":"Startone SFL-55 Flute",
+    "description":"Cabeza, cuerpo y mecánica de alpaca. Completamente plateada. Mecanismo de mi. Llaves cerrada. Sol desalineado. Incluye maletín. ¡Completamente revisada en taller!",
+    "precioDescription": "119 €",
+    "precio": 119,
+    "src": "./img/"
 }
 
 
