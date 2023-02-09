@@ -1,23 +1,23 @@
 const radioCatalogo = document.getElementById('radiocatalogo');
 
-// const radioCuerda = document.getElementById('radio-cuerda');
-// const checksCuerda = document.getElementById('cheks-cuerda');
-// const radioViento = document.getElementById('radio-viento');
-// const checksViento = document.getElementById('cheks-viento');
-// const radioPercusion = document.getElementById('radio-percusion');
-// const checksPercusion = document.getElementById('cheks-percusion');
-// const radioElectronico = document.getElementById('radio-electronico');
-// const checksElectronico = document.getElementById('cheks-electronico');
+const radioCuerda = document.getElementById('radio-cuerda');
+const checksCuerda = document.getElementById('cheks-cuerda');
+const radioViento = document.getElementById('radio-viento');
+const checksViento = document.getElementById('cheks-viento');
+const radioPercusion = document.getElementById('radio-percusion');
+const checksPercusion = document.getElementById('cheks-percusion');
+const radioElectronico = document.getElementById('radio-electronico');
+const checksElectronico = document.getElementById('cheks-electronico');
 
 
-//  radioCuerda.addEventListener('change', yesnoCheck)
-//  radioPercusion.addEventListener('change', yesnoCheck)
-//  radioViento.addEventListener('change', yesnoCheck)
-//  radioElectronico.addEventListener('change', yesnoCheck)
+radioCuerda.addEventListener('change', yesnoCheck)
+radioPercusion.addEventListener('change', yesnoCheck)
+radioViento.addEventListener('change', yesnoCheck)
+radioElectronico.addEventListener('change', yesnoCheck)
 
 
 
-//  function yesnoCheckCuerda() {
+  function yesnoCheckCuerda() {
 //     if (radioCuerda.checked==true) {
 //         console.log('visible')
 //         checksCuerda.style.visibility = 'visible';
