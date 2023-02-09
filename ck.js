@@ -11,19 +11,8 @@ let cupon = document.getElementById("inputcupon");
 
 let codigoReal= "250X"
 
-
-// let btnPedido = document.getElementById("ck_bntpedido");
-
-
-
-
-
 gastosDeEnvio()
-
 totalGastos()
-
-
-
 ck_primerradio.addEventListener("change",()=>{
     gastosDeEnvio()
     totalGastos()
@@ -45,7 +34,6 @@ cupon.addEventListener("keyup",(event)=>{
     debugger
     if (event.code === 'Enter') {
         calcular()
-        //totalGastos()
     }
 
 })
@@ -104,10 +92,6 @@ function gastosDeEnvio(){
 
 
   }
-
-
-
-
 
 
 
