@@ -92,6 +92,22 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+#cheks-cuerda {
+  visibility: hidden;
+}
+
+#cheks-viento {
+  visibility: hidden;
+}
+
+#checks-percusion {
+  visibility: hidden;
+}
+
+#cheks-electronico {
+  visibility: hidden;
+}
+
 #cont-radio-check {
   border: 2px solid #387373;
   border-radius: 1.5rem;
@@ -103,8 +119,8 @@
   width: 15%;
 }
 
-#cheks-electronico {
-  width: 50%;
+#caja-radio-percusion, #caja-radio-electronico {
+  width: 10rem;
 }
 
 #ico-cuerda {
@@ -132,7 +148,7 @@
 
 #ico-percusion {
   background-image: url("./img/percusion-ico.jpg");
-  width: 20%;
+  width: 18%;
   height: 50px;
   background-position: center;
   background-color: transparent;
@@ -143,15 +159,11 @@
 
 #ico-electronico {
   background-image: url("./img/electronico1.webp");
-  width: 20%;
+  width: 18%;
   height: 50px;
   background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0rem;
-}
-
-#cheks-cuerda {
-  display: none !important;
 }/*# sourceMappingURL=juan.css.map */
