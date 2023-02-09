@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="home.css" rel="stylesheet">
+    <link rel="stylesheet" href="Mohamed.js">
     
     <title>Document</title>
 </head>
@@ -22,16 +23,13 @@
                     <input id="buscador" class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
                     <ul id="menu-interior"class="navbar-nav justify-content-around">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Home.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="catalogo.html">Catálogo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Novedades</a>
+                            <a class="nav-link" href="#novedades">Novedades</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Ofertas</a>
+                            <a class="nav-link" href="#ofertas">Ofertas</a>
                         </li>
                     </ul>
                 </div>
@@ -39,27 +37,27 @@
                 
                 <ul id="menu-iconers"class="nav justify-content-around">
                     <li ><i class="fa-solid fa-earth-americas"></i></li>
-                    <li ><i class="fa-regular fa-circle-user"></i></li>
+                    <li ><a href="login.html"><i class="fa-regular fa-circle-user"></i></a></li>
                     <li ><i class="fa-solid fa-heart"></i></li>
-                    <li ><i class="fa-solid fa-cart-shopping"></i></li>
+                    <li ><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>   
             </div>
           </nav>
 
-        <div id="frase_nav">
-            <p>"Deja tu imaginación volar... siente la música"</p>
-        </div>
+        <!-- <div id="frase_nav" class="container-sm justify-content-center"> -->
+            <p id="frase_imaginacion">"Deja tu imaginación volar... siente la música"</p>
+        <!-- </div> -->
     </header>
     <main>
         <div class="container-sm">
 
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="caja-h2 d-flex flex-row align-items-center justify-content-center">
                     <div class="linea1"></div>
-                    <h2>Novedades</h2>
+                    <h2 id="novedades">Novedades</h2>
                     <div class="linea2"></div>
                 </div>
-                <div class="col-2 card">
+                <div class="col-2 card cardH">
                   
                     <div id="imgN1" class="img"></div>
                     <div class="card-body">
@@ -73,7 +71,7 @@
                     </div>
                 </div>
     
-                <div class="col-2 card">
+                <div class="col-2 card cardH">
                     <div id="imgN2" class="img"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -88,7 +86,7 @@
                 </div>
     
     
-                <div class="col-2 card">
+                <div class="col-2 card cardH">
                     <div id= "imgN3" class="img"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -102,13 +100,13 @@
         
                 
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="caja-h2 d-flex flex-row align-items-center justify-content-center">
                     <div class="linea1"></div>
-                    <h2>Ofertas</h2>
+                    <h2 id="ofertas">Ofertas</h2>
                     <div class="linea2"></div>
                 </div>
-                <div class="col-2 card">
+                <div class="col-2 card cardH">
                     <div id="imgO1" class="img"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -120,7 +118,7 @@
                     </div>
                 </div>
     
-                <div class="col-2 card">
+                <div class="col-2 card cardH">
                     <div id="imgO2" class="img"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -133,7 +131,7 @@
                 </div>
     
     
-                <div class="col-2 card">
+                <div class="col-2 card cardH">
                     <div id= "imgO3" class="img"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -148,11 +146,11 @@
                 
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
               
                 <div class="caja-h2 d-flex flex-row align-items-center justify-content-center">
                     <div class="linea1"></div>
-                    <h2>Mejores Marcas</h2>
+                    <h2 id="mejores-marcas">Mejores Marcas</h2>
                     <div class="linea2"></div>
                 </div>
                 

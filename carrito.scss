@@ -16,18 +16,17 @@ header{
     padding-top: 6rem;
     padding-bottom: 6rem;
     #cr_caja_producto{
+
+        width: 40rem;
         #cr_imagen_producto{
     
-            @include img($wth:80%,$hght: 10rem);
+            @include img($wth:80%,$hght: 10rem, $margin:1.6rem);
         }
     
-        #cr_precio_producto{
+        #cr_precio_producto, #cr_precio_cantidad{
             @extend %precio;
         }
-        #cr_precio_cantidad{
-            @extend %precio;
-        }
-    
+       
         #cr_basura,#cr_corazon{
             @extend %iconos;
         }
@@ -35,8 +34,8 @@ header{
     }
     
     #cr_comprar_pedido{
-        
-        height:225px;
+        width: 20rem;
+        height:250px;
         #cr_carrito{
             @extend %iconos;
         }
@@ -62,15 +61,3 @@ header{
 
 
 
-<<<<<<< HEAD
-    width: $wth;
-    height: $hght;
-    background-position: center;
-    background-color: $color_blanco;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 2rem;
-}
-
-=======
->>>>>>> 3023c1e3315d2f8994a995beb2fd9e84c1fa8b70

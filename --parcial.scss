@@ -69,7 +69,7 @@ header{
        background-color:transparent;
        font-weight: $fontWGeneral;
     
-        #logo,#logo2{
+        #logo{
             @include img ($url:url("./img/logo.png"),$wth:20%,$hght: 5rem);
             background-color: transparent;
             margin: 0rem;
@@ -92,15 +92,17 @@ header{
 
     }
 
-    #frase_nav{
-        padding-left: 20rem;
-        padding-top: 7rem;
+    // #frase_nav{
+    //     padding-left: 20rem;
+    //     padding-top: 7rem;
 
-        p{
-            font-size: 45px; 
-            font-family: Blackadder ITC;
-        }
+    #frase_imaginacion{
+        font-size: 45px; 
+        font-family: Blackadder ITC;
+        padding-top: 6rem;
+        padding-left: 5rem;
     }
+    // }
 }
 
 
