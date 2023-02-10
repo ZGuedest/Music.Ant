@@ -17,4 +17,3 @@ btnCerrarModal.addEventListener("click",function()
     modal.close();
 })
 
-

@@ -1,0 +1,4 @@
+function buscador_interno(){
+
+}
+
