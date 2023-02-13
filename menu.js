@@ -46,6 +46,8 @@ let euskera = [ "Hasi", "Bilatu", "Katalogoa", "Berria", "Eskaintzak"];
 
 let array=[];
 
+array=espanol
+
 let nav = document.createElement("nav");
 
 let header= document.getElementsByTagName("header")[0]
@@ -59,15 +61,15 @@ header.innerHTML = `
     <div id="logo"></div>
 
     <div id="navbarNav" class="collapse navbar-collapse justify-content-around" >
-        <input id="buscador" class="form-control" type="search" placeholder=${array[1]} aria-label="Buscar">
+        <input id="buscador" class="pt-3 form-control" type="search" placeholder=${array[1]} aria-label="Buscar">
         <ul id="menu-interior"class="navbar-nav justify-content-around">
-            <li class="nav-item">
+            <li class="nav-item pt-3">
                 <a class="nav-link" href="catalogo.html">${array[2]}</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item pt-3">
                 <a class="nav-link" href="#novedades">${array[3]}</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item pt-3">
                 <a class="nav-link" href="#ofertas">${array[4]}</a>
             </li>
         </ul>
@@ -78,7 +80,7 @@ header.innerHTML = `
                     
             <li > <div class="dropdown">
                 <button class="btn btn-secondary d-flex flex-row text-center align-items-center dropdown-toggle bg-transparent border-0 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <p id="idio-select" class=" pt-3">Español</p>
+                    <p id="idio-select" class=" pt-3 ">Español</p>
                     <i class="fa-solid fa-earth-americas text-dark"></i>
                 </button>
                 <ul class="dropdown-menu">
