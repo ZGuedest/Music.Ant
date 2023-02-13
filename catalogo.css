@@ -90,7 +90,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#checks-cuerda, #checks-viento, #checks-percusion, #checks-electronico {
+#cheks-cuerda, #cheks-viento, #checks-percusion, #cheks-electronico {
   display: none;
 }
 
@@ -152,4 +152,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0rem;
+}
+
+.img {
+  width: 90%;
 }/*# sourceMappingURL=catalogo.css.map */

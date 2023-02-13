@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <a href="#es" data-reload="Español"></a>
+        <a href="#eng" data-reload="English"></a>
+        <a href="#eus" data-reload="Euskera"></a>
+        <p id="hola">
+            ¡Bienvenidos!
+        </p>
+        <script>
+            //define language reload anchors
+            var = dataReload = document.querySelectorAll("(data-reload)")
+
+
+            //language translation
+
+            var = language {
+                es = {bienvenido : "¡Bienvenidos!"
+
+                },
+                eng = {bienvenido : "Welcome!"
+
+                },
+                eus = {bienvenido "¡kaixo!"
+                //define language via window hash
+                };
+                if (window.location.hash) {
+                    if (window.location.hash === "#eng") {
+                        hola.textContent = language.eng.bienvenido;
+                    }
+                }
+            }
+        </script>
+
+
+        
+    </body>
+</html>

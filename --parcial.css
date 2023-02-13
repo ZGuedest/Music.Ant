@@ -1,6 +1,7 @@
 * header nav #menu-iconers a, * header nav #menu-iconers i {
   font-size: 1em;
   color: black;
+  cursor: pointer;
 }
 
 * {
