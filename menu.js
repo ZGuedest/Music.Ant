@@ -40,9 +40,11 @@
 
 //    --------idiomas navegador----------
 
-let array = ["Inicio", "Buscar", "Catálogo", "Novedades", "Ofertas"];
+let espanol = ["Inicio", "Buscar", "Catálogo", "Novedades", "Ofertas"];
 let ingles = [ "Start", "Search", "Catalogue", "News", "Offers"];
 let euskera = [ "Hasi", "Bilatu", "Katalogoa", "Berria", "Eskaintzak"];
+
+let array=[];
 
 let nav = document.createElement("nav");
 
@@ -68,26 +70,28 @@ header.innerHTML = `
             <li class="nav-item">
                 <a class="nav-link" href="#ofertas">${array[4]}</a>
             </li>
-            <li > <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle bg-transparent border-0 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-earth-americas text-dark"></i>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Español</a></li>
-                    <li><a class="dropdown-item" href="#">Inglés</a></li>
-                    <li><a class="dropdown-item" href="#">Euskera</a></li>
-                </ul>
-            </li> 
-
         </ul>
     </div>
 
 
-    <ul id="menu-iconers"class="nav justify-content-around">
-        <li ><a href="login.html"><i class="fa-regular fa-circle-user"></i></a></li>
-        <li ><i class="fa-solid fa-heart"></i></li>
-        <li ><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-    </ul>   
+        <ul id="menu-iconers"class="nav pt-3 justify-content-around">
+                    
+            <li > <div class="dropdown">
+                <button class="btn btn-secondary d-flex flex-row text-center align-items-center dropdown-toggle bg-transparent border-0 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <p id="idio-select" class=" pt-3">Español</p>
+                    <i class="fa-solid fa-earth-americas text-dark"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li value="espanol"><a class=" idioma px-1 py-1 dropdown-item" href="#">Español</a></li>
+                    <li value="ingles"><a class=" idioma px-1 py-1 dropdown-item" href="#">Inglés</a></li>
+                    <li value="euskera"><a class=" idioma px-1 py-1 dropdown-item" href="#">Euskera</a></li>
+                </ul>
+            </li>
+                                
+            <li ><a href="login.html"><i class="pt-4 fa-regular fa-circle-user"></i></a></li>
+            <li ><i class="pt-4 fa-solid fa-heart"></i></li>
+            <li ><a href="carrito.html"><i class="pt-4 fa-solid fa-cart-shopping"></i></a></li>
+        </ul>     
     </div>
 </nav>`
 
@@ -103,3 +107,5 @@ let p= document.createElement("p");
 nav.className = "p";
 nav.innerHTML =`<p id="frase_imaginacion">"${array_p[5]}"</p>
 <!-- </div> -->`
+
+
