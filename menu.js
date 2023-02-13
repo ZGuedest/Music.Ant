@@ -45,38 +45,52 @@ let ingles = [ "Start", "Search", "Catalogue", "News", "Offers"];
 let euskera = [ "Hasi", "Bilatu", "Katalogoa", "Berria", "Eskaintzak"];
 
 let nav = document.createElement("nav");
-nav.className = "navbar navbar-expand-lg navbar-light";
-nav.innerHTML = `
 
-<div class="container-xl">
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-<div id="logo"></div>
+let header= document.getElementsByTagName("header")[0]
+header.innerHTML = `
+<nav class="navbar navbar-expand-lg navbar-light">
 
-<div id="navbarNav" class="collapse navbar-collapse justify-content-around" >
-    <input id="buscador" class="form-control" type="search" placeholder=${array[1]} aria-label="Buscar">
-    <ul id="menu-interior"class="navbar-nav justify-content-around">
-        <li class="nav-item">
-            <a class="nav-link" href="catalogo.html">${array[2]}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#novedades">${array[3]}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#ofertas">${array[4]}</a>
-        </li>
-    </ul>
-</div>
+    <div class="container-xl">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="logo"></div>
+
+    <div id="navbarNav" class="collapse navbar-collapse justify-content-around" >
+        <input id="buscador" class="form-control" type="search" placeholder=${array[1]} aria-label="Buscar">
+        <ul id="menu-interior"class="navbar-nav justify-content-around">
+            <li class="nav-item">
+                <a class="nav-link" href="catalogo.html">${array[2]}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#novedades">${array[3]}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#ofertas">${array[4]}</a>
+            </li>
+            <li > <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle bg-transparent border-0 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-earth-americas text-dark"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Español</a></li>
+                    <li><a class="dropdown-item" href="#">Inglés</a></li>
+                    <li><a class="dropdown-item" href="#">Euskera</a></li>
+                </ul>
+            </li> 
+
+        </ul>
+    </div>
 
 
-<ul id="menu-iconers"class="nav justify-content-around">
-    <li ><i class="fa-solid fa-earth-americas"></i></li>
-    <li ><a href="login.html"><i class="fa-regular fa-circle-user"></i></a></li>
-    <li ><i class="fa-solid fa-heart"></i></li>
-    <li ><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-</ul>   
-</div>`
+    <ul id="menu-iconers"class="nav justify-content-around">
+        <li ><a href="login.html"><i class="fa-regular fa-circle-user"></i></a></li>
+        <li ><i class="fa-solid fa-heart"></i></li>
+        <li ><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+    </ul>   
+    </div>
+</nav>`
+
 
 
 //--------idiomas frase logo----------
