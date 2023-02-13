@@ -61,7 +61,7 @@ header.innerHTML = `
     <div id="logo"></div>
 
     <div id="navbarNav" class="collapse navbar-collapse justify-content-around" >
-        <input id="buscador" class="pt-3 form-control" type="search" placeholder=${array[1]} aria-label="Buscar">
+        <input id="buscador" class="mt-3 form-control" type="search" placeholder=${array[1]} aria-label="Buscar">
         <ul id="menu-interior"class="navbar-nav justify-content-around">
             <li class="nav-item pt-3">
                 <a class="nav-link" href="catalogo.html">${array[2]}</a>
@@ -80,7 +80,7 @@ header.innerHTML = `
                     
             <li > <div class="dropdown">
                 <button class="btn btn-secondary d-flex flex-row text-center align-items-center dropdown-toggle bg-transparent border-0 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <p id="idio-select" class=" pt-3 ">Español</p>
+                    <p id="idio-select" class=" pt-3">Español</p>
                     <i class="fa-solid fa-earth-americas text-dark"></i>
                 </button>
                 <ul class="dropdown-menu">

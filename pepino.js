@@ -13,8 +13,6 @@ function cargarDelLocalStorage(){
     return productos;
 
 }
-
-
 let productos = cargarDelLocalStorage();
 
 console.log(productos)
@@ -39,7 +37,7 @@ function pintarCarrito(){
                     <p  class="card-text cr_precio_producto">precio del producto: <small id="" class="text-muted">${product.precio}</small></p>
 
                     <input  type="number" class="aumentar" value=${product.cantidad} name="aumentar" min="1" max="10">
-                    <p class="card-text px-2"> precio por cantidad: <small  id="cr_precio_cantidad"  class="text-muted">20€</small></p>
+                    <p class="card-text px-2"> precio por cantidad: <small  id="cr_precio_cantidad"  class="text-muted">${product.cantidad * product.precio}</small></p>
                 </div>
                 <div class="d-flex gap-0 column-gap-3">
                     <i class="cr_basura fa-solid fa-trash"></i>

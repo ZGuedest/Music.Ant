@@ -465,7 +465,6 @@ cargarLocalStorage();
 
 
 //CARGAR PRODUCTOS AL LOCAL STORAGE
-//LIMPIAR EL LOCAL STORAGE
 function cargarLocalStorage(){
 
     //localStorage.clear()
