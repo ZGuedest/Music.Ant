@@ -18,17 +18,22 @@ header{
     #cr_caja_producto{
 
         width: 40rem;
-        #cr_imagen_producto{
+        .cr_imagen_producto{
     
-            @include img($wth:80%,$hght: 10rem, $margin:1.6rem);
+            @include img($wth:20%,$hght: 10rem, $margin:0rem);
         }
     
-        #cr_precio_producto, #cr_precio_cantidad{
+        .cr_precio_producto, #cr_precio_cantidad{
             @extend %precio;
         }
        
-        #cr_basura,#cr_corazon{
+        .cr_basura,.cr_corazon{
             @extend %iconos;
+            font-size: x-large;
+        }
+
+        input{
+            height: 2rem;
         }
        
     }
@@ -52,6 +57,7 @@ header{
     
         #cr_visa, #cr_paypal,#cr_mastercard{
             @extend %iconos;
+            font-size: x-large;
         }
     }
  }

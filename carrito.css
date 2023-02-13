@@ -1,6 +1,7 @@
-#cr_contenedor_principal #cr_comprar_pedido #cr_visa, #cr_contenedor_principal #cr_comprar_pedido #cr_paypal, #cr_contenedor_principal #cr_comprar_pedido #cr_mastercard, #cr_contenedor_principal #cr_comprar_pedido #cr_carrito, #cr_contenedor_principal #cr_caja_producto #cr_basura, #cr_contenedor_principal #cr_caja_producto #cr_corazon, * header nav #menu-iconers a, * header nav #menu-iconers i {
+#cr_contenedor_principal #cr_comprar_pedido #cr_visa, #cr_contenedor_principal #cr_comprar_pedido #cr_paypal, #cr_contenedor_principal #cr_comprar_pedido #cr_mastercard, #cr_contenedor_principal #cr_comprar_pedido #cr_carrito, #cr_contenedor_principal #cr_caja_producto .cr_basura, #cr_contenedor_principal #cr_caja_producto .cr_corazon, * header nav #menu-iconers a, * header nav #menu-iconers i {
   font-size: 1em;
   color: black;
+  cursor: pointer;
 }
 
 * {
@@ -90,7 +91,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#cr_contenedor_principal #cr_comprar_pedido #cr_precio_total, #cr_contenedor_principal #cr_caja_producto #cr_precio_producto, #cr_contenedor_principal #cr_caja_producto #cr_precio_cantidad {
+#cr_contenedor_principal #cr_comprar_pedido #cr_precio_total, #cr_contenedor_principal #cr_caja_producto .cr_precio_producto, #cr_contenedor_principal #cr_caja_producto #cr_precio_cantidad {
   font-weight: bold;
   font-size: large;
 }
@@ -113,15 +114,21 @@ header {
 #cr_contenedor_principal #cr_caja_producto {
   width: 40rem;
 }
-#cr_contenedor_principal #cr_caja_producto #cr_imagen_producto {
+#cr_contenedor_principal #cr_caja_producto .cr_imagen_producto {
   background-image: url("./img/guitarra1.jpg");
-  width: 80%;
+  width: 20%;
   height: 10rem;
   background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 1.6rem;
+  margin: 0rem;
+}
+#cr_contenedor_principal #cr_caja_producto .cr_basura, #cr_contenedor_principal #cr_caja_producto .cr_corazon {
+  font-size: x-large;
+}
+#cr_contenedor_principal #cr_caja_producto input {
+  height: 2rem;
 }
 #cr_contenedor_principal #cr_comprar_pedido {
   width: 20rem;
@@ -140,4 +147,7 @@ header {
 #cr_contenedor_principal #cr_comprar_pedido #cr_comprar_ahora:hover {
   background-color: #E4F2E7;
   color: black;
+}
+#cr_contenedor_principal #cr_comprar_pedido #cr_visa, #cr_contenedor_principal #cr_comprar_pedido #cr_paypal, #cr_contenedor_principal #cr_comprar_pedido #cr_mastercard {
+  font-size: x-large;
 }/*# sourceMappingURL=carrito.css.map */
