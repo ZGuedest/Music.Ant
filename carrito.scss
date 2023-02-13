@@ -29,6 +29,11 @@ header{
        
         .cr_basura,.cr_corazon{
             @extend %iconos;
+            font-size: x-large;
+        }
+
+        input{
+            height: 2rem;
         }
        
     }
@@ -52,6 +57,7 @@ header{
     
         #cr_visa, #cr_paypal,#cr_mastercard{
             @extend %iconos;
+            font-size: x-large;
         }
     }
  }
