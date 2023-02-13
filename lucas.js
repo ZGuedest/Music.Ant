@@ -1,8 +1,4 @@
-
-
 //localStorage.setItem('gmail'," ");
-
-
 
 let cerrar= document.getElementById("cerrar")
 
