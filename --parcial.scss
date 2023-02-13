@@ -77,7 +77,7 @@ header{
         }
 
         #buscador{
-            width: 17rem;
+            width: 15rem;
             height: 2rem;
         }
 
@@ -85,7 +85,7 @@ header{
             width: 40%;
         }
         #menu-iconers{
-            width: 15%;
+            width: 20%;
             a , i{
                 @extend %iconos;
             }
