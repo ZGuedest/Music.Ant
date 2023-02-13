@@ -17,3 +17,5 @@ function cambiar(corazon) {
         corazon.setAttribute("class", "fa-regular fa-heart corazon-vacio");
     }
 }
+
+

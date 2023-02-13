@@ -11,11 +11,9 @@ function regestrar(){
 
     localStorage.setItem('gmail',gamil_gmail);
     localStorage.setItem('password',password_password);
-
-
-
-
-
+    if(gmail=="lucas" && password=="1234"){
+        window.location.href="Index.html"
+    }
 
 }
 
