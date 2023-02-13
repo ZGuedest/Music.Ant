@@ -36,12 +36,16 @@
 <!-- </div> -->
 </header> */}
 
+
+
+//    --------idiomas navegador----------
+
 let array = ["Inicio", "Buscar", "Catálogo", "Novedades", "Ofertas"];
 let ingles = [ "Start", "Search", "Catalogue", "News", "Offers"];
 let euskera = [ "Hasi", "Bilatu", "Katalogoa", "Berria", "Eskaintzak"];
 
 let nav = document.createElement("nav");
-nav.className = "collapse navbar-collapse justify-content-around";
+nav.className = "navbar navbar-expand-lg navbar-light";
 nav.innerHTML = `
 
 <div class="container-xl">
@@ -73,3 +77,15 @@ nav.innerHTML = `
     <li ><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
 </ul>   
 </div>`
+
+
+//--------idiomas frase logo----------
+
+let array_p = "Deja tu imaginación volar... siente la música";
+let ingles_p = "Let your imagination fly... feel the music";
+let euskera_p ="Utzi zure irudimena hegan... sentitu musika" ;
+
+let p= document.createElement("p");
+nav.className = "p";
+nav.innerHTML =`<p id="frase_imaginacion">"${array_p[5]}"</p>
+<!-- </div> -->`
