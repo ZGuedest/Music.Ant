@@ -1,21 +1,27 @@
-let boton =document.getElementById("button");
-let gmail =document.getElementById("form2Example11");
-let password=document.getElementById("form2Example22");
+let btn= document.getElementById("button")
+
+btn.addEventListener("click", (event)=>{
+
+    event.preventDefault()
+    validarPassword ()
+})
 
 
-boton.addEventListener('click',regestrar);
-function regestrar(){
+function validarPassword (){
 
-    let gamil_gmail=gmail.value;
-    let password_password=password.value;
+    var email, password
 
-    localStorage.setItem('gmail',gamil_gmail);
-    localStorage.setItem('password',password_password);
-    if(gmail=="lucas" && password=="1234"){
-        window.location.href="Index.html"
+    email = document.getElementById("form2Example11").value;
+    password = document.getElementById("form2Example22").value;
+
+    if (email == "prueba@gmail.com" && password == "1234"){
+        localStorage.setItem('gmail',email);
+        localStorage.setItem('password',password);
+        window.location.assign ("Index.html");
+    }else{
+        alert ("Datos incorrectos")
+
     }
 
-}
-
-
+};
 
