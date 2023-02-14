@@ -1,33 +1,24 @@
-{/* 
-
-<!-- <div id="frase_nav" class="container-sm justify-content-center"> -->
-    <p id="frase_imaginacion">"Deja tu imaginación volar... siente la música"</p>
-<!-- </div> -->
-</header> */}
-
-
 
 //    --------idiomas navegador----------
-
-let array=cambiarIdioma("espanol")
+let array=cambiarIdioma("Español")
+let idiomaSelect="Español";
 cargarMenu()
-let opciones = document.getElementsByClassName("idioma");
- for (let a = 0 ; a<opciones.length; a++){
-     opciones[a].addEventListener("click", (event)=>{
-        debugger
-        //let aux=opciones[i]
-        //let idio=aux.getAttribute("value")
-        console-log(a)
-        let idi=opciones[a].textContent
-        console.log(idi)
-         //cambiarIdioma(idio)
-         cargarMenu()
-     })
-   
- }
+function eventoCambiarIdioma(){
+    let opciones = document.getElementsByClassName("idioma");
+    let idio_select= document.getElementById("idio-select")
+
+    for (let a = 0 ; a<opciones.length; a++){
+        opciones[a].addEventListener("click", (event)=>{ 
+           array=cambiarIdioma(event.target.textContent)
+           idiomaSelect=event.target.textContent
+           cargarMenu()
+
+        })
+      
+    }
+}
 
 
-//let nav = document.createElement("nav");
 function cargarMenu(){
 
     let header= document.getElementsByTagName("header")[0]
@@ -63,11 +54,11 @@ function cargarMenu(){
                         
                 <li > <div class="dropdown">
                     <button class="btn btn-secondary d-flex flex-row text-center align-items-center dropdown-toggle bg-transparent border-0 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <p id="idio-select" value="espanol" class="pt-3">Español</p>
+                        <p id="idio-select" value="espanol" class="pt-3">${idiomaSelect}</p>
                         <i class="fa-solid fa-earth-americas text-dark"></i>
                     </button>
                     <ul class="dropdown-menu">
-                        <li value="espanol"><a value="espanol class=" idioma px-1 py-1 dropdown-item" href="#">Español</a></li>
+                        <li value="espanol"><a value="espanol" class=" idioma px-1 py-1 dropdown-item" href="#">Español</a></li>
                         <li value="ingles"><a value="ingles" class=" idioma px-1 py-1 dropdown-item" href="#">Inglés</a></li>
                         <li value="euskera"><a value="euskera" class=" idioma px-1 py-1 dropdown-item" href="#">Euskera</a></li>
                     </ul>
@@ -87,6 +78,7 @@ function cargarMenu(){
     p.innerHTML=`"${array[5]}"`
     header.append(p)
 
+    eventoCambiarIdioma()
 
 }
 
@@ -102,19 +94,16 @@ function cambiarIdioma(idioma){
     let inglesM = [ "Start", "Search", "Catalogue", "News", "Offers","Let your imagination fly... feel the music"];
     let euskeraM = [ "Hasi", "Bilatu", "Katalogoa", "Berria", "Eskaintzak","Utzi zure irudimena hegan... sentitu musika"];
     let array=[]
-    debugger
-    if (idioma=="espanol"){
+    //let idio_select= document.getElementById("idio-select")
+    if (idioma=="Español"){
         //idio_select.innerHTML = "Español";
-        //idio_select.value="espanol"
         array=espanolM
-    }else if (idioma=="ingles"){
-        //idio_select.innerHTML= "Ingles";
-        //idio_select.value="ingles"
+    }else if (idioma=="Inglés"){
+        //idio_select.innerHTML= "Inglés";
         array=inglesM
     }else{
             //idio_select.innerHTML = "Euskera";
-            //idio_select.value="euskera"
-            array = euskeraM
+        array = euskeraM
     }
     return array;
 }
