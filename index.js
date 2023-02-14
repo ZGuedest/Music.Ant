@@ -1,5 +1,7 @@
-function buscador_interno(){
-
+if(localStorage.getItem("gmail")==" "){
+    localStorage.clear()
 }
+
+
 
 

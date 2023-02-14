@@ -61,7 +61,7 @@ header.innerHTML = `
                     <li value="euskera"><a class=" idioma px-1 py-1 dropdown-item" href="#">Euskera</a></li>
                 </ul>
             </li>
-                                
+            <div id="ven"></div>            
             <li ><a href="login.html"><i class="pt-4 fa-regular fa-circle-user"></i></a></li>
             <li ><i class="pt-4 fa-solid fa-heart"></i></li>
             <li ><a href="carrito.html"><i class="pt-4 fa-solid fa-cart-shopping"></i></a></li>
