@@ -67,6 +67,10 @@
   font-size: 2.3em;
   padding-left: 0.7rem;
 }
+* .cardH {
+  margin: 3rem;
+  width: 16rem;
+}
 * footer {
   padding-top: 4rem;
   background-color: #387373;
@@ -119,6 +123,12 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0rem;
+}
+header #inicio, header #catalogo {
+  display: block;
+}
+header #ofertas, header #novedades, header #frase_imaginacion {
+  display: none;
 }
 
 #cr_contenedor_principal {
