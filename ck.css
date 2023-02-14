@@ -53,6 +53,20 @@
   padding-top: 6rem;
   padding-left: 5rem;
 }
+* .btn-primary {
+  background-color: #387373;
+  width: 10rem;
+  color: white;
+  font-weight: 900;
+}
+* .btn-primary:hover {
+  background-color: #E4F2E7;
+  color: black;
+}
+* .corazon-vacio {
+  font-size: 2.3em;
+  padding-left: 0.7rem;
+}
 * footer {
   padding-top: 4rem;
   background-color: #387373;
