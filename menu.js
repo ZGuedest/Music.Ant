@@ -5,8 +5,6 @@ let idiomaSelect="Español";
 cargarMenu()
 function eventoCambiarIdioma(){
     let opciones = document.getElementsByClassName("idioma");
-    let idio_select= document.getElementById("idio-select")
-
     for (let a = 0 ; a<opciones.length; a++){
         opciones[a].addEventListener("click", (event)=>{ 
            array=cambiarIdioma(event.target.textContent)
@@ -14,7 +12,6 @@ function eventoCambiarIdioma(){
            cargarMenu()
 
         })
-      
     }
 }
 
@@ -94,19 +91,14 @@ function cambiarIdioma(idioma){
     let inglesM = [ "Start", "Search", "Catalogue", "News", "Offers","Let your imagination fly... feel the music"];
     let euskeraM = [ "Hasi", "Bilatu", "Katalogoa", "Berria", "Eskaintzak","Utzi zure irudimena hegan... sentitu musika"];
     let array=[]
-    //let idio_select= document.getElementById("idio-select")
     if (idioma=="Español"){
-        //idio_select.innerHTML = "Español";
         array=espanolM
     }else if (idioma=="Inglés"){
-        //idio_select.innerHTML= "Inglés";
         array=inglesM
     }else{
-            //idio_select.innerHTML = "Euskera";
         array = euskeraM
     }
     return array;
 }
 
-//-----capturar parrafo-----
 
