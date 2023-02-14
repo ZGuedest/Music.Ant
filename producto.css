@@ -1,56 +1,122 @@
-#pr_guitarrita {
-  background-image: url("./img/guitarra1.jpg");
+* header nav #menu-iconers a, * header nav #menu-iconers i {
+  font-size: 1em;
+  color: black;
+  cursor: pointer;
+}
+
+* {
+  font-family: sans-serif, Arial, Verdana, Tahoma;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+}
+* header {
+  background-image: linear-gradient(rgb(56, 115, 115), rgba(56, 115, 115, 0.8), rgba(255, 255, 255, 0.5)), url("./img/fondo2.jpg");
   width: 100%;
-  height: 30rem;
+  height: 500px;
   background-position: center;
-  background-color: white;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 2rem;
+  margin: 0rem;
+  background-size: cover;
 }
-
-.galeriaenproducto img {
-  max-width: 20%;
+* header nav {
+  background-color: transparent;
+  font-weight: 900;
 }
-
-.radiocatalogo {
-  padding: 1.5rem;
+* header nav #logo {
+  background-image: url("./img/logo.png");
+  width: 20%;
   height: 5rem;
-  border: 2px solid #387373;
-  padding-right: 15rem;
-}
-
-.checkboxcatalogo {
-  margin: 2rem 0rem 2rem 5.9rem;
-}
-
-.galeriaenproducto img {
-  max-width: 20%;
-}
-
-.btn {
-  background-color: #387373;
-}
-
-.btn:hover {
-  background-color: rgb(84, 7, 82);
-}
-
-.img {
-  width: 80%;
-  height: 10rem;
   background-position: center;
-  background-color: white;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 2rem;
-  background-image: url("./img/guitarra1.jpg");
+  background-color: transparent;
+  margin: 0rem;
 }
-
-.cajaenvio-devol {
+* header nav #buscador {
+  width: 15rem;
+  height: 2rem;
+}
+* header nav #menu-interior {
+  width: 40%;
+}
+* header nav #menu-iconers {
+  width: 20%;
+}
+* header #frase_imaginacion {
+  font-size: 45px;
+  font-family: Blackadder ITC;
+  padding-top: 6rem;
+  padding-left: 5rem;
+}
+* .btn-primary {
+  background-color: #387373;
+  width: 10rem;
+  color: white;
+  font-weight: 900;
+}
+* .btn-primary:hover {
+  background-color: #E4F2E7;
+  color: black;
+}
+* .corazon-vacio {
+  font-size: 2.3em;
+  padding-left: 0.7rem;
+}
+* .cardH {
+  margin: 3rem;
+  width: 16rem;
+}
+* footer {
+  padding-top: 4rem;
   background-color: #387373;
 }
-
-.text-center {
+* footer .btn {
   background-color: #387373;
+  width: 7rem;
+  color: white;
+  font-weight: 900;
+}
+* footer .btn:hover {
+  background-color: #E4F2E7;
+  color: black;
+}
+* footer #appel-store {
+  background-image: url("./img/appel.png");
+  width: 35%;
+  height: 7rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 1rem;
+}
+* footer #play-store {
+  background-image: url("./img/play-store.png");
+  width: 35%;
+  height: 7rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 1rem;
+}
+* footer #copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+header #inicio, header #catalogo {
+  display: block;
+}
+header #ofertas, header #novedades {
+  display: none;
+}
+
+i {
+  font-size: x-large;
+  padding-right: 0.5rem;
 }/*# sourceMappingURL=producto.css.map */
