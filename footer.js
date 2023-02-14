@@ -1,7 +1,7 @@
-let arrayF = ["Síguenos en nuestras redes sociales", "Suscríbete para recibir actualizaciones", "Subscribe", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Descárgate Nuestra App", "Contáctanos", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88", "© 2023 Copyright:", "MusicAnt.com"] 
-let arrayIngles =["Follow us on our social networks", "Subscribe to receive updates", "Subscribete", "Cookies policy", "Legal warning", , "Cookies policy", "Privacy Policy", "Legal warning", "Download Our App", "Contact us", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88", "© 2023 Copyright:", "MusicAnt.com"]
+let arrayF = ["Síguenos en nuestras redes sociales", "Suscríbete para recibir actualizaciones", "Subscribe", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Descárgate Nuestra App", "Contáctanos", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88","© MusicAnt.com 2023"] 
+let arrayIngles =["Follow us on our social networks", "Subscribe to receive updates", "Subscribete", "Cookies policy", "Legal warning", , "Cookies policy", "Privacy Policy", "Legal warning", "Download Our App", "Contact us", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88", "© MusicAnt.com 2023"]
 let arrayeuskera = ["Jarrai gaitzazu gure sare sozialetan", "Harpidetu eguneraketak jasotzeko",  "harpidetu", "cookien politika", 
-"Pribatutasun politika", "Lege abisua", "Deskargatu Gure aplikazioa", "jarri gurekin harremanetan" , "New York, NY 10012, US","© 2023 Copyright:","MusicAnt.com"]
+"Pribatutasun politika", "Lege abisua", "Deskargatu Gure aplikazioa", "jarri gurekin harremanetan" , "New York, NY 10012, US","© MusicAnt.com 2023"]
 
 debugger
 let html= document.getElementsByTagName("html")[0]
@@ -121,13 +121,9 @@ footer.innerHTML=`<h2>${arrayF[0]}</h2>
     </section>
     <!-- Section: Links -->
 </div>
-<!-- Grid container -->
 
-<!-- Copyright -->
 <div id="copyright" class="text-center p-3">
-${arrayF[13]}
     <a class="text-white" href="">${arrayF[14]}</a>
 </div>
-<!-- Copyright -->
 `
 html.append(footer)
