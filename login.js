@@ -14,7 +14,6 @@ function regestrar(){
     if(gmail=="lucas" && password=="1234"){
         window.location.href="Index.html"
     }
-
 }
 
 
