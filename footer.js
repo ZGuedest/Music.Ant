@@ -3,7 +3,6 @@ let arrayIngles =["Follow us on our social networks", "Subscribe to receive upda
 let arrayeuskera = ["Jarrai gaitzazu gure sare sozialetan", "Harpidetu eguneraketak jasotzeko",  "harpidetu", "cookien politika", 
 "Pribatutasun politika", "Lege abisua", "Deskargatu Gure aplikazioa", "jarri gurekin harremanetan" , "New York, NY 10012, US","© MusicAnt.com 2023"]
 
-debugger
 let html= document.getElementsByTagName("html")[0]
 let footer = document.createElement("footer")
 footer.className="text-center text-white"
