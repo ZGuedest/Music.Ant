@@ -67,6 +67,10 @@
   font-size: 2.3em;
   padding-left: 0.7rem;
 }
+* .cardH {
+  margin: 3rem;
+  width: 16rem;
+}
 * footer {
   padding-top: 4rem;
   background-color: #387373;
@@ -110,6 +114,9 @@
   font-size: 17px;
   margin: 0;
   padding: 0;
+}
+* header #inicio {
+  display: none;
 }
 * body .caja-h2 {
   padding-top: 2rem;
