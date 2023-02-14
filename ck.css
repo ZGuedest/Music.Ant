@@ -67,6 +67,10 @@
   font-size: 2.3em;
   padding-left: 0.7rem;
 }
+* .cardH {
+  margin: 3rem;
+  width: 16rem;
+}
 * footer {
   padding-top: 4rem;
   background-color: #387373;
@@ -115,13 +119,19 @@ header {
   background-size: contain;
   margin: 0rem;
 }
+header #inicio, header #catalogo {
+  display: block;
+}
+header #ofertas, header #novedades, header #frase_imaginacion {
+  display: none;
+}
 
 #ck_inputnombre, #ck_inputapellidos, #ck_inputTl, #ck_inputCity, #ck_inputdireccion, #ck_inputCp, #ck_inputEmail, #ck_inputPassword {
   background-color: #E4F2E7;
 }
 
-#ck_btn-Tarjeta, #ck_btn-Bizum, #ck_btn-Paypal, #ck_btnpedido {
-  background-color: #387373;
+#ck_btnpedido {
+  width: 15rem;
 }
 
 #ck_imgBizum {
