@@ -2,6 +2,9 @@ let array = ["Síguenos en nuestras redes sociales", "Suscríbete para recibir a
 let arrayIngles =["Follow us on our social networks", "Subscribe to receive updates", "Subscribete", "Cookies policy", "Legal warning", , "Cookies policy", "Privacy Policy", "Legal warning", "Download Our App", "Contact us", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88", "© 2023 Copyright:", "MusicAnt.com"]
 let arrayeuskera = ["Jarrai gaitzazu gure sare sozialetan", "Harpidetu eguneraketak jasotzeko",  "harpidetu", "cookien politika", 
 "Pribatutasun politika", "Lege abisua", "Deskargatu Gure aplikazioa", "jarri gurekin harremanetan" , "New York, NY 10012, US","© 2023 Copyright:","MusicAnt.com"]
+
+debugger
+let html= document.getElementsByTagName("html")[0]
 let footer = document.createElement("footer")
 footer.className="text-center text-white"
 footer.innerHTML=`<h2>${array[0]}</h2>
@@ -126,18 +129,5 @@ ${array[13]}
     <a class="text-white" href="">${array[14]}</a>
 </div>
 <!-- Copyright -->
-</footer>
-<!-- Footer -->
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/8c655d3807.js" crossorigin="anonymous"></script>
-<script src="index.js"></script>
-<script src="corazones.js"></script>
-</body>
-</html>
-
-
-
 `
+html.append(footer)
