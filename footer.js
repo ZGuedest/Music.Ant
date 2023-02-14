@@ -1,10 +1,13 @@
-let array = ["Síguenos en nuestras redes sociales", "Suscríbete para recibir actualizaciones", "Subscribe", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Descárgate Nuestra App", "Contáctanos", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88", "© 2023 Copyright:", "MusicAnt.com"] 
-let arrayIngles =["Follow us on our social networks", "Subscribe to receive updates", "Subscribete", "Cookies policy", "Legal warning", , "Cookies policy", "Privacy Policy", "Legal warning", "Download Our App", "Contact us", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88", "© 2023 Copyright:", "MusicAnt.com"]
+let arrayF = ["Síguenos en nuestras redes sociales", "Suscríbete para recibir actualizaciones", "Subscribe", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Descárgate Nuestra App", "Contáctanos", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88","© MusicAnt.com 2023"] 
+let arrayIngles =["Follow us on our social networks", "Subscribe to receive updates", "Subscribete", "Cookies policy", "Legal warning", , "Cookies policy", "Privacy Policy", "Legal warning", "Download Our App", "Contact us", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88", "© MusicAnt.com 2023"]
 let arrayeuskera = ["Jarrai gaitzazu gure sare sozialetan", "Harpidetu eguneraketak jasotzeko",  "harpidetu", "cookien politika", 
-"Pribatutasun politika", "Lege abisua", "Deskargatu Gure aplikazioa", "jarri gurekin harremanetan" , "New York, NY 10012, US","© 2023 Copyright:","MusicAnt.com"]
+"Pribatutasun politika", "Lege abisua", "Deskargatu Gure aplikazioa", "jarri gurekin harremanetan" , "New York, NY 10012, US","© MusicAnt.com 2023"]
+
+debugger
+let html= document.getElementsByTagName("html")[0]
 let footer = document.createElement("footer")
 footer.className="text-center text-white"
-footer.innerHTML=`<h2>${array[0]}</h2>
+footer.innerHTML=`<h2>${arrayF[0]}</h2>
 <!-- Grid container -->
 <div class="container p-4">
     <!-- Section: Social media -->
@@ -38,7 +41,7 @@ footer.innerHTML=`<h2>${array[0]}</h2>
         <!--Grid column-->
         <div class="col-auto">
             <p class="pt-2">
-            <strong>${array[1]}</strong>
+            <strong>${arrayF[1]}</strong>
             </p>
         </div>
         
@@ -56,7 +59,7 @@ footer.innerHTML=`<h2>${array[0]}</h2>
         <div class="col-auto">
             <!-- Submit button -->
             <button type="submit" class="btn btn-outline-light mb-4">
-            ${array[2]}
+            ${arrayF[2]}
             </button>
         </div>
         <!--Grid column-->
@@ -81,18 +84,18 @@ footer.innerHTML=`<h2>${array[0]}</h2>
          <!--Grid column-->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mt-4">
             <div class="d-flex flex-colum flex-wrap">
-                <a class="text-white col-12 text-md-start" href="">${array[3]}</a>
-                <a class="text-white col-12 text-md-start" href="">${array[4]}</a>
-                <a class="text-white col-12 text-md-start" href="">${array[5]}</a>
-                <a class="text-white col-12 text-md-start" href="">${array[6]}</a>
-                <a class="text-white col-12 text-md-start" href="">${array[7]}</a>
-                <a class="text-white col-12 text-md-start" href="">${array[8]}</a>
+                <a class="text-white col-12 text-md-start" href="">${arrayF[3]}</a>
+                <a class="text-white col-12 text-md-start" href="">${arrayF[4]}</a>
+                <a class="text-white col-12 text-md-start" href="">${arrayF[5]}</a>
+                <a class="text-white col-12 text-md-start" href="">${arrayF[6]}</a>
+                <a class="text-white col-12 text-md-start" href="">${arrayF[7]}</a>
+                <a class="text-white col-12 text-md-start" href="">${arrayF[8]}</a>
             </div>
         </div>
         <!--Grid column-->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mt-4">${array[9]}</h6>
+            <h6 class="text-uppercase fw-bold mt-4">${arrayF[9]}</h6>
             <div class="d-flex flex-row flex-wrap justify-content-around" style="width: 100%;">
                 <div id="appel-store"></div>
                 <div id="play-store"></div>
@@ -103,11 +106,11 @@ footer.innerHTML=`<h2>${array[0]}</h2>
         <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mt-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">${array[10]}</h6>
+            <h6 class="text-uppercase fw-bold mb-4">${arrayF[10]}</h6>
             
             <div class="d-flex flex-colum flex-wrap">
-                <p class="col-12 text-md-start"><i class="fas fa-home me-3"></i>${array[11]}</p>
-                <p class="col-12 text-md-start"><i class="fas fa-envelope me-3"></i>${array[12]}</p>
+                <p class="col-12 text-md-start"><i class="fas fa-home me-3"></i>${arrayF[11]}</p>
+                <p class="col-12 text-md-start"><i class="fas fa-envelope me-3"></i>${arrayF[12]}</p>
                 <p class="col-12 text-md-start"><i class="fas fa-phone me-3"></i>+ 01 234 567 88</p>
             </div>
             
@@ -118,26 +121,9 @@ footer.innerHTML=`<h2>${array[0]}</h2>
     </section>
     <!-- Section: Links -->
 </div>
-<!-- Grid container -->
 
-<!-- Copyright -->
 <div id="copyright" class="text-center p-3">
-${array[13]}
-    <a class="text-white" href="">${array[14]}</a>
+    <a class="text-white" href="">${arrayF[14]}</a>
 </div>
-<!-- Copyright -->
-</footer>
-<!-- Footer -->
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/8c655d3807.js" crossorigin="anonymous"></script>
-<script src="index.js"></script>
-<script src="corazones.js"></script>
-</body>
-</html>
-
-
-
 `
+html.append(footer)

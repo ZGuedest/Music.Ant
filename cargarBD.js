@@ -8,7 +8,9 @@ const productos=[
         "precioDescription": "138€",
         "precio": 138,
         "src": "./img/guitarra1.jpg",
-        "cantidad": 0
+        "cantidad": 0,
+        "novedad": "false",
+        "oferta": "false"
     },
 
     {
@@ -20,7 +22,9 @@ const productos=[
         "precioDescription": "238 €",
         "precio": 238,
         "src": "./img/guitarra2.jpg",
-        "cantidad": 0
+        "cantidad": 0,
+        "novedad": "false",
+        "oferta": "false"
 
     },
     {
@@ -31,7 +35,9 @@ const productos=[
         "precioDescription": "629 €",
         "precio": 629,
         "src": "./img/guitarra3.jpg",
-        "cantidad": 0
+        "cantidad": 0,
+        "novedad": "false",
+        "oferta": "false"
 
     },
     {
@@ -42,7 +48,9 @@ const productos=[
         "precioDescription": "94,21 €",
         "precio": 94.21,
         "src": "./img/violin1.jpg",
-        "cantidad": 0
+        "cantidad": 0,
+        "novedad": "false",
+        "oferta": "false"
 
     },
     {
@@ -53,7 +61,9 @@ const productos=[
         "precioDescription": "120,38€",
         "precio": 120.38,
         "src": "./img/violin2.jpg",
-        "cantidad": 0
+        "cantidad": 0,
+        "novedad": "false",
+        "oferta": "false"
 
     },
     {
@@ -64,7 +74,9 @@ const productos=[
         "precioDescription": "919 €",
         "precio": 919,
         "src": "./img/violin3.jpg",
-        "cantidad": 0
+        "cantidad": 0,
+        "novedad": "false",
+        "oferta": "false"
 
     },
     {
@@ -75,7 +87,9 @@ const productos=[
         "precioDescription": "1050 €",
         "precio": 1050,
         "src": "./img/bajo1.webp",
-        "cantidad": 0
+        "cantidad": 0,
+        "novedad": "false",
+        "oferta": "false"
 
     },
     {
@@ -87,7 +101,9 @@ const productos=[
     "precioDescription": "377 €",
     "precio": 377,
     "src": "./img/bajo2.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 
 },
 {
@@ -98,7 +114,9 @@ const productos=[
     "precioDescription": "169 €",
     "precio": 169,
     "src": "./img/bajo3.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
     
 },
 { 
@@ -109,7 +127,9 @@ const productos=[
     "precioDescription": "2.899 €",
     "precio": 2.899,
     "src": "./img/flauta1.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 
 },
 {
@@ -120,7 +140,9 @@ const productos=[
     "precioDescription": "147.50 €",
     "precio": 147.50,
     "src": "./img/flauta2.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 
 },
 {
@@ -131,7 +153,9 @@ const productos=[
     "precioDescription": "219.00 € ",
     "precio": 219.00,
     "src": "./img/flauta3.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":13,
@@ -141,7 +165,9 @@ const productos=[
     "precioDescription": "293.90 €",
     "precio": 293.90,
     "src": "./img/trompeta1.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":14,
@@ -151,7 +177,9 @@ const productos=[
     "precioDescription": "222 €",
     "precio": 222,
     "src": "./img/trompeta2.jpg",
-    "cantidad": 0 
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false" 
 },
 {
     "id":15,
@@ -161,7 +189,9 @@ const productos=[
     "precioDescription": " 359 €",
     "precio":  359,
     "src": "./img/trompeta3.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":16,
@@ -171,7 +201,9 @@ const productos=[
     "precioDescription": "599 € ",
     "precio": 599,
     "src": "./img/trompa1.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":17,
@@ -181,7 +213,9 @@ const productos=[
     "precioDescription": "542 €",
     "precio": 542,
     "src": "./img/trompa2.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":18,
@@ -191,7 +225,9 @@ const productos=[
     "precioDescription": "836 €",
     "precio": 836,
     "src": "./img/trompa3.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":19,
@@ -201,7 +237,9 @@ const productos=[
     "precioDescription": "1.235 €",
     "precio": 1.235,
     "src": "./img/bateria1.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 
 },
 {
@@ -212,7 +250,9 @@ const productos=[
     "precioDescription": "1.107€",
     "precio": 1.107,
     "src": "./img/bateria2.jpg",
-    "cantidad": 0 
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":21,
@@ -222,7 +262,9 @@ const productos=[
     "precioDescription": "1.090 €",
     "precio": 1.090,
     "src": "./img/bateria3.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
 
@@ -233,7 +275,9 @@ const productos=[
     "precioDescription": "679 €",
     "precio": 679,
     "src": "./img/bongo1.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
  
 },
 {
@@ -244,7 +288,9 @@ const productos=[
     "precioDescription": "411 € ",
     "precio": 411,
     "src": "./img/bongo2.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 
 },
 {
@@ -255,7 +301,9 @@ const productos=[
     "precioDescription": "455 €",
     "precio": 455,
     "src": "./img/bongo3.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 
 },
 {
@@ -267,7 +315,9 @@ const productos=[
     "precioDescription": "777 €",
     "precio": 777,
     "src": "./img/miscelanea1.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
 
@@ -278,7 +328,9 @@ const productos=[
     "precioDescription": "82 €",
     "precio": 82,
     "src": "./img/miscelanea2.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 
 },
 {
@@ -289,7 +341,9 @@ const productos=[
     "precioDescription": "26.06€",
     "precio": 26.06,
     "src": "./img/miscelanea3.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 
 },
 {
@@ -300,7 +354,9 @@ const productos=[
     "precioDescription": "2.539 €",
     "precio": 2.539,
     "src": "./img/mezcladora1.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 
 },
 {
@@ -311,7 +367,9 @@ const productos=[
     "precioDescription": "2.298 €",
     "precio": 2.298,
     "src": "./img/mezcladora2.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 
 },
 {
@@ -323,7 +381,9 @@ const productos=[
     "precioDescription": "3.098 €",
     "precio": 3.098,
     "src": "./img/mezcladora3.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":31,
@@ -333,7 +393,9 @@ const productos=[
     "precioDescription": "2.999 € ",
     "precio": 2.999,
     "src": "./img/amplificador1.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":32,
@@ -343,7 +405,9 @@ const productos=[
     "precioDescription": "1.119 € ",
     "precio": 1.119,
     "src": "./img/amplificador2.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":33,
@@ -353,7 +417,9 @@ const productos=[
     "precioDescription": "8.490 €",
     "precio": 8.490,
     "src": "./img/amplificador3.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
 
@@ -364,7 +430,9 @@ const productos=[
     "precioDescription": "380.06 €",
     "precio": 380.06,
     "src": "./img/microfono1.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":35,
@@ -374,7 +442,9 @@ const productos=[
     "precioDescription": "429 €",
     "precio": 429,
     "src": "./img/microfono2.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 {
     "id":36,
@@ -384,7 +454,9 @@ const productos=[
     "precioDescription": "179€",
     "precio": 179,
     "src": "./img/microfono3.jpg",
-    "cantidad": 0
+    "cantidad": 0,
+    "novedad": "false",
+    "oferta": "false"
 },
 
 ]
@@ -393,10 +465,9 @@ cargarLocalStorage();
 
 
 //CARGAR PRODUCTOS AL LOCAL STORAGE
-//LIMPIAR EL LOCAL STORAGE
 function cargarLocalStorage(){
 
-    localStorage.clear()
+    //localStorage.clear()
     let aux;
     for(let i=0; i<productos.length;i++){
         
@@ -407,74 +478,3 @@ function cargarLocalStorage(){
     }
 
 }
-
-
-    //CARGAR PRODUCTOS DEL CATALOGO
-    productos.forEach((product)=> {
-
-        let content = document.createElement ("div");
-        content.className = "col-2 card cardH";
-        content.innerHTML = `
-            <img class="" src="${product.src}">
-            <div class="d-flex flex-row align-items-center">
-                <h5 class="card-title">${product.name}  ${product.precio}€</h5>
-            </div>
-            <p class="card-text description">${product.description}</p>
-            <div class="d-flex flex-row align-items-center">
-                <a  id =${product.id} data-producto =${product.id}  href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> COMPRAR</a>
-                <i class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
-            </div>
-
-        `;
-
-        shopContent.append(content);
-    });
-
-    //SUMAR NUMERO DEL ICONO CARRITO
-
-    let botonesComprar = document.getElementsByClassName("btn-primary");
-
-    console.log(botonesComprar)
-
-    for(let i=0; i<botonesComprar.length;i++){
-        botonesComprar[i].addEventListener("click",(event)=>{
-            event.preventDefault()
-            cantidadDelIconoCarrito()
-        })
-    }
-
-
-    function cantidadDelIconoCarrito(){
-        let span= document.getElementById("cantidadCarrito");
-        let num= parseInt(span.getAttribute("value"))+1;
-        span.setAttribute("value",String(num))
-        span.innerHTML=num;
-    }
-    
-
-    function añadirAlCarrito(idBtn){
-        productos[idBtn-1].cantidad++
-            
-    }
-
-    /*-----GUARDANDO CARRITO AL LOCAL STORAGE-----*/
-
-
-
-    /*-----FUNCIONALIDAD EVENTO CLICK -----------*/
-    let carrito = [];
-    let botones = document.getElementsByClassName("btn");
-
-    for(let b=0; b<botones.length; b++){
-
-        botones[b].addEventListener("click",  (event)=>{
-            let idBtn= event.target.id;
-            añadirAlCarrito(idBtn)
-            cargarLocalStorage();
-        });
-
-    }
-
-        
-
-
