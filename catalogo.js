@@ -139,7 +139,7 @@ function cargarLocalStorage(){
   
   let shopContent= document.getElementById("shopContent")
   while (shopContent.firstChild) {
-  shopContent.removeChild(shopContent.firstChild);
+    shopContent.removeChild(shopContent.firstChild);
   }
 
   prodCat.forEach((p)=>{

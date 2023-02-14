@@ -53,6 +53,24 @@
   padding-top: 6rem;
   padding-left: 5rem;
 }
+* .btn-primary {
+  background-color: #387373;
+  width: 10rem;
+  color: white;
+  font-weight: 900;
+}
+* .btn-primary:hover {
+  background-color: #E4F2E7;
+  color: black;
+}
+* .corazon-vacio {
+  font-size: 2.3em;
+  padding-left: 0.7rem;
+}
+* .cardH {
+  margin: 3rem;
+  width: 16rem;
+}
 * footer {
   padding-top: 4rem;
   background-color: #387373;
@@ -97,6 +115,9 @@
   margin: 0;
   padding: 0;
 }
+* header #inicio {
+  display: none;
+}
 * body .caja-h2 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -110,24 +131,6 @@
   width: 22rem;
   margin-right: 1rem;
   margin-left: 1rem;
-}
-* body .cardH {
-  margin: 3rem;
-  width: 16rem;
-}
-* body .btn-primary {
-  background-color: #387373;
-  width: 10rem;
-  color: white;
-  font-weight: 900;
-}
-* body .btn-primary:hover {
-  background-color: #E4F2E7;
-  color: black;
-}
-* body .corazon-vacio {
-  font-size: 2.3em;
-  padding-left: 0.7rem;
 }
 * body #imgN1 {
   background-image: url("./img/guitarra1.jpg");

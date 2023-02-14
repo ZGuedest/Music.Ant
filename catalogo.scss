@@ -6,10 +6,20 @@
 //     url("")), $wth:100%,$hght: 100px,$margin:0rem);
 //  }
 
-#checks-cuerda, #checks-viento, #checks-percusion, #checks-electronico{
-    display: none;
-    width: 10%;
+header{
+    #inicio{
+        display: block;
+    }
+    #catalogo, #ofertas,#novedades{
+        display: none;
+    }
+
 }
+body{
+    #checks-cuerda, #checks-viento, #checks-percusion, #checks-electronico{
+        display: none;
+        width: 10%;
+    }
 
     #cont-radio-check{
         border: 2px solid $color_VerdeOsc;
@@ -44,5 +54,7 @@
     .img{
         width: 90%;
     }
+}
+    
 
    
