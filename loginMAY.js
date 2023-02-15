@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="login.css">
-
-  </head>
-  <body>
-    <section  class="h-100 gradient-form justify-content-center d-flex">
-    <div id="lg_fondo" class="container py-5 my-5 h-100">
-      <a href="Index.html"><i class="fa-solid fa-arrow-left">  regresar </i></a>
+{/* <a href="Index.html"><i class="fa-solid fa-arrow-left">  ${arrayLog=[0]} </i></a>
       <div class="text-center">
         <img src="img/logo.png"
           style="width: 185px;" alt="logo">
@@ -61,11 +47,20 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- <script src="login.js"></script> -->
-  <script src="login.js"></script>
-  <script src="https://kit.fontawesome.com/8c655d3807.js" crossorigin="anonymous"></script>
-</body>
-</html>
+      </div> */}
+
+const lgnEsp = ["regresar","Deja tu imaginación volar... sientre la música","Por favor meta los datos de su cuenta","correo","contraseña","entrar","¿Has olvidado tu contraseña?","Si no tienes cuenta","registrate","Somos más que una empresa","Somos un grupo de entusiastas de la música que tiene la suerte de compartir su pasión con personas afines, guiando, aconsejando y también aprendiendo de nuestros clientes. Bienvenidos a nuestra familia: !Viva la música!"]
+const lgnEng = ["back","Let your imagination fly... feel the music","Please enter your account information","email","password","enter","Have you forgotten your password?"," If you don't have an account","register","We are more than a company","We are a group of music enthusiasts lucky enough to share their passion with like-minded people, guiding, advising and also learning from our customers. Welcome to our family: Long live the music!"]
+const lgnEus = ["itzuli","Utzi zure irudimena hegan egiten... sentitu musika","Mesedez sartu zure kontuaren informazioa","posta elektronikoa","pasahitza","sartu","Pasahitza ahaztu al duzu?","Ez baduzu 'ez daukazu konturik","erregistratu","Enpresa bat baino gehiago gara","Musika zaleen talde bat gara bere pasioa gogokoekin partekatzeko zortea, gure bezeroak gidatuz, aholkatuz eta baita ikasten ere. Ongi etorri gure familiara: Bizi musika!"]
+
+let arrayLog=[];
+arrayLog=lgnEsp;
+cargarLogin()
+
+function cargarLogin(arrayLog){
+
+
+
+
+}
+

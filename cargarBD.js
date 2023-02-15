@@ -9,7 +9,7 @@ const productos=[
         "precio": 138,
         "src": "./img/guitarra1.jpg",
         "cantidad": 0,
-        "novedad": "false",
+        "novedad": "true",
         "oferta": "false"
     },
 
@@ -42,7 +42,7 @@ const productos=[
     },
     {
         "id":4,
-        "varname":"violin1",
+        "varname":"true",
         "name":"Forenza F1151A - Conjunto de violín de tamaño completo",
         "description":"Tamaño 4/4. Se suministra con el puente equipada, configurar listo para jugar. Clavijas y armarios integral de la pieza de cola afinadores. Incluye arco de madera con el bloque de colofonia. Caso de cremallera de peso ligero con asa y correas para los hombros",
         "precioDescription": "94,21 €",
@@ -128,7 +128,7 @@ const productos=[
     "precio": 2.899,
     "src": "./img/flauta1.jpg",
     "cantidad": 0,
-    "novedad": "false",
+    "novedad": "true",
     "oferta": "false"
 
 },
@@ -203,7 +203,7 @@ const productos=[
     "src": "./img/trompa1.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "true"
 },
 {
     "id":17,
@@ -317,7 +317,7 @@ const productos=[
     "src": "./img/miscelanea1.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "true"
 },
 {
 
@@ -456,7 +456,7 @@ const productos=[
     "src": "./img/microfono3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "true"
 },
 
 ]
