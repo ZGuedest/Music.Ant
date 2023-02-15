@@ -2,11 +2,11 @@ const prdtEsp = ["AÑADIR", "Envio gratuito","Devoluciones o cambios permitidos"
 const prdtEng = ["ADD", "Free shipping","Returns or changes allowed"]
 const prdtEus = ["GEHITU", "Doako bidalketa", "Itzulketak edo aldaketak onartzen dira"]
 let arrayPr = []
-arrayPr=chcktEsp;
+arrayPr=prdtEsp;
 
-cargarCheckout(arrayPr)
+cargarProducto(arrayPr)
 
-function cargarProducto(){
+function cargarProducto(arrayPr){
     debugger
     let main = document.getElementsByTagName("main")[0]
     main.innerHTML = `<div class="container-sm pt-5 pb-5 d-flex justify-content-center">
