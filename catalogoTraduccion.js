@@ -154,6 +154,10 @@ for(let i = 0; i<arraycheckout.length; i++){
         cargarProductosPorCheckout()
     })
 }
+   function cargarProductoPorCheckout (){
+        alert("yes");
+       
+}
 
 
 
