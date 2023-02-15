@@ -3,7 +3,7 @@ console.log(corazones)
 for( let i=0; i< corazones.length; i++){
 
     corazones[i].addEventListener("click", ()=>{
-      debugger
+
         cambiar(corazones[i]);
     })
 }
