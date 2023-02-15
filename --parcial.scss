@@ -85,7 +85,7 @@ $fontWH2:600;
                 width: 40%;
             }
             #menu-iconers{
-                width: 20%;
+                width: 30%;
                 a , i{
                     @extend %iconos;
                 }
@@ -97,17 +97,12 @@ $fontWH2:600;
 
         }
 
-        // #frase_nav{
-        //     padding-left: 20rem;
-        //     padding-top: 7rem;
-
         #frase_imaginacion{
             font-size: 45px; 
             font-family: Blackadder ITC;
             padding-top: 6rem;
             padding-left: 5rem;
         }
-        // }
     }
 
     .btn-primary{
