@@ -5,7 +5,7 @@ const lgnEng = ["back","Let your imagination fly... feel the music","Please ente
 const lgnEus = ["itzuli","Utzi zure irudimena hegan egiten... sentitu musika","Mesedez sartu zure kontuaren informazioa","posta elektronikoa","pasahitza","Sartu","Pasahitza ahaztu al duzu?","Ez baduzu 'ez daukazu konturik","Erregistratu","Enpresa bat baino gehiago gara","Musika zaleen talde bat gara bere pasioa gogokoekin partekatzeko zortea, gure bezeroak gidatuz, aholkatuz eta baita ikasten ere. Ongi etorri gure familiara: Bizi musika!"]
 
 let arrayLog=[];
-arrayLog=lgnEus;
+arrayLog=lgnEsp;
 cargarLogin(arrayLog)
 
 function cargarLogin(arrayLog){
