@@ -8,7 +8,7 @@ cargarCatalogo(arrayCata)
 
 
 function cargarCatalogo(arrayCata){
-debugger;
+
 let cajaCatalogo = document.getElementById("cont-radio-check");
 
 cajaCatalogo.innerHTML = ` 
