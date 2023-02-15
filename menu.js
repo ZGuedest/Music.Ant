@@ -60,8 +60,17 @@ function cargarMenu(){
                         <li value="euskera"><a value="euskera" class=" idioma px-1 py-1 dropdown-item" href="#">Euskera</a></li>
                     </ul>
                 </li>
-                                    
-                <li ><a href="login.html"><i class="pt-4 fa-regular fa-circle-user"></i></a></li>
+                <div class="d-flex flex-column aling-items-center">
+                    <li ><a id="login" href="login.html"><i class="pt-4 fa-regular fa-circle-user"></i></a></li>
+
+                    <div class="ventana" id="ven" style="background-color: white; width: 4rem;height: 1.5rem; color: black; display: none;">
+                        <span id="cerrar">Cerrar<span> 
+
+                    </div>
+                </div>                  
+
+
+
                 <li ><i class="pt-4 fa-solid fa-heart"></i></li>
                 <li ><a href="carrito.html"><i class="pt-4 fa-solid fa-cart-shopping"></i></a><span id="cantidadCarrito" class="cantidad-carrito" value="0"></span></li>
             </ul>     
@@ -99,6 +108,36 @@ function cambiarIdioma(idioma){
         array = euskeraM
     }
     return array;
+}
+
+let black=document.getElementById("login");
+
+black.addEventListener('click',(event)=>{
+    debugger
+    event.preventDefault()
+
+    if(localStorage.getItem('gmail') ===" "){
+        window.location.href="login.html"
+    }else{
+        abrir();
+    }
+    
+    
+ });
+
+let cerrar= document.getElementById("cerrar")
+
+cerrar.addEventListener("click",()=>{
+
+    localStorage.clear()
+    localStorage.setItem('gmail'," ");
+
+    window.location.href="Index.html"
+})
+
+
+function abrir(){
+    document.getElementById("ven").style.display="block";
 }
 
 
