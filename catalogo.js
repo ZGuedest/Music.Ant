@@ -1,3 +1,6 @@
+
+
+/////////////////////////////////////////////////////////////////////////////
 const radioCatalogo = document.getElementById("radiocatalogo");
 
 const radioCuerda = document.getElementById("radio-cuerda");
@@ -41,32 +44,21 @@ function activarClickComprar(){
 
 function yesnoCheck() {
   if (radioCuerda.checked == true) {
-    checksCuerda.style.display = "block";
-    checksViento.style.display = "none";
-    checksPercusion.style.display = "none";
-    checksElectronico.style.display = "none";
-    pintarCatalogo("cuerda")
+    cambiarDisplayRadioButton(checksCuerda,checksViento,checksPercusion,checksElectronico)
+    pintarCatalogoCategoria("cuerda")
 
   } else if (radioViento.checked == true) {
-    checksCuerda.style.display = "none";
-    checksViento.style.display = "block";
-    checksPercusion.style.display = "none";
-    checksElectronico.style.display = "none";
-    pintarCatalogo("viento")
+  
+    cambiarDisplayRadioButton(checksViento,checksCuerda,checksPercusion,checksElectronico)
+    pintarCatalogoCategoria("viento")
 
   } else if (radioPercusion.checked == true) {
-    checksCuerda.style.display = "none";
-    checksViento.style.display = "none";
-    checksPercusion.style.display = "block";
-    checksElectronico.style.display = "none";
-    pintarCatalogo("percusion")
+    cambiarDisplayRadioButton(checksPercusion,checksCuerda,checksViento,checksElectronico)
+    pintarCatalogoCategoria("percusion")
 
   } else if (radioElectronico.checked == true) {
-    checksCuerda.style.display = "none";
-    checksViento.style.display = "none";
-    checksPercusion.style.display = "none";
-    checksElectronico.style.display = "block";
-    pintarCatalogo("electronico")
+    cambiarDisplayRadioButton(checksElectronico,checksCuerda,checksViento,checksPercusion)
+    pintarCatalogoCategoria("electronico")
 
   }
 
@@ -74,7 +66,14 @@ function yesnoCheck() {
 }
 
 ///////////////////////////////////////
+function cambiarDisplayRadioButton(ck1,ck2,ck3,ck4){
 
+    ck1.style.display = "block";
+    ck2.style.display = "none";
+    ck3.style.display = "none";
+    ck4.style.display = "none";
+
+}
  
 function cargarDelLocalStorage(){
 
@@ -107,9 +106,8 @@ function cargarLocalStorage(){
 
 
 
-//PINTAR CATALOGO 
-
- function pintarCatalogo(categoria){
+//PINTAR CATALOGO POR CATEGORIAS
+ function pintarCatalogoCategoria(categoria){
   let prodCat=[];
 
    productos.forEach((product)=> {
@@ -138,31 +136,37 @@ function cargarLocalStorage(){
      }
      
    });
+   let shopContent= document.getElementById("shopContent")
+
+   pintarCatalogo(shopContent,prodCat)
   
-  let shopContent= document.getElementById("shopContent")
-  while (shopContent.firstChild) {
-    shopContent.removeChild(shopContent.firstChild);
-  }
 
-  prodCat.forEach((p)=>{
-  let content = document.createElement ("div");
-  content.className = "col-2 card cardH";
-  content.innerHTML = `
-      <img class="" src="${p.src}">
-      <div class="d-flex flex-row align-items-center">
-          <h5 class="card-title">${p.name}  ${p.precio}€</h5>
-      </div>
-      <p class="card-text description">${p.description}</p>
-      <div class="d-flex flex-row align-items-center">
-          <a  id =${p.id} data-producto =${p.id}  href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> COMPRAR</a>
-          <i class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
-      </div>
+ }
 
-  `;
 
-  shopContent.append(content);
-   })
+ function pintarCatalogo(shopContent , prod){
+    while (shopContent.firstChild) {
+      shopContent.removeChild(shopContent.firstChild);
+    }
 
+    prod.forEach((p)=>{
+    let content = document.createElement ("div");
+    content.className = "col-2 card cardH";
+    content.innerHTML = `
+        <img class="" src="${p.src}">
+        <div class="d-flex flex-row align-items-center">
+            <h5 class="card-title">${p.name}  ${p.precio}€</h5>
+        </div>
+        <p class="card-text description">${p.description}</p>
+        <div class="d-flex flex-row align-items-center">
+            <a  id =${p.id} data-producto =${p.id}  href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> Añadir</a>
+            <i class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
+        </div>
+
+    `;
+
+    shopContent.append(content);
+    })
  }
 
 

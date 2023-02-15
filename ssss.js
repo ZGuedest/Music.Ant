@@ -1,38 +1,13 @@
 debugger
 
-let idiomaSelect="Español";
-let arrayCata=cambiarIdioma(idiomaSelect);
+const ctlgEsp = ["Cuerda","Guitarra","Violín","Bajo","Viento","Trompeta","Flauta","Trompa","Percusión","Batería","Bongó","Miscelanea","Electrónico","Mezcladora","Amplificador", "Microfono"]
+const ctlgEng = ["Strings","Guitar","Violin","Bass","Wind","Trumpet","Flute","Horn","Percussion","Drums","Bongo","Miscellaneous"," Electronic","Mixer","Amplifier", "Microphone"]
+const ctlgEus = ["Hariak","Gitarra","Biolina","Baxua","Haizea","Tronpeta","Flauta","Tronpa","Perkusioa","Bateria","Bongo","Denetariko"," Elektronika","Nahastailea","Anplifikadorea","Mikrofonoa"]
+
+
+
+let arrayCata=ctlgEsp;
 cargarCatalogo(arrayCata)
-
-
-function eventoCambiarIdioma(){
-    let opciones = document.getElementsByClassName("idioma");
-    for (let a = 0 ; a<opciones.length; a++){
-        opciones[a].addEventListener("click", (event)=>{ 
-            idiomaSelect=event.target.textContent
-
-            arrayCata=cambiarIdioma(idiomaSelect)
-            cargarCatalogo(arrayCata)
-        })
-    }
-}
-
-function cambiarIdioma(idioma){
-
-
-    let arrayM=[]
-    if (idioma=="Español"){
-        arrayM=ctlgEsp
-    }else if (idioma=="Inglés"){
-        arrayM=ctlgEng
-    }else{
-        arrayM = ctlgEus
-    }
-
-   
-    return arrayM;
-}
-
 
 function cargarCatalogo(arrayCata){
     let cajaCatalogo = document.getElementById("cont-radio-check");
@@ -146,9 +121,4 @@ function cargarCatalogo(arrayCata){
     `
 
 }
-
-
-
-
-
 
