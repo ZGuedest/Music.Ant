@@ -1,11 +1,9 @@
+
 let arrayF = ["Síguenos en nuestras redes sociales", "Suscríbete para recibir actualizaciones", "Subscribe", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Descárgate Nuestra App", "Contáctanos", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88","© MusicAnt.com 2023"] 
 let arrayIngles =["Follow us on our social networks", "Subscribe to receive updates", "Subscribete", "Cookies policy", "Legal warning", , "Cookies policy", "Privacy Policy", "Legal warning", "Download Our App", "Contact us", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88", "© MusicAnt.com 2023"]
 let arrayeuskera = ["Jarrai gaitzazu gure sare sozialetan", "Harpidetu eguneraketak jasotzeko",  "harpidetu", "cookien politika", 
 "Pribatutasun politika", "Lege abisua", "Deskargatu Gure aplikazioa", "jarri gurekin harremanetan" , "New York, NY 10012, US","© MusicAnt.com 2023"]
-<<<<<<< HEAD
-=======
 
->>>>>>> eba48ade6334fd5dbabeb2f8f0a12dde19d35bce
 let html= document.getElementsByTagName("html")[0]
 let footer = document.createElement("footer")
 footer.className="text-center text-white"

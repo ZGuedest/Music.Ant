@@ -16,6 +16,7 @@ let productos = cargarDelLocalStorage();
 
 yesnoCheck();
 
+
 radioCuerda.addEventListener("change", yesnoCheck)
 radioPercusion.addEventListener("change", yesnoCheck)
 radioViento.addEventListener("change", yesnoCheck);
@@ -26,6 +27,7 @@ function activarClickComprar(){
   let botonesComprar = document.getElementsByClassName("btn-primary");
   for(let i=0; i<botonesComprar.length;i++){
     botonesComprar[i].addEventListener("click",(event)=>{
+      debugger
         event.preventDefault()
         cantidadDelIconoCarrito()
         let idBtn= event.target.id;
@@ -178,21 +180,6 @@ function añadirAlCarrito(idBtn){
   productos[idBtn-1].cantidad++
       
 }
-
-
-/*-----FUNCIONALIDAD EVENTO CLICK -----------*/
-// let carrito = [];
-// let botones = document.getElementsByClassName("btn");
-
-// for(let b=0; b<botones.length; b++){
-
-//   botones[b].addEventListener("click",  (event)=>{
-//       let idBtn= event.target.id;
-//       añadirAlCarrito(idBtn)
-//       cargarLocalStorage();
-//   });
-
-// }
 
   
 

@@ -47,6 +47,9 @@
 * header nav #menu-iconers {
   width: 20%;
 }
+* header nav #ven {
+  display: none;
+}
 * header #frase_imaginacion {
   font-size: 45px;
   font-family: Blackadder ITC;

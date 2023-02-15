@@ -63,7 +63,7 @@ function cargarMenu(){
                                     
                 <li ><a href="login.html"><i class="pt-4 fa-regular fa-circle-user"></i></a></li>
                 <li ><i class="pt-4 fa-solid fa-heart"></i></li>
-                <li ><a href="carrito.html"><i class="pt-4 fa-solid fa-cart-shopping"></i></a></li>
+                <li ><a href="carrito.html"><i class="pt-4 fa-solid fa-cart-shopping"></i></a><span id="cantidadCarrito" class="cantidad-carrito" value="0"></span></li>
             </ul>     
         </div>
     </nav>`
