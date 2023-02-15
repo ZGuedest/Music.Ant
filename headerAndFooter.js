@@ -82,6 +82,8 @@ function cargarMenu(arrayM){
 
                 <li ><i class="pt-4 fa-solid fa-heart"></i></li>
                 <li ><a href="carrito.html"><i class="pt-4 fa-solid fa-cart-shopping"></i></a><span id="cantidadCarrito" class="cantidad-carrito" value="0"></span></li>
+                <li ><p class="pt-4">23/02/2023</p></li>
+
             </ul>     
         </div>
     </nav>`
