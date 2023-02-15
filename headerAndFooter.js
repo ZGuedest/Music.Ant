@@ -274,3 +274,5 @@ function abrir(){
 }
 ////////FIN  VALIDACION DEL LOGIN/////////
 
+
+
