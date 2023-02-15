@@ -36,7 +36,6 @@ function cambiarIdioma(idioma){
 
 function cargarCatalogo(arrayCata){
     let cajaCatalogo = document.getElementById("cont-radio-check");
-
     cajaCatalogo.innerHTML = ` 
 
     <div id="radiocatalogo" class="d-flex justify-content-around" >
