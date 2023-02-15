@@ -272,10 +272,9 @@ cerrar.addEventListener("click",()=>{
 function abrir(){
     document.getElementById("ven").style.display="block";
 }
-// var date = new Date();
-// 	document.getElementById("fecha").innerHTML = date;
+
 var date = new Date();
-	var current_date =date.getDate()+"-"+(date.getMonth()+1)+"-"+ date.getFullYear();
+	var current_date =date.getDate()+"/"+(date.getMonth()+1)+"/"+ date.getFullYear();
 	document.getElementById("fecha").innerHTML = current_date;
 ////////FIN  VALIDACION DEL LOGIN/////////
 
