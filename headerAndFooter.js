@@ -9,20 +9,19 @@ cargarFooter(arrayM)
 
 
 
-function eventoCambiarIdioma(){
-    let opciones = document.getElementsByClassName("idioma");
-    for (let a = 0 ; a<opciones.length; a++){
-        opciones[a].addEventListener("click", (event)=>{ 
-            idiomaSelect=event.target.textContent
+// function eventoCambiarIdioma(){
+//     let opciones = document.getElementsByClassName("idioma");
+//     for (let a = 0 ; a<opciones.length; a++){
+//         opciones[a].addEventListener("click", (event)=>{ 
+//             idiomaSelect=event.target.textContent
 
-           arrayM=cambiarIdioma(idiomaSelect)
-           cargarMenu(arrayM)
-           cargarFooter(arrayM)
+//            arrayM=cambiarIdioma(idiomaSelect)
+//            cargarMenu(arrayM)
+//            cargarFooter(arrayM)
 
-
-        })
-    }
-}
+//         })
+//     }
+// }
 
 
 function cargarMenu(arrayM){
@@ -95,7 +94,7 @@ function cargarMenu(arrayM){
     p.innerHTML=`"${arrayM[5]}"`
     header.append(p)
 
-    eventoCambiarIdioma()
+    //eventoCambiarIdioma()
 
 }
 
