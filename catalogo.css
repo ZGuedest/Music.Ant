@@ -45,7 +45,7 @@
   width: 40%;
 }
 * header nav #menu-iconers {
-  width: 20%;
+  width: 30%;
 }
 * header nav #ven {
   display: none;
@@ -120,7 +120,7 @@ header #catalogo, header #ofertas, header #novedades {
 }
 
 body #checks-cuerda, body #checks-viento, body #checks-percusion, body #checks-electronico {
-  display: none;
+  display: block;
   width: 10%;
 }
 body #cont-radio-check {

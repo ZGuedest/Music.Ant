@@ -10,7 +10,8 @@ const productos=[
         "src": "./img/guitarra1.jpg",
         "cantidad": 0,
         "novedad": "true",
-        "oferta": "false"
+        "oferta": "false",
+        "favorito":"false"
     },
 
     {
@@ -24,7 +25,8 @@ const productos=[
         "src": "./img/guitarra2.jpg",
         "cantidad": 0,
         "novedad": "false",
-        "oferta": "false"
+        "oferta": "false",
+        "favorito":"false"
 
     },
     {
@@ -37,12 +39,13 @@ const productos=[
         "src": "./img/guitarra3.jpg",
         "cantidad": 0,
         "novedad": "false",
-        "oferta": "false"
+        "oferta": "false",
+        "favorito":"false"
 
     },
     {
         "id":4,
-        "varname":"true",
+        "varname":"violin1",
         "name":"Forenza F1151A - Conjunto de violín de tamaño completo",
         "description":"Tamaño 4/4. Se suministra con el puente equipada, configurar listo para jugar. Clavijas y armarios integral de la pieza de cola afinadores. Incluye arco de madera con el bloque de colofonia. Caso de cremallera de peso ligero con asa y correas para los hombros",
         "precioDescription": "94,21 €",
@@ -50,7 +53,8 @@ const productos=[
         "src": "./img/violin1.jpg",
         "cantidad": 0,
         "novedad": "false",
-        "oferta": "false"
+        "oferta": "false",
+        "favorito":"false"
 
     },
     {
@@ -63,7 +67,8 @@ const productos=[
         "src": "./img/violin2.jpg",
         "cantidad": 0,
         "novedad": "false",
-        "oferta": "false"
+        "oferta": "false",
+        "favorito":"false"
 
     },
     {
@@ -76,7 +81,8 @@ const productos=[
         "src": "./img/violin3.jpg",
         "cantidad": 0,
         "novedad": "false",
-        "oferta": "false"
+        "oferta": "false",
+        "favorito":"false"
 
     },
     {
@@ -89,7 +95,8 @@ const productos=[
         "src": "./img/bajo1.webp",
         "cantidad": 0,
         "novedad": "false",
-        "oferta": "false"
+        "oferta": "false",
+        "favorito":"false"
 
     },
     {
@@ -103,7 +110,8 @@ const productos=[
     "src": "./img/bajo2.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 
 },
 {
@@ -116,7 +124,8 @@ const productos=[
     "src": "./img/bajo3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
     
 },
 { 
@@ -129,7 +138,8 @@ const productos=[
     "src": "./img/flauta1.jpg",
     "cantidad": 0,
     "novedad": "true",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 
 },
 {
@@ -142,7 +152,8 @@ const productos=[
     "src": "./img/flauta2.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 
 },
 {
@@ -155,7 +166,8 @@ const productos=[
     "src": "./img/flauta3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":13,
@@ -167,7 +179,8 @@ const productos=[
     "src": "./img/trompeta1.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":14,
@@ -179,7 +192,8 @@ const productos=[
     "src": "./img/trompeta2.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false" 
+    "oferta": "false",
+    "favorito":"false" 
 },
 {
     "id":15,
@@ -191,7 +205,8 @@ const productos=[
     "src": "./img/trompeta3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":16,
@@ -203,11 +218,12 @@ const productos=[
     "src": "./img/trompa1.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "true"
+    "oferta": "true",
+    "favorito":"false"
 },
 {
     "id":17,
-    "vername":"trompa2",
+    "varname":"trompa2",
     "name": "Referencia FH700",
     "description":"Trompa Si bemol. Lacada. 4 valvulas. Campana desmontable. Con estuche semi-rígido.",
     "precioDescription": "542 €",
@@ -215,11 +231,12 @@ const productos=[
     "src": "./img/trompa2.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":18,
-    "vername":"trompa3",
+    "varname":"trompa3",
     "name": "Trompa Doble Gara GHR-66",
     "description":"Sin duda la trompa más demandada por los estudiantes de este instrumento, por su calidad de sonido, y perfecta afinación.Campana fija, Lacada. En FA/SIb con estuche y boquilla.",
     "precioDescription": "836 €",
@@ -227,11 +244,12 @@ const productos=[
     "src": "./img/trompa3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":19,
-    "vername":"bateria1",
+    "varname":"bateria1",
     "name": "Sonor AQ1 Studio Set Piano Black",
     "description":"Versión 'Studio'. Cascos 100% de abedul. Herrajes de los cascos de cromo. Incluye soporte doble para toms y set de herrajes Sonor HS2000. Nuevo sistema de montaje de toms SmartMount, para un sustain óptimo del sonido con una cantidad mínima de herrajes en el casco del tambor. Color: Negro Piano (Piano Black, PB",
     "precioDescription": "1.235 €",
@@ -239,7 +257,8 @@ const productos=[
     "src": "./img/bateria1.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 
 },
 {
@@ -252,7 +271,8 @@ const productos=[
     "src": "./img/bateria2.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":21,
@@ -264,7 +284,8 @@ const productos=[
     "src": "./img/bateria3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
 
@@ -277,7 +298,8 @@ const productos=[
     "src": "./img/bongo1.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
  
 },
 {
@@ -290,7 +312,8 @@ const productos=[
     "src": "./img/bongo2.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 
 },
 {
@@ -303,7 +326,8 @@ const productos=[
     "src": "./img/bongo3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 
 },
 {
@@ -317,7 +341,8 @@ const productos=[
     "src": "./img/miscelanea1.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "true"
+    "oferta": "true",
+    "favorito":"false"
 },
 {
 
@@ -330,7 +355,8 @@ const productos=[
     "src": "./img/miscelanea2.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 
 },
 {
@@ -343,7 +369,8 @@ const productos=[
     "src": "./img/miscelanea3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 
 },
 {
@@ -356,7 +383,8 @@ const productos=[
     "src": "./img/mezcladora1.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 
 },
 {
@@ -369,7 +397,8 @@ const productos=[
     "src": "./img/mezcladora2.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 
 },
 {
@@ -383,7 +412,8 @@ const productos=[
     "src": "./img/mezcladora3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":31,
@@ -395,7 +425,8 @@ const productos=[
     "src": "./img/amplificador1.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":32,
@@ -407,7 +438,8 @@ const productos=[
     "src": "./img/amplificador2.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":33,
@@ -419,7 +451,8 @@ const productos=[
     "src": "./img/amplificador3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
 
@@ -432,7 +465,8 @@ const productos=[
     "src": "./img/microfono1.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "false"
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":35,
@@ -443,8 +477,9 @@ const productos=[
     "precio": 429,
     "src": "./img/microfono2.jpg",
     "cantidad": 0,
-    "novedad": "false",
-    "oferta": "false"
+    "novedad": "true",
+    "oferta": "false",
+    "favorito":"false"
 },
 {
     "id":36,
@@ -456,7 +491,8 @@ const productos=[
     "src": "./img/microfono3.jpg",
     "cantidad": 0,
     "novedad": "false",
-    "oferta": "true"
+    "oferta": "true",
+    "favorito":"false"
 },
 
 ]
