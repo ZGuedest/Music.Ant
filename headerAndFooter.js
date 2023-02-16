@@ -59,10 +59,10 @@ function cargarMenu(arrayM){
 
             <ul id="menu-iconers"class="nav pt-3 justify-content-around">
                         
-                <li > <div class="dropdown">
+                <li > <div class="dropdown ">
                     <button class="btn btn-secondary d-flex flex-row text-center align-items-center dropdown-toggle bg-transparent border-0 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <p id="idio-select" value="espanol" class="pt-3">${idiomaSelect}</p>
-                        <i class="fa-solid fa-earth-americas text-dark ml-1"></i>
+                        <i class="fa-solid fa-earth-americas text-dark ms-1"></i>
                     </button>
                     <ul class="dropdown-menu">
                         <li value="espanol"><a value="espanol" class=" idioma px-1 py-1 dropdown-item" href="#">Español</a></li>
