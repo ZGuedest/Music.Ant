@@ -83,7 +83,8 @@ function pintarCarrito(){
     activarEventoBasura()
 }
 
-//function cacularTotal()
+
+
 
 function activarEventoBasura(){
     let bas= document.getElementsByClassName("cr_basura")
