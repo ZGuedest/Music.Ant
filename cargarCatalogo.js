@@ -162,7 +162,7 @@ function activarClickComprar(){
 function yesnoCheck() {
     
   if (radios[0].checked == true) {
-    //cambiarDisplayRadioButton(cajas_checkouts[0],cajas_checkouts[1],cajas_checkouts[2],cajas_checkouts[3])
+    cambiarDisplayRadioButton(cajas_checkouts[0],cajas_checkouts[1],cajas_checkouts[2],cajas_checkouts[3])
     pintarCatalogoCategoria("cuerda")
     descheckearProductos("cuerda")
 
@@ -246,15 +246,8 @@ function cargarDelLocalStorage(){
 }
 
 function cargarLocalStorage(){
-
-  //localStorage.clear()
-  let aux;
   for(let i=0; i<productos.length;i++){
-      
-      aux = JSON.stringify(productos[i])
-      localStorage.setItem( i, aux)
-
-
+    localStorage.setItem( i,  JSON.stringify(productos[i]))
   }
 
 }
@@ -342,13 +335,14 @@ function añadirAlCarrito(idBtn){
 
 // // --------cargar producto por checkout-----
 
-eventoCargarProductoPorCheckout()
+//eventoCargarProductoPorCheckout()
 function eventoCargarProductoPorCheckout(){
   for(let i = 0; i<arraycheckout.length; i++){
       arraycheckout[i].addEventListener ("change", ()=>{
-        debugger
         let categoria= arraycheckout[i].getAttribute("data-bs-c")
-        cargarProductoPorCheckout(categoria)
+        let prodchecked = cargarProductoPorCheckout(categoria)
+        let shopContent= document.getElementById("shopContent")
+        pintarCatalogo(shopContent,prodchecked)
       })
   }
      
@@ -363,17 +357,16 @@ function cargarProductoPorCheckout (categoria){
             if(arraycheckout[ck].checked == true){
                 debugger
                 let aux=elegirProdPorCheck(arraycheckout[ck]);
-                prodchecked.push(aux);
+                for(let j=0; j<aux.length;j++){
+                  prodchecked.push(aux[j]);
+                }
             }
             
         }
         
     }
 
-    let shopContent= document.getElementById("shopContent")
-    pintarCatalogo(shopContent,prodchecked[0])
-    
- 
+    return prodchecked
 }
 
 
