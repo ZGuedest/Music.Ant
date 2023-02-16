@@ -4,6 +4,10 @@ let idiomaSelect="Español";
 
 
 let arrayM=cambiarIdioma(idiomaSelect)
+
+var date = new Date();
+var fechaactual =date.getDate()+"/"+(date.getMonth()+1)+"/"+ date.getFullYear();
+	//document.getElementById("fecha").innerHTML = fechaactual;
 cargarMenu(arrayM)
 cargarFooter(arrayM)
 
@@ -59,7 +63,7 @@ function cargarMenu(arrayM){
             <ul id="menu-iconers"class="nav pt-3 justify-content-around">
                         
                 <li > <div class="dropdown">
-                    <button class="btn btn-secondary d-flex flex-row text-center align-items-center dropdown-toggle bg-transparent border-0 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-secondary d-flex flex-row text-center align-items-center dropdown-toggle bg-transparent  border-0 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <p id="idio-select" value="espanol" class="pt-3">${idiomaSelect}</p>
                         <i class="fa-solid fa-earth-americas text-dark"></i>
                     </button>
@@ -82,9 +86,10 @@ function cargarMenu(arrayM){
 
                 <li ><i class="pt-4 fa-solid fa-heart"></i></li>
                 <li ><a href="carrito.html"><i class="pt-4 fa-solid fa-cart-shopping"></i></a><span id="cantidadCarrito" class="cantidad-carrito" value="0"></span></li>
-                <li ><p id="fecha" class="pt-4"></p></li>
+                
 
-            </ul>     
+            </ul>  
+            <div <li ><p id="fecha" class="pt-4">${fechaactual}</p></li></div>   
         </div>
     </nav>`
 
@@ -273,8 +278,6 @@ function abrir(){
     document.getElementById("ven").style.display="block";
 }
 
-var date = new Date();
-	var current_date =date.getDate()+"/"+(date.getMonth()+1)+"/"+ date.getFullYear();
-	document.getElementById("fecha").innerHTML = current_date;
+
 ////////FIN  VALIDACION DEL LOGIN/////////
 
