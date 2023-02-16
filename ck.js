@@ -10,7 +10,9 @@ let cupon = document.getElementById("inputcupon");
 
 
 let codigoReal= "250X"
-
+ 
+totalP.value = localStorage.getItem('total');
+totalP.innerHTML = localStorage.getItem('total');
 gastosDeEnvio()
 totalGastos()
 ck_primerradio.addEventListener("change",()=>{

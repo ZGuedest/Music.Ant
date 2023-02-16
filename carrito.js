@@ -116,7 +116,7 @@ function cacularTotal(){
         suma += parseFloat(pc[i].textContent)
     }
     total.innerHTML = suma;
-
+    localStorage.setItem('total', suma)
 
 }
 
