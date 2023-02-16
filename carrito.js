@@ -6,18 +6,15 @@ let inputs= document.getElementsByTagName("input")
 
 for(let inp=0; inp<inputs.length;inp++){
     inputs[inp].addEventListener("change",(event)=>{
-        debugger
-        limpiarContenedor()
         let foundP= productos.find((element) => element.id==event.target.id);
-        //inputs[inp].setAttribute("value", foundP.cantidad)
         foundP.cantidad = parseFloat(inputs[inp].value)
-        productos.map
         productos.map ((prod) => {                        
             if (prod.id === foundP.id) {
-                prod.cantidad = foundP.cantidad
+                prod.cantidad = foundP.cantidad                
+                document.getElementById("S+"+foundP.id).innerHTML = String(`${ prod.cantidad * prod.precio }`)
             }
         });
-        pintarCarrito()
+
     })
 }
 
@@ -59,14 +56,14 @@ function pintarCarrito(){
                 <p class="card-text">${product.description}</p>
                 
                 <div class="d-flex flex-row justify-content-around">
-                    <p  class="card-text cr_precio_producto">precio del producto: <small id="" class="text-muted">${product.precio}</small></p>
+                    <p  class="card-text cr_precio_producto">precio del producto: <small id="" class="text-muted">${product.precio}</small> €</p>
 
-                    <input  type="number" id=${product.id} class="aumentar" value=${product.cantidad} name="aumentar" min="1" max="10">
-                    <p class="card-text px-2"> precio por cantidad: <small  id="cr_precio_cantidad"  class="text-muted">${product.cantidad * product.precio}</small></p>
+                    <input  type="number" class="aumentar" id=${product.id} value=${product.cantidad} name="aumentar" min="1" max="10">
+                    <p class="card-text px-2 cr_precio_cantidad"> precio por cantidad: <small id="S+${product.id}" class="text-muted">${product.cantidad * product.precio}</small> €</p>
                 </div>
                 <div class="d-flex gap-0 column-gap-3">
-                    <i class="cr_basura fa-solid fa-trash"></i>
-                    <i class="cr_corazon fa-regular fa-heart"></i>
+                    <i id="B+${product.id}" class="cr_basura fa-solid fa-trash"></i>
+                    <i id="C+${product.id}" class="cr_corazon fa-regular fa-heart"></i>
                 </div>
             </div>
    
@@ -79,8 +76,33 @@ function pintarCarrito(){
 
     });
 
-
+    activarEventoBasura()
 }
+
+
+function activarEventoBasura(){
+    let bas= document.getElementsByClassName("cr_basura")
+
+    for(let b=0; b<bas.length;b++){
+        bas[b].addEventListener("click",(event)=>{
+
+            let fP= productos.find((element) => element.id==(event.target.id).slice(1));
+            productos.map ((prod) => {                        
+                if (prod.id === fP.id) {
+                    prod.cantidad = 0
+                    limpiarContenedor()
+                    pintarCarrito()
+        
+                    
+                }
+            });
+        
+        })
+    }
+}
+
+
+
 
 
 
