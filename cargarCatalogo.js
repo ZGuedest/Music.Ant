@@ -123,3 +123,22 @@ function cargarMenuCatalogo(arrayCata){
     eventoCambiarIdioma()
 }
 
+
+// --------cargar producto por checkout-----
+let arraycheckout = document.getElementsByClassName("ck");
+for(let i = 0; i<arraycheckout.length; i++){
+    arraycheckout[i].addEventListener ("change", ()=>{
+        cargarProductosPorCheckout()
+    })
+}
+   function cargarProductoPorCheckout (){
+        alert("yes");
+       
+}
+
+
+
+
+
+
+
