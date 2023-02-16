@@ -1,161 +1,144 @@
 
+
+let productos = cargarDelLocalStorage();
+
 const ctlgEsp = ["Cuerda","Guitarra","Violín","Bajo","Viento","Trompeta","Flauta","Trompa","Percusión","Batería","Bongó","Miscelanea","Electrónico","Mezcladora","Amplificador", "Microfono"]
 const ctlgEng = ["Strings","Guitar","Violin","Bass","Wind","Trumpet","Flute","Horn","Percussion","Drums","Bongo","Miscellaneous"," Electronic","Mixer","Amplifier", "Microphone"]
 const ctlgEus = ["Hariak","Gitarra","Biolina","Baxua","Haizea","Tronpeta","Flauta","Tronpa","Perkusioa","Bateria","Bongo","Denetariko"," Elektronika","Nahastailea","Anplifikadorea","Mikrofonoa"]
-
 
 let arrayCata=[];
 
 arrayCata=cambiarIdioma(idiomaSelect, ctlgEsp, ctlgEng, ctlgEus)
 cargarMenuCatalogo(arrayCata)
 
+const radios= document.getElementsByClassName("radio")
+const cajas_checkouts= document.getElementsByClassName("caja_check")
+const arraycheckout = document.getElementsByClassName("ck");
+
+yesnoCheck()
+eventoRadios(radios)
+
+
+
 function cargarMenuCatalogo(arrayCata){
 
-    let cajaCatalogo = document.getElementById("cont-radio-check");
+  let cajaCatalogo = document.getElementById("cont-radio-check");
 
-    cajaCatalogo.innerHTML = ` 
+  cajaCatalogo.innerHTML = ` 
 
-    <div id="radiocatalogo" class="d-flex justify-content-around" >
+  <div id="radiocatalogo" class="d-flex justify-content-around" >
 
-        <div id="cuerda" class="form-check form-check-inline">
+      <div id="cuerda" class="form-check form-check-inline">
 
-            <div id="caja-radio-cuerda" class="d-flex flex-row align-items-center justify-content-around">
-                <input id="radio-cuerda" class="form-check-input p-1 m-2" type="radio" name="inlineRadioOptions" value="cuerda" checked>
-                <label class="form-check-label" for="radio-cuerda">${arrayCata[arrayM.length-1][0]}</label>
-                <div id="ico-cuerda"></div>
-            </div>
-
-
-            <div id="checks-cuerda">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck " data-bs-c="cuerda" type="checkbox" id="check-guitarra" value="guitarra">
-                    <label class="form-check-label" for="check-guitarra">${arrayCata[arrayM.length-1][1]}</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck " type="checkbox" id="check-violin" value="violin">
-                    <label   label class="form-check-label" for="check-violin">${arrayCata[arrayM.length-1][2]}</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck" type="checkbox" id="check-bajo" value="bajo">
-                    <label class="form-check-label" for="check-bajo">${arrayCata[arrayM.length-1][3]}</label>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div id="viento"class="form-check form-check-inline ">
-            <div id="caja-radio-viento" class="d-flex flex-row align-items-center justify-content-around">
-                <input id="radio-viento" class="form-check-input p-1 m-2" type="radio" name="inlineRadioOptions" value="viento">
-                <label class="form-check-label" for="radio-viento">${arrayCata[arrayM.length-1][4]}</label>
-                <div id="ico-viento"></div>
-            </div>
+          <div id="caja-radio-cuerda" class="d-flex flex-row align-items-center justify-content-around">
+              <input id="radio-cuerda" class="form-check-input radio p-1 m-2" type="radio" name="inlineRadioOptions" value="cuerda" checked>
+              <label class="form-check-label" for="radio-cuerda">${arrayCata[arrayM.length-1][0]}</label>
+              <div id="ico-cuerda"></div>
+          </div>
 
 
-            <div id="checks-viento" >
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck" type="checkbox" id="check-trompeta" value="trompeta">
-                    <label class="form-check-label" for="check-trompeta">${arrayCata[arrayM.length-1][5]}</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck" type="checkbox" id="check-flauta" value="flauta">
-                    <label   label class="form-check-label" for="check-flauta">${arrayCata[arrayM.length-1][6]}</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck" type="checkbox" id="check-trompa" value="trompa">
-                    <label class="form-check-label" for="check-trompa">${arrayCata[arrayM.length-1][7]}</label>
-                </div>
+          <div id="checks-cuerda" class="caja_check">
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck " data-bs-c="cuerda" type="checkbox" id="check-guitarra" value="guitarra">
+                  <label class="form-check-label" for="check-guitarra">${arrayCata[arrayM.length-1][1]}</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck " type="checkbox" id="check-violin" value="violin">
+                  <label   label class="form-check-label" for="check-violin">${arrayCata[arrayM.length-1][2]}</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck" type="checkbox" id="check-bajo" value="bajo">
+                  <label class="form-check-label" for="check-bajo">${arrayCata[arrayM.length-1][3]}</label>
+              </div>
 
-            </div>
-        </div>
+          </div>
 
-        <div id="percusion"class="form-check form-check-inline ">
-            <div id="caja-radio-percusion" class="d-flex flex-row align-items-center justify-content-between">
-                <input id="radio-percusion" class="form-check-input p-1 m-2" type="radio" name="inlineRadioOptions"  value="percusion">
-                <label class="form-check-label" for="radio-percusion">${arrayCata[arrayM.length-1][8]}</label>
-                <div id="ico-percusion"></div>
-            </div>
+      </div>
 
-
-            <div id="checks-percusion">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck" type="checkbox" id="check-bateria" value="bateria">
-                    <label class="form-check-label" for="check-bateria">${arrayCata[arrayM.length-1][9]}</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck" type="checkbox" id="check-bongo" value="bongo">
-                    <label   label class="form-check-label" for="check-bongo">${arrayCata[arrayM.length-1][10]}</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck" type="checkbox" id="check-miscelanea" value="miscelanea">
-                    <label class="form-check-label" for="check-miscelanea">${arrayCata[arrayM.length-1][11]}</label>
-                </div>
-
-            </div>
-        </div>
-
-        <div id="electronico"class="form-check form-check-inline ">
-            <div id="caja-radio-electronico" class="d-flex flex-row align-items-center justify-content-between">
-                <input  id="radio-electronico" class="form-check-input p-1 m-2" type="radio" name="inlineRadioOptions" value="electronico">
-                <label class="form-check-label" for="radio-electronico">${arrayCata[arrayM.length-1][12]}</label>
-                <div id="ico-electronico"></div>
-            </div>
+      <div id="viento"class="form-check form-check-inline ">
+          <div id="caja-radio-viento" class="d-flex  flex-row align-items-center justify-content-around">
+              <input id="radio-viento" class=" radio form-check-input p-1 m-2" type="radio" name="inlineRadioOptions" value="viento">
+              <label class="form-check-label" for="radio-viento">${arrayCata[arrayM.length-1][4]}</label>
+              <div id="ico-viento"></div>
+          </div>
 
 
-            <div id="checks-electronico">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck" type="checkbox" id="check-mezcladora" value="mezcladora">
-                    <label class="form-check-label" for="check-mezcladora">${arrayCata[arrayM.length-1][13]}</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck" type="checkbox" id="check-Amplificador" value="amplificador">
-                    <label   label class="form-check-label" for="check-Amplificador">${arrayCata[arrayM.length-1][14]}</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input ck" type="checkbox" id="check-microfono" value="microfono">
-                    <label class="form-check-label" for="check-microfono">${arrayCata[arrayM.length-1][15]}</label>
-                </div>
+          <div id="checks-viento" class="caja_check">
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck" type="checkbox" id="check-trompeta" value="trompeta">
+                  <label class="form-check-label" for="check-trompeta">${arrayCata[arrayM.length-1][5]}</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck" type="checkbox" id="check-flauta" value="flauta">
+                  <label   label class="form-check-label" for="check-flauta">${arrayCata[arrayM.length-1][6]}</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck" type="checkbox" id="check-trompa" value="trompa">
+                  <label class="form-check-label" for="check-trompa">${arrayCata[arrayM.length-1][7]}</label>
+              </div>
 
-            </div>
-        </div>
-    </div>
-    `
-    //eventoCambiarIdioma()
+          </div>
+      </div>
+
+      <div id="percusion"class="form-check form-check-inline ">
+          <div id="caja-radio-percusion" class="d-flex flex-row align-items-center justify-content-between">
+              <input id="radio-percusion" class=" radio form-check-input p-1 m-2" type="radio" name="inlineRadioOptions"  value="percusion">
+              <label class="form-check-label" for="radio-percusion">${arrayCata[arrayM.length-1][8]}</label>
+              <div id="ico-percusion"></div>
+          </div>
+
+
+          <div id="checks-percusion" class="caja_check">
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck" type="checkbox" id="check-bateria" value="bateria">
+                  <label class="form-check-label" for="check-bateria">${arrayCata[arrayM.length-1][9]}</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck" type="checkbox" id="check-bongo" value="bongo">
+                  <label   label class="form-check-label" for="check-bongo">${arrayCata[arrayM.length-1][10]}</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck" type="checkbox" id="check-miscelanea" value="miscelanea">
+                  <label class="form-check-label" for="check-miscelanea">${arrayCata[arrayM.length-1][11]}</label>
+              </div>
+
+          </div>
+      </div>
+
+      <div id="electronico"class="form-check form-check-inline ">
+          <div id="caja-radio-electronico" class="d-flex flex-row align-items-center justify-content-between">
+              <input  id="radio-electronico" class="radio form-check-input p-1 m-2" type="radio" name="inlineRadioOptions" value="electronico">
+              <label class="form-check-label" for="radio-electronico">${arrayCata[arrayM.length-1][12]}</label>
+              <div id="ico-electronico"></div>
+          </div>
+
+
+          <div id="checks-electronico" class="caja_check">
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck" type="checkbox" id="check-mezcladora" value="mezcladora">
+                  <label class="form-check-label" for="check-mezcladora">${arrayCata[arrayM.length-1][13]}</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck" type="checkbox" id="check-Amplificador" value="amplificador">
+                  <label   label class="form-check-label" for="check-Amplificador">${arrayCata[arrayM.length-1][14]}</label>
+              </div>
+              <div class="form-check form-check-inline">
+                  <input class="form-check-input ck" type="checkbox" id="check-microfono" value="microfono">
+                  <label class="form-check-label" for="check-microfono">${arrayCata[arrayM.length-1][15]}</label>
+              </div>
+
+          </div>
+      </div>
+  </div>
+  `
+  eventoCambiarIdioma(ctlgEsp, ctlgEng, ctlgEus)
 }
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////
-const radioCatalogo = document.getElementById("radiocatalogo");
-
-const radioCuerda = document.getElementById("radio-cuerda");
-const checksCuerda = document.getElementById("checks-cuerda");
-
-const radioViento = document.getElementById("radio-viento");
-const checksViento = document.getElementById("checks-viento");
-
-const radioPercusion = document.getElementById("radio-percusion");
-const checksPercusion = document.getElementById("checks-percusion");
-
-const radioElectronico = document.getElementById("radio-electronico");
-const checksElectronico = document.getElementById("checks-electronico");
-
-let arraycheckout = document.getElementsByClassName("ck");
-
-
-let productos = cargarDelLocalStorage();
-
-yesnoCheck();
-
-
-radioCuerda.addEventListener("change", yesnoCheck)
-radioPercusion.addEventListener("change", yesnoCheck)
-radioViento.addEventListener("change", yesnoCheck);
-radioElectronico.addEventListener("change", yesnoCheck);
-
+function eventoRadios(radios){
+  for(let i=0;i<radios.length;i++){
+    radios[i].addEventListener("change", yesnoCheck)
+  
+  }
+}
 
 function activarClickComprar(){
   let botonesComprar = document.getElementsByClassName("btn-primary");
@@ -172,31 +155,28 @@ function activarClickComprar(){
 }
 
 
-
-
 function yesnoCheck() {
     
-  if (radioCuerda.checked == true) {
-    cambiarDisplayRadioButton(checksCuerda,checksViento,checksPercusion,checksElectronico)
-    
+  if (radios[0].checked == true) {
+    //cambiarDisplayRadioButton(cajas_checkouts[0],cajas_checkouts[1],cajas_checkouts[2],cajas_checkouts[3])
     pintarCatalogoCategoria("cuerda")
     descheckearProductos("cuerda")
 
-  } else if (radioViento.checked == true) {
+  } else if (radios[1].checked == true) {
   
-    cambiarDisplayRadioButton(checksViento,checksCuerda,checksPercusion,checksElectronico)
+    cambiarDisplayRadioButton(cajas_checkouts[1],cajas_checkouts[0],cajas_checkouts[2],cajas_checkouts[3])
     pintarCatalogoCategoria("viento")
     descheckearProductos("viento")
 
 
-  } else if (radioPercusion.checked == true) {
-    cambiarDisplayRadioButton(checksPercusion,checksCuerda,checksViento,checksElectronico)
+  } else if (radios[2].checked == true) {
+    cambiarDisplayRadioButton(cajas_checkouts[2],cajas_checkouts[0],cajas_checkouts[1],cajas_checkouts[3])
     pintarCatalogoCategoria("percusion")
     descheckearProductos("percusion")
 
 
-  } else if (radioElectronico.checked == true) {
-    cambiarDisplayRadioButton(checksElectronico,checksCuerda,checksViento,checksPercusion)
+  } else if (radios[3].checked == true) {
+    cambiarDisplayRadioButton(cajas_checkouts[3],cajas_checkouts[1],cajas_checkouts[2],cajas_checkouts[0])
     pintarCatalogoCategoria("electronico")
     descheckearProductos("electronico")
 
@@ -206,9 +186,9 @@ function yesnoCheck() {
   activarClickComprar()
 }
 
-///////////////////////////////////////
+/*Esta funcion recibe las 4 cajas contenedoras de los checkouts por cada categoria
+ la primera caja que se pase la muestra y las demás las oculta*/
 function cambiarDisplayRadioButton(ck1,ck2,ck3,ck4){
-
     ck1.style.display = "block";
     ck2.style.display = "none";
     ck3.style.display = "none";
@@ -216,13 +196,9 @@ function cambiarDisplayRadioButton(ck1,ck2,ck3,ck4){
 
 }
 
-///DESCHECKEAR
 function descheckearProductos(categoria){
 
     let arrayAux = cargarCheckoutPorCategoria(categoria)
-
-    
-
     for (let i = 0; i< arraycheckout.length; i++) {
         if( (i !=arrayAux[0] && i!= arrayAux[1] && i != arrayAux[2])){
             arraycheckout[i].checked=false;
@@ -249,8 +225,6 @@ function cargarCheckoutPorCategoria(categoria){
     return arrayAux;
 }
 
-
-// ------cargar del localStorage------
 
 function cargarDelLocalStorage(){
 
@@ -281,10 +255,32 @@ function cargarLocalStorage(){
 
 }
 
+function pintarCatalogo(shopContent,prod){
+  while (shopContent.firstChild) {
+    shopContent.removeChild(shopContent.firstChild);
+  }
 
+  prod.forEach((p)=>{
+  let content = document.createElement ("div");
+  content.className = "col-2 card cardH";
+  content.innerHTML = `
+      <img class="" src="${p.src}">
+      <div class="d-flex flex-row align-items-center">
+          <h5 class="card-title">${p.name}  ${p.precio}€</h5>
+      </div>
+      <p class="card-text description">${p.description}</p>
+      <div class="d-flex flex-row align-items-center">
+          <a  id =${p.id} data-producto =${p.id}  href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> Añadir</a>
+          <i class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
+      </div>
 
-//PINTAR CATALOGO POR CATEGORIAS
- function pintarCatalogoCategoria(categoria){
+  `;
+
+  shopContent.append(content);
+  })
+}
+
+function pintarCatalogoCategoria(categoria){
   let prodCat=[];
 
    productos.forEach((product)=> {
@@ -321,34 +317,8 @@ function cargarLocalStorage(){
  }
 
 
- function pintarCatalogo(shopContent , prod){
-    while (shopContent.firstChild) {
-      shopContent.removeChild(shopContent.firstChild);
-    }
 
-    prod.forEach((p)=>{
-    let content = document.createElement ("div");
-    content.className = "col-2 card cardH";
-    content.innerHTML = `
-        <img class="" src="${p.src}">
-        <div class="d-flex flex-row align-items-center">
-            <h5 class="card-title">${p.name}  ${p.precio}€</h5>
-        </div>
-        <p class="card-text description">${p.description}</p>
-        <div class="d-flex flex-row align-items-center">
-            <a  id =${p.id} data-producto =${p.id}  href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> Añadir</a>
-            <i class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
-        </div>
-
-    `;
-
-    shopContent.append(content);
-    })
- }
-
-
-
-//SUMAR NUMERO DEL ICONO CARRITO
+///////-----------CARRITO-----------------/////////
 function cantidadDelIconoCarrito(){
   let span= document.getElementById("cantidadCarrito");
   let num= parseInt(span.getAttribute("value"))+1;
@@ -360,17 +330,14 @@ function añadirAlCarrito(idBtn){
   productos[idBtn-1].cantidad++
       
 }
+///////--------FIN CARRITO---------------/////////
 
   
 
-
-
-// // --------cargar producto por checkout-----
-
-eventoCargarProductoPorCheckout()
 function eventoCargarProductoPorCheckout(){
   for(let i = 0; i<arraycheckout.length; i++){
       arraycheckout[i].addEventListener ("change", ()=>{
+        debugger
         let categoria= arraycheckout[i].getAttribute("data-bs-c")
         cargarProductoPorCheckout(categoria)
       })
@@ -382,8 +349,7 @@ function eventoCargarProductoPorCheckout(){
 function cargarProductoPorCheckout (categoria){
     let prodchecked = [];
     let arrayckCat = cargarCheckoutPorCategoria(categoria);
-    let g=arraycheckout.length
-    for(let ck=0; ck<g; ck++){
+    for(let ck=0; ck<arraycheckout.length; ck++){
         if(ck == arrayckCat[0] || ck == arrayckCat[1] || ck == arrayckCat[2]) {
             if(arraycheckout[ck].checked == true){
                 debugger
@@ -396,21 +362,21 @@ function cargarProductoPorCheckout (categoria){
     }
 
     let shopContent= document.getElementById("shopContent")
-
     pintarCatalogo(shopContent,prodchecked[0])
     
  
 }
-// -------------elegin categoría----
 
 
- 
-
- function elegirProdPorCheck(check){
+/* Esta función recibe un checkbox, guarda su value, recorre el arreglo de productos generales y 
+accede a la propiedad varname de cada producto, como esta propiedad tiene un numero al final, elimina ese numero
+y compara el resultado obtenido con el value del checkbox, si son iguales, coje el producto y lo guarda en el arreglo
+prodsCk y lo retorna*/
+function elegirProdPorCheck(check){
     let valueCk= check.value
     let prodsCk=[]
-    for( let i=0; i<15;i++){
-        let aux=productos[i].varname.slice(0, -1)
+    for( let i=0; i<productos.length;i++){
+        let au=productos[i].varname
         if( productos[i].varname.slice(0, -1)==valueCk) {
             prodsCk.push(productos[i])
         }
@@ -418,7 +384,6 @@ function cargarProductoPorCheckout (categoria){
     }
 
     return prodsCk;
-
  }
  
 

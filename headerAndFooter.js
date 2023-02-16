@@ -1,29 +1,12 @@
 
 //    --------idiomas navegador----------
 let idiomaSelect="Español";
-
-
-let arrayM=cambiarIdioma(idiomaSelect)
+let arrayM=cambiarIdioma(idiomaSelect,[],[],[])
 var date = new Date();
 var fechaActual =date.getDate()+"/"+(date.getMonth()+1)+"/"+ date.getFullYear();
 cargarMenu(arrayM)
 cargarFooter(arrayM)
 
-
-
-// function eventoCambiarIdioma(){
-//     let opciones = document.getElementsByClassName("idioma");
-//     for (let a = 0 ; a<opciones.length; a++){
-//         opciones[a].addEventListener("click", (event)=>{ 
-//             idiomaSelect=event.target.textContent
-
-//            arrayM=cambiarIdioma(idiomaSelect)
-//            cargarMenu(arrayM)
-//            cargarFooter(arrayM)
-
-//         })
-//     }
-// }
 
 
 function cargarMenu(arrayM){
@@ -47,10 +30,10 @@ function cargarMenu(arrayM){
                 <li id="catalogo" class="nav-item pt-3">
                     <a class="nav-link" href="catalogo.html">${arrayM[2]}</a>
                 </li>
-                <li id="novedades" class="nav-item pt-3">
+                <li id="m-novedades" class="nav-item pt-3">
                     <a class="nav-link" href="#novedades">${arrayM[3]}</a>
                 </li>
-                <li id="ofertas" class="nav-item pt-3">
+                <li id="m-ofertas" class="nav-item pt-3">
                     <a class="nav-link" href="#ofertas">${arrayM[4]}</a>
                 </li>
             </ul>
@@ -97,7 +80,7 @@ function cargarMenu(arrayM){
     p.innerHTML=`"${arrayM[5]}"`
     header.append(p)
 
-    //eventoCambiarIdioma()
+    eventoCambiarIdioma()
 
 }
 
@@ -226,35 +209,10 @@ function cargarFooter(arrayM){
     `
 }
 
-//-----cambiar idioma-----
-function cambiarIdioma(idioma, esp, ing, eusk){
-
-    let espanolM = ["Inicio", "Buscar", "Catálogo", "Novedades", "Ofertas","Deja tu imaginación volar... siente la música","Síguenos en nuestras redes sociales", "Suscríbete para recibir actualizaciones", "Suscribir", "Política de Cookies", "Política de Privacidad", "Aviso Legal", "Condiciones del servicio","Sobre Nosotros", "Nuestro Blog", "Descárgate Nuestra App", "Contáctanos", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88","© MusicAnt.com 2023"];
-    let inglesM = [ "Home", "Search", "Catalogue", "News", "Offers","Let your imagination fly... feel the music","Follow us on our social networks", "Subscribe to receive updates", "Subscribe ", "Cookies policy" , "Privacy Policy", "Legal warning", "Terms of Service", "About Us", "Our Blog", "Download Our App", "Contact us", "New York, NY 10012, US", "info@example.com ", "+ 01 234 567 88", "© MusicAnt.com 2023"];
-    let euskeraM = [ "Hasi", "Bilatu", "Katalogoa", "Berria", "Eskaintzak","Utzi zure irudimena hegan... sentitu musika","Jarrai gaitzazu gure sare sozialetan", "Harpidetu eguneraketak jasotzeko",  "Harpidetu", "Cookien politika", 
-    "Pribatutasun politika", "Lege abisua", "Zerbitzuaren baldintzak","Gutaz", "Gure bloga", "Deskargatu Gure aplikazioa", "jarri gurekin harremanetan" , "New York, NY 10012, US","info@example.com ","+ 01 234 567 88","© MusicAnt.com 2023"];
-    espanolM.push(esp)
-    inglesM.push(ing)
-    euskeraM.push(eusk)
-
-    let arrayM=[]
-    if (idioma=="Español"){
-        arrayM=espanolM
-    }else if (idioma=="Inglés"){
-        arrayM=inglesM
-    }else{
-        arrayM = euskeraM
-    }
-
-   
-    return arrayM;
-}
-
-
 ////////VALIDACION DEL LOGIN/////////
 let black=document.getElementById("login");
 black.addEventListener('click',(event)=>{
-    debugger
+    
     event.preventDefault()
 
     if(localStorage.getItem('gmail') ===" "){

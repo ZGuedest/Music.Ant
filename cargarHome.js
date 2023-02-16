@@ -1,16 +1,18 @@
-debugger
 
 let novedades_caja= document.getElementById("novedades_caja")
+let ofertas_caja= document.getElementById("ofertas_caja")
+
 let prodNew = filtrarProductos("novedad")
-cargarNovedades(novedades_caja, prodNew)
+let prodOf = filtrarProductos("oferta")
+cargarNovedadesOfertas(novedades_caja, prodNew,"Novedades")
+cargarNovedadesOfertas(ofertas_caja, prodOf, "Ofertas")
 
-
-function cargarNovedades(CajaContent, prod){
+function cargarNovedadesOfertas(CajaContent, prod, tit){
 
     // while (CajaContent.firstChild) {
     //     CajaContent.removeChild(CajaContent.firstChild);
     //   }
-    let titulo= cargarTitulo("Novedades")
+    let titulo= cargarTitulo(tit)
     CajaContent.append(titulo);
     prod.forEach((p)=>{
       let content = document.createElement ("div");
