@@ -5,12 +5,10 @@ const ctlgEus = ["Hariak","Gitarra","Biolina","Baxua","Haizea","Tronpeta","Flaut
 let arrayCata=[];
 
 arrayCata=cambiarIdioma(idiomaSelect, ctlgEsp, ctlgEng, ctlgEus)
-// alert(arrayCata)
 cargarMenuCatalogo(arrayCata)
 
 function cargarMenuCatalogo(arrayCata){
 
-    let aux = arrayCata[arrayM.length-1][0]
     let cajaCatalogo = document.getElementById("cont-radio-check");
 
     cajaCatalogo.innerHTML = ` 

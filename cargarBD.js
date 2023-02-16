@@ -1,6 +1,6 @@
+
 const productos=[
     {
-
         "id":1,
         "varname":"guitarra1",
         "name": "Yamaha CGS103A Guitarra Clásica",

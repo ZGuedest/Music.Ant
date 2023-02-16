@@ -59,7 +59,7 @@ function pintarCarrito(){
                     <p  class="card-text cr_precio_producto">precio del producto: <small id="" class="text-muted">${product.precio}</small> €</p>
 
                     <input  type="number" class="aumentar" id=${product.id} value=${product.cantidad} name="aumentar" min="1" max="10">
-                    <p class="card-text px-2 cr_precio_cantidad"> precio por cantidad: <small id="S+${product.id}" class="text-muted">${product.cantidad * product.precio}</small> €</p>
+                    <p class="card-text px-2 cr_precio_cantidad"> precio por cantidad: <small id="S+${product.id}" class=" pc text-muted">${product.cantidad * product.precio}</small> €</p>
                 </div>
                 <div class="d-flex gap-0 column-gap-3">
                     <i id="B+${product.id}" class="cr_basura fa-solid fa-trash"></i>
