@@ -1,3 +1,4 @@
+debugger
 
 let idiomaSelect="Español";
 let arrayCata=cambiarIdioma(idiomaSelect);
@@ -144,13 +145,13 @@ function cargarCatalogo(arrayCata){
     `
 
 }
-debugger
 
+debugger
 // --------cargar producto por checkout-----
 let arraycheckout = document.getElementsByClassName("ck");
 for(let i = 0; i<arraycheckout.length; i++){
     arraycheckout[i].addEventListener ("change", ()=>{
-        cargarProductoPorCheckout()
+        cargarProductosPorCheckout()
     })
 }
    function cargarProductoPorCheckout (){
