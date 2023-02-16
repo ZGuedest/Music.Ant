@@ -43,11 +43,11 @@ function cargarMenuCatalogo(arrayCata){
                   <label class="form-check-label" for="check-guitarra">${arrayCata[arrayM.length-1][1]}</label>
               </div>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck " type="checkbox" id="check-violin" value="violin">
+                  <input class="form-check-input ck " data-bs-c="cuerda" type="checkbox" id="check-violin" value="violin">
                   <label   label class="form-check-label" for="check-violin">${arrayCata[arrayM.length-1][2]}</label>
               </div>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck" type="checkbox" id="check-bajo" value="bajo">
+                  <input class="form-check-input ck" data-bs-c="cuerda" type="checkbox" id="check-bajo" value="bajo">
                   <label class="form-check-label" for="check-bajo">${arrayCata[arrayM.length-1][3]}</label>
               </div>
 
@@ -65,15 +65,15 @@ function cargarMenuCatalogo(arrayCata){
 
           <div id="checks-viento" class="caja_check">
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck" type="checkbox" id="check-trompeta" value="trompeta">
+                  <input class="form-check-input ck" data-bs-c="viento" type="checkbox" id="check-trompeta" value="trompeta">
                   <label class="form-check-label" for="check-trompeta">${arrayCata[arrayM.length-1][5]}</label>
               </div>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck" type="checkbox" id="check-flauta" value="flauta">
+                  <input class="form-check-input ck" data-bs-c="viento"  type="checkbox" id="check-flauta" value="flauta">
                   <label   label class="form-check-label" for="check-flauta">${arrayCata[arrayM.length-1][6]}</label>
               </div>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck" type="checkbox" id="check-trompa" value="trompa">
+                  <input class="form-check-input ck" data-bs-c="viento" type="checkbox" id="check-trompa" value="trompa">
                   <label class="form-check-label" for="check-trompa">${arrayCata[arrayM.length-1][7]}</label>
               </div>
 
@@ -90,15 +90,15 @@ function cargarMenuCatalogo(arrayCata){
 
           <div id="checks-percusion" class="caja_check">
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck" type="checkbox" id="check-bateria" value="bateria">
+                  <input class="form-check-input ck" data-bs-c="percusion" type="checkbox" id="check-bateria" value="bateria">
                   <label class="form-check-label" for="check-bateria">${arrayCata[arrayM.length-1][9]}</label>
               </div>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck" type="checkbox" id="check-bongo" value="bongo">
+                  <input class="form-check-input ck" data-bs-c="percusion"  type="checkbox" id="check-bongo" value="bongo">
                   <label   label class="form-check-label" for="check-bongo">${arrayCata[arrayM.length-1][10]}</label>
               </div>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck" type="checkbox" id="check-miscelanea" value="miscelanea">
+                  <input class="form-check-input ck" data-bs-c="percusion"  type="checkbox" id="check-miscelanea" value="miscelanea">
                   <label class="form-check-label" for="check-miscelanea">${arrayCata[arrayM.length-1][11]}</label>
               </div>
 
@@ -115,15 +115,15 @@ function cargarMenuCatalogo(arrayCata){
 
           <div id="checks-electronico" class="caja_check">
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck" type="checkbox" id="check-mezcladora" value="mezcladora">
+                  <input class="form-check-input ck" data-bs-c="electronico" type="checkbox" id="check-mezcladora" value="mezcladora">
                   <label class="form-check-label" for="check-mezcladora">${arrayCata[arrayM.length-1][13]}</label>
               </div>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck" type="checkbox" id="check-Amplificador" value="amplificador">
+                  <input class="form-check-input ck" data-bs-c="electronico" type="checkbox" id="check-Amplificador" value="amplificador">
                   <label   label class="form-check-label" for="check-Amplificador">${arrayCata[arrayM.length-1][14]}</label>
               </div>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input ck" type="checkbox" id="check-microfono" value="microfono">
+                  <input class="form-check-input ck" data-bs-c="electronico" type="checkbox" id="check-microfono" value="microfono">
                   <label class="form-check-label" for="check-microfono">${arrayCata[arrayM.length-1][15]}</label>
               </div>
 
@@ -139,6 +139,10 @@ function eventoRadios(radios){
   
   }
 }
+
+eventoCargarProductoPorCheckout() ///REVISAR ESTO
+
+
 
 function activarClickComprar(){
   let botonesComprar = document.getElementsByClassName("btn-primary");
@@ -334,6 +338,11 @@ function añadirAlCarrito(idBtn){
 
   
 
+
+
+// // --------cargar producto por checkout-----
+
+eventoCargarProductoPorCheckout()
 function eventoCargarProductoPorCheckout(){
   for(let i = 0; i<arraycheckout.length; i++){
       arraycheckout[i].addEventListener ("change", ()=>{
@@ -380,7 +389,6 @@ function elegirProdPorCheck(check){
         if( productos[i].varname.slice(0, -1)==valueCk) {
             prodsCk.push(productos[i])
         }
-
     }
 
     return prodsCk;
