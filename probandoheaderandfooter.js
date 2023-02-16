@@ -67,7 +67,7 @@ function cargarMenu(arrayM){
                         <p id="idio-select" value="espanol" class="pt-3">${idiomaSelect}</p>
                         <i class="fa-solid fa-earth-americas text-dark"></i>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" gap-3>
                         <li value="espanol"><a value="espanol" class=" idioma px-1 py-1 dropdown-item" href="#">Español</a></li>
                         <li value="ingles"><a value="ingles" class=" idioma px-1 py-1 dropdown-item" href="#">Inglés</a></li>
                         <li value="euskera"><a value="euskera" class=" idioma px-1 py-1 dropdown-item" href="#">Euskera</a></li>

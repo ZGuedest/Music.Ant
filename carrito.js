@@ -1,8 +1,9 @@
-
 let shopContent = document.getElementById("cr_caja_producto");
 let productos = cargarDelLocalStorage();
 pintarCarrito()
 let inputs= document.getElementsByTagName("input")
+cacularTotal()
+
 
 for(let inp=0; inp<inputs.length;inp++){
     inputs[inp].addEventListener("change",(event)=>{
@@ -14,6 +15,9 @@ for(let inp=0; inp<inputs.length;inp++){
                 document.getElementById("S+"+foundP.id).innerHTML = String(`${ prod.cantidad * prod.precio }`)
             }
         });
+
+
+        cacularTotal()
 
     })
 }
@@ -79,6 +83,7 @@ function pintarCarrito(){
     activarEventoBasura()
 }
 
+//function cacularTotal()
 
 function activarEventoBasura(){
     let bas= document.getElementsByClassName("cr_basura")
@@ -92,6 +97,7 @@ function activarEventoBasura(){
                     prod.cantidad = 0
                     limpiarContenedor()
                     pintarCarrito()
+                    cacularTotal()
         
                     
                 }
@@ -99,6 +105,18 @@ function activarEventoBasura(){
         
         })
     }
+}
+function cacularTotal(){
+    debugger
+    let pc = document.getElementsByClassName("pc");
+    let total = document.getElementById("cr_precio_total");
+    let suma = 0;
+    for(let i = 0; i<pc.length; i++) {
+        suma += parseFloat(pc[i].textContent)
+    }
+    total.innerHTML = suma;
+
+
 }
 
 
