@@ -42,7 +42,7 @@ const productos=[
     },
     {
         "id":4,
-        "varname":"true",
+        "varname":"violin1",
         "name":"Forenza F1151A - Conjunto de violín de tamaño completo",
         "description":"Tamaño 4/4. Se suministra con el puente equipada, configurar listo para jugar. Clavijas y armarios integral de la pieza de cola afinadores. Incluye arco de madera con el bloque de colofonia. Caso de cremallera de peso ligero con asa y correas para los hombros",
         "precioDescription": "94,21 €",
@@ -207,7 +207,7 @@ const productos=[
 },
 {
     "id":17,
-    "vername":"trompa2",
+    "varname":"trompa2",
     "name": "Referencia FH700",
     "description":"Trompa Si bemol. Lacada. 4 valvulas. Campana desmontable. Con estuche semi-rígido.",
     "precioDescription": "542 €",
@@ -219,7 +219,7 @@ const productos=[
 },
 {
     "id":18,
-    "vername":"trompa3",
+    "varname":"trompa3",
     "name": "Trompa Doble Gara GHR-66",
     "description":"Sin duda la trompa más demandada por los estudiantes de este instrumento, por su calidad de sonido, y perfecta afinación.Campana fija, Lacada. En FA/SIb con estuche y boquilla.",
     "precioDescription": "836 €",
@@ -231,7 +231,7 @@ const productos=[
 },
 {
     "id":19,
-    "vername":"bateria1",
+    "varname":"bateria1",
     "name": "Sonor AQ1 Studio Set Piano Black",
     "description":"Versión 'Studio'. Cascos 100% de abedul. Herrajes de los cascos de cromo. Incluye soporte doble para toms y set de herrajes Sonor HS2000. Nuevo sistema de montaje de toms SmartMount, para un sustain óptimo del sonido con una cantidad mínima de herrajes en el casco del tambor. Color: Negro Piano (Piano Black, PB",
     "precioDescription": "1.235 €",
