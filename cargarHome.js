@@ -1,19 +1,18 @@
 debugger
 
-
-//let productos = cargarDelLocalStorage();
-
 let novedades_caja= document.getElementById("novedades_caja")
-//cargarNovedades(novedades_caja, prod)
+let prodNew = filtrarProductos("novedad")
+cargarNovedades(novedades_caja, prodNew)
 
 
 function cargarNovedades(CajaContent, prod){
 
-    while (CajaContent.firstChild) {
-        CajaContent.removeChild(CajaContent.firstChild);
-      }
-  
-      prod.forEach((p)=>{
+    // while (CajaContent.firstChild) {
+    //     CajaContent.removeChild(CajaContent.firstChild);
+    //   }
+    let titulo= cargarTitulo("Novedades")
+    CajaContent.append(titulo);
+    prod.forEach((p)=>{
       let content = document.createElement ("div");
       content.className = "col-2 card cardH";
       content.innerHTML = `
@@ -30,18 +29,38 @@ function cargarNovedades(CajaContent, prod){
       `;
   
       CajaContent.append(content);
-      })
-
-
-
-
+    })
 }
 
-const result = productos.filter(prod => prod.novedad=="true");
+function cargarTitulo(titulo){
+    let tit = document.createElement ("div");
+      tit.className = "caja-h2 d-flex flex-row align-items-center justify-content-center";
+      tit.innerHTML = `
+        <div class="linea1"></div>
+        <h2 id="novedades">${titulo}</h2> 
+        <div class="linea2"></div>`
 
-alert(result)
+    return tit
+}
 
+function filtrarProductos(opcion){
+    let prods=[]
+    let productos=cargarDelLocalStorage(opcion)
+    for(let i=0; i<productos.length;i++){
+        if(opcion=="novedad" && productos[i].novedad=="true"){
+            prods.push(productos[i])
+        }
+        else if(opcion=="oferta" && productos[i].oferta=="true"){
+            prods.push(productos[i])
+        }
+        else if(opcion=="favorito" && productos[i].favorito=="true"){
+            prods.push(productos[i])
 
+        }
+    }
+
+    return prods
+}
 
 
 function cargarDelLocalStorage(){
