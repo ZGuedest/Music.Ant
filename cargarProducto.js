@@ -7,7 +7,6 @@ arrayPr=prdtEsp;
 cargarProducto(arrayPr)
 
 function cargarProducto(arrayPr){
-    debugger
     let main = document.getElementsByTagName("main")[0]
     main.innerHTML = `<div class="container-sm pt-5 pb-5 d-flex justify-content-center">
     <div class="card row g-0 d-flex flex-row col-8 mt-5 mb-5">
