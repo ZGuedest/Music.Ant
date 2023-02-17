@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+let date = new Date();
+let day = date.toLocaleString('es', {weekday: 'long'});
+console.log(day);
+
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const options = {'es' weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+console.log(event.toLocaleDateString());
+
+const day = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"][new Date().getDay()]
+
+
+let date = new Date();
+let dia = date.toLocaleString('es', {weekday: 'long'});
+//let mes = date.toLocaleString('es', {month: 'long'});
+let mes =date.toLocaleString('es', { month: 'short' })
+
+
+var fechaactual =dia+"/"+mes+"/"+ date.getFullYear();
+console.log(fechaactual)
+    </script>
+</body>
+</html>

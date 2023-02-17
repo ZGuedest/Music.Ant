@@ -5,12 +5,20 @@ function eventoCambiarIdioma(ctlgEsp, ctlgEng, ctlgEus){
         opciones[a].addEventListener("click", (event)=>{ 
             debugger
             idiomaSelect=event.target.textContent
-
-           arrayM=cambiarIdioma(idiomaSelect, ctlgEsp, ctlgEng, ctlgEus)
-
-           cargarMenu(arrayM)
-           cargarFooter(arrayM)
-           cargarMenuCatalogo(arrayM)
+            localStorage.setItem("idioma",idiomaSelect)
+            arrayM=cambiarIdioma(idiomaSelect, ctlgEsp, ctlgEng, ctlgEus)
+            cargarMenu(arrayM)
+            cargarFooter(arrayM)
+            cargarBD(idiomaSelect)
+            let aux=window.location.href
+            if(aux.substring(aux.length-("Index.html").length,aux.length)=="Index.html" ||
+            aux.substring(aux.length-("Index.html").length,aux.length)=="ndex.html#"){
+                cargarHome(idiomaSelect)
+            }
+            if(aux.substring(aux.length-("catalogo.html").length,aux.length)=="catalogo.html" ||
+             aux.substring(aux.length-("catalogo.html").length,aux.length)=="atalogo.html#"){
+                iniciarCatalogo(idiomaSelect)
+            }
         })
     }
 }
