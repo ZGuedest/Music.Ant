@@ -1,41 +1,94 @@
-let shopContent = document.getElementById("cr_caja_producto");
-let productos = cargarDelLocalStorage();
-pintarCarrito()
-let inputs= document.getElementsByTagName("input")
-cacularTotal()
 
+iniciarCarrito(idiomaSelect)
+function iniciarCarrito(idiomaSelect){
 
-for(let inp=0; inp<inputs.length;inp++){
-    inputs[inp].addEventListener("change",(event)=>{
-        let foundP= productos.find((element) => element.id==event.target.id);
-        foundP.cantidad = parseFloat(inputs[inp].value)
-        productos.map ((prod) => {
-            if (prod.id === foundP.id) {
-                prod.cantidad = foundP.cantidad
-                document.getElementById("S+"+foundP.id).innerHTML = String(`${ prod.cantidad * prod.precio }`)
-            }
-        });
-
-
-        cacularTotal()
-
-    })
+    let espc = ["Resumen del Pedido", "Comprar", "Aceptar"];
+    let ingc = ["Order Summary", "Buy", "Accept"];
+    let eusc = ["Eskaeraren laburpena", "Erosi", "Onartu"];
+    let arrayc=cambiarIdioma(idiomaSelect, espc, ingc, eusc)
+    //arrayc = espc;
+    debugger
+    let productos = cargarDelLocalStorage(idiomaSelect);
+    cargarcarrito(arrayc,productos);
+    //pintarCarrito(productos)
+    cacularTotal()
 }
 
-function cargarDelLocalStorage(){
 
-    let aux;
-    let productos =[];
-    for(let i=0; i<36;i++){
+function cargarcarrito(arrayc,productos){
+    let main = document.getElementsByTagName("main")[0];
+    main.innerHTML = `
 
-        aux= localStorage.getItem(i)
-        aux = JSON.parse(aux)
-        productos.push(aux)
+    <div  id="cr_contenedor_principal" class="container-sm row justify-content-around">
+                
+        <div id="cr_caja_producto" class="card m-3 row g-0 d-flex flex-row col mt-0" >
+        </div>
+        <div id= "cr_comprar_pedido" class="card p-3 col-4">
+            <div class="Pedido">
+                <h5 class="card-title">${arrayc[0]}</h5>
+                <div class="d-flex  flex-column align-items-center gap-0 row-gap-3">
+                    <div class="d-flex gap-0 column-gap-3 align-items-center">
+                        <i id="cr_carrito"class="fa-solid fa-cart-shopping"></i>
+                        <p id="cr_precio_total" class="card-text precios">  0 €</p>
+                    </div>
+                    
+                    <a href="checkout.html" class="btn btn-primary" >${arrayc[1]}</a>
+                </div>
+                
+                <h5 class="card-title pt-4">${arrayc[2]}</h5>
+                <div class="d-flex gap-0 column-gap-3">
+                    <i id="cr_visa"class="fa-brands fa-cc-visa"></i>
+                    <i id="cr_paypal"class="fa-brands fa-cc-paypal"></i>
+                    <i id="cr_mastercard"class="fa-brands fa-cc-mastercard"></i>
+                    
+                </div>
+            
+            </div>
+        </div>
+    </div>`
+    //eventoCambiarIdioma(ctlgEsp, ctlgEng, ctlgEus)
+    pintarCarrito(productos)
+}
+
+
+
+function actualizarPrecioPorCantidad(productos, event){
+    let foundP= productos.find((element) => element.id==event.target.id);
+    foundP.cantidad = parseFloat(inputs[inp].value)
+    productos.map ((prod) => {
+        if (prod.id === foundP.id) {
+            prod.cantidad = foundP.cantidad
+            document.getElementById("S+"+foundP.id).innerHTML = String(`${ prod.cantidad * prod.precio }`)
+            cargarLocalStorage(productos)
+        }
+    });
+}
+
+function activarEventoInputNumber(){
+    let inputs= document.getElementsByTagName("input")
+    for(let inp=0; inp<inputs.length;inp++){
+        inputs[inp].addEventListener("change",(event)=>{
+            actualizarPrecioPorCantidad(productos, event)
+            cacularTotal()
+    
+        })
     }
-
-    return productos;
-
 }
+
+// function cargarDelLocalStorage(){
+
+//     let aux;
+//     let productos =[];
+//     for(let i=0; i<36;i++){
+
+//         aux= localStorage.getItem(i)
+//         aux = JSON.parse(aux)
+//         productos.push(aux)
+//     }
+
+//     return productos;
+
+// }
 
 
 function limpiarContenedor(){
@@ -43,8 +96,8 @@ function limpiarContenedor(){
         shopContent.removeChild(shopContent.firstChild);
     }
 }
-function pintarCarrito(){
-
+function pintarCarrito(productos){
+    let shopContent = document.getElementById("cr_caja_producto");
     productos.forEach((product)=> {
 
 
@@ -84,7 +137,7 @@ function pintarCarrito(){
 }
 
 
-function activarEventoBasura(){
+function activarEventoBasura(productos){
     let bas= document.getElementsByClassName("cr_basura")
 
     for(let b=0; b<bas.length;b++){
@@ -94,11 +147,10 @@ function activarEventoBasura(){
             productos.map ((prod) => {
                 if (prod.id === fP.id) {
                     prod.cantidad = 0
+                    cargarLocalStorage(productos)
                     limpiarContenedor()
                     pintarCarrito()
                     cacularTotal()
-
-
                 }
             });
 
@@ -106,7 +158,6 @@ function activarEventoBasura(){
     }
 }
 function cacularTotal(){
-    debugger
     let pc = document.getElementsByClassName("pc");
     let total = document.getElementById("cr_precio_total");
     let suma = 0;

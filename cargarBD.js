@@ -1,12 +1,4 @@
 
-
-
-//cargarLocalStorage(productos);
-
-
-//cargarLocalStorage(productos);
-//CARGAR PRODUCTOS AL LOCAL STORAGE
-
 function cargarBD(idiomaSelect){
     
 const productos=[
@@ -1031,3 +1023,19 @@ function cargarLocalStorage(productos){
     }
 
 }
+
+
+function cargarDelLocalStorage(){
+
+    let aux;
+    let prtos =[];
+    for(let i=0; i<36;i++){
+  
+        aux= localStorage.getItem(i)
+        aux = JSON.parse(aux)
+        prtos.push(aux)
+    }
+  
+    return prtos;
+  
+  }

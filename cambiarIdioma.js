@@ -19,6 +19,10 @@ function eventoCambiarIdioma(ctlgEsp, ctlgEng, ctlgEus){
              aux.substring(aux.length-("catalogo.html").length,aux.length)=="atalogo.html#"){
                 iniciarCatalogo(idiomaSelect)
             }
+            if(aux.substring(aux.length-("carrito.html").length,aux.length)=="carrito.html" ||
+             aux.substring(aux.length-("carrito.html").length,aux.length)=="arrito.html#"){
+                iniciarCarrito(idiomaSelect)
+            }
         })
     }
 }

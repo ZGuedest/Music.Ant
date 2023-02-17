@@ -28,21 +28,21 @@ function activarClickComprar(productos){
     let botonesComprar = document.getElementsByClassName("btn-primary");
     for(let i=0; i<botonesComprar.length;i++){
       botonesComprar[i].addEventListener("click",(event)=>{
+          debugger
           event.preventDefault()
           cantidadDelIconoCarrito()
           let idBtn= event.target.id;
           añadirAlCarrito(idBtn,productos)
-          cargarLocalStorage(productos);
       })
     }
   }
 
-  function cargarLocalStorage(productos){
-    for(let i=0; i<productos.length;i++){
-      localStorage.setItem( i,  JSON.stringify(productos[i]))
-    }
+  // function cargarLocalStorage(productos){
+  //   for(let i=0; i<productos.length;i++){
+  //     localStorage.setItem( i,  JSON.stringify(productos[i]))
+  //   }
   
-  }
+  // }
 
 
   function cantidadDelIconoCarrito(){
@@ -54,5 +54,6 @@ function activarClickComprar(productos){
   
   function añadirAlCarrito(idBtn, productos){
     productos[idBtn-1].cantidad++
+    cargarLocalStorage(productos);
   
   }

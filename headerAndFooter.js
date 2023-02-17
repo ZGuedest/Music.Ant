@@ -1,11 +1,10 @@
-
 //    --------idiomas navegador----------
 let idiomaSelect= localStorage.getItem("idioma")
 if(idiomaSelect==null){
     idiomaSelect="Español";
 }
 
-cargarBD(idiomaSelect)
+//cargarBD(idiomaSelect)
 
 let arrayM=cambiarIdioma(idiomaSelect,[],[],[])
 // var date = new Date();
@@ -227,7 +226,7 @@ black.addEventListener('click',(event)=>{
     
     event.preventDefault()
 
-    if(localStorage.getItem('gmail') ===" "){
+    if(localStorage.getItem('gmail') ===" " || localStorage.getItem('gmail') == null){
         window.location.href="login.html"
     }else{
         abrir();

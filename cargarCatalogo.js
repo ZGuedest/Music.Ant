@@ -151,7 +151,6 @@ function eventoRadios(radios,cajas_checkouts,shopContent,arraycheckout,productos
 
   for(let i=0;i<radios.length;i++){
     radios[i].addEventListener("change",()=>{
-      debugger
       yesnoCheck(radios,cajas_checkouts,shopContent,arraycheckout,productos)
     } )
 
@@ -243,22 +242,6 @@ function cargarCheckoutPorCategoria(categoria){
 }
 
 
-function cargarDelLocalStorage(){
-
-  let aux;
-  let prtos =[];
-  for(let i=0; i<36;i++){
-
-      aux= localStorage.getItem(i)
-      aux = JSON.parse(aux)
-      prtos.push(aux)
-  }
-
-  return prtos;
-
-}
-
-
 function pintarCatalogo(shopContent,prod){
   while (shopContent.firstChild) {
     shopContent.removeChild(shopContent.firstChild);
@@ -326,6 +309,9 @@ function eventoCargarProductoPorCheckout(arraycheckout,productos){
         pintarCatalogo(shopContent,prodchecked)
       })
   }
+
+  // activarClickComprar(productos)
+  // eventoCorazon()
 
 
 }
