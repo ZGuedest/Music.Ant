@@ -9,9 +9,9 @@ for(let inp=0; inp<inputs.length;inp++){
     inputs[inp].addEventListener("change",(event)=>{
         let foundP= productos.find((element) => element.id==event.target.id);
         foundP.cantidad = parseFloat(inputs[inp].value)
-        productos.map ((prod) => {                        
+        productos.map ((prod) => {
             if (prod.id === foundP.id) {
-                prod.cantidad = foundP.cantidad                
+                prod.cantidad = foundP.cantidad
                 document.getElementById("S+"+foundP.id).innerHTML = String(`${ prod.cantidad * prod.precio }`)
             }
         });
@@ -27,7 +27,7 @@ function cargarDelLocalStorage(){
     let aux;
     let productos =[];
     for(let i=0; i<36;i++){
-        
+
         aux= localStorage.getItem(i)
         aux = JSON.parse(aux)
         productos.push(aux)
@@ -47,7 +47,7 @@ function pintarCarrito(){
 
     productos.forEach((product)=> {
 
-        
+
         let content = document.createElement ("div");
         content.className = "card row g-0 d-flex flex-row col-12 mt-0";
 
@@ -58,7 +58,7 @@ function pintarCarrito(){
             <div id="cr_caja_contenedora_text_producto" class="col p-3">
                 <h5 class="card-title">${product.name}</h5>
                 <p class="card-text">${product.description}</p>
-                
+
                 <div class="d-flex flex-row justify-content-around">
                     <p  class="card-text cr_precio_producto">precio del producto: <small id="" class="text-muted">${product.precio}</small> €</p>
 
@@ -70,20 +70,18 @@ function pintarCarrito(){
                     <i id="C+${product.id}" class="cr_corazon fa-regular fa-heart"></i>
                 </div>
             </div>
-   
+
         `;
-   
-   
+
+
         shopContent.append(content);
         }
-        
+
 
     });
 
     activarEventoBasura()
 }
-
-
 
 
 function activarEventoBasura(){
@@ -93,17 +91,17 @@ function activarEventoBasura(){
         bas[b].addEventListener("click",(event)=>{
 
             let fP= productos.find((element) => element.id==(event.target.id).slice(1));
-            productos.map ((prod) => {                        
+            productos.map ((prod) => {
                 if (prod.id === fP.id) {
                     prod.cantidad = 0
                     limpiarContenedor()
                     pintarCarrito()
                     cacularTotal()
-        
-                    
+
+
                 }
             });
-        
+
         })
     }
 }

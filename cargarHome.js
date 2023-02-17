@@ -1,18 +1,32 @@
+debugger
+cargarHome(idiomaSelect)
 
-let novedades_caja= document.getElementById("novedades_caja")
-let ofertas_caja= document.getElementById("ofertas_caja")
+function cargarHome(idiomaSelect){
+    let titulosNov=["Novedades","News","Berrikuntzak"]
+    let titOf=["Ofertas","Oferts","Eskaintzak"]
+    let titulosMarc=["Mejores Marcas","Top Brands","Marka Onenak"]
 
-let prodNew = filtrarProductos("novedad")
-let prodOf = filtrarProductos("oferta")
-cargarNovedadesOfertas(novedades_caja, prodNew,"Novedades")
-cargarNovedadesOfertas(ofertas_caja, prodOf, "Ofertas")
+    let contenedor_principal=document.getElementById("contenedor_principal")
+    limpiarContenedor(contenedor_principal)
+    let titulo= seleccionarTitulo(idiomaSelect,titulosMarc);
+    agregarCajasNovedadOfertaMarcas(contenedor_principal,titulo)
 
-function cargarNovedadesOfertas(CajaContent, prod, tit){
+    let novedades_caja= document.getElementById("novedades_caja")
+    let ofertas_caja= document.getElementById("ofertas_caja")
+    let productos=cargarDelLocalStorage()
+    let prodNew = filtrarProductos("novedad",productos)
+    let prodOf = filtrarProductos("oferta",productos)
+    titulo=cargarTitulo(idiomaSelect,titulosNov);
+    cargarNovedadesOfertas(novedades_caja, prodNew,titulo)
+    titulo=cargarTitulo(idiomaSelect,titOf)
+    cargarNovedadesOfertas(ofertas_caja, prodOf, titulo)
+    activarClickComprar(productos)
+    eventoCorazon()
+}
 
-    // while (CajaContent.firstChild) {
-    //     CajaContent.removeChild(CajaContent.firstChild);
-    //   }
-    let titulo= cargarTitulo(tit)
+
+
+function cargarNovedadesOfertas(CajaContent, prod, titulo){
     CajaContent.append(titulo);
     prod.forEach((p)=>{
       let content = document.createElement ("div");
@@ -34,7 +48,75 @@ function cargarNovedadesOfertas(CajaContent, prod, tit){
     })
 }
 
-function cargarTitulo(titulo){
+function agregarCajasNovedadOfertaMarcas(contenedor_principal,marca){
+
+    contenedor_principal.innerHTML=`
+
+    <div id="novedades_caja" class="row justify-content-center">
+    </div>
+    <div id= "ofertas_caja"class="row justify-content-center">  
+    </div>
+    <div id="marcas_caja" class="row justify-content-center">
+      
+        <div class="caja-h2 d-flex flex-row align-items-center justify-content-center">
+            <div class="linea1"></div>
+            <h2 id="mejores-marcas">${marca} </h2>
+            <div class="linea2"></div>
+        </div>
+        
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img4" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img5" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img6" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img7" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img8" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img9" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img10" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img11" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img12" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img13" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img14" class="img"></div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div id= "img15" class="img"></div>
+        </div>
+    </div>
+
+    
+    
+    `
+
+
+
+   
+
+
+}
+
+function cargarTitulo(idiomaSelect, array){
+
+
+    let titulo=seleccionarTitulo(idiomaSelect, array);
     let tit = document.createElement ("div");
       tit.className = "caja-h2 d-flex flex-row align-items-center justify-content-center";
       tit.innerHTML = `
@@ -45,9 +127,21 @@ function cargarTitulo(titulo){
     return tit
 }
 
-function filtrarProductos(opcion){
+function seleccionarTitulo(idiomaSelect, array){
+    let titulo;
+    if(idiomaSelect=="Español"){
+        titulo=array[0]
+    }else if(idiomaSelect=="Inglés"){
+        titulo=array[1]
+    }else if(idiomaSelect=="Euskera"){
+        titulo=array[2]
+    }
+    return titulo;
+}
+
+function filtrarProductos(opcion, productos){
     let prods=[]
-    let productos=cargarDelLocalStorage(opcion)
+    //let productos=cargarDelLocalStorage(opcion)
     for(let i=0; i<productos.length;i++){
         if(opcion=="novedad" && productos[i].novedad=="true"){
             prods.push(productos[i])
@@ -78,4 +172,11 @@ function cargarDelLocalStorage(){
   
     return prtos;
   
-  }
+}
+
+
+function limpiarContenedor(shopContent){
+    while (shopContent.firstChild) {
+        shopContent.removeChild(shopContent.firstChild);
+    }
+}

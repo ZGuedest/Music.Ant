@@ -1,5 +1,0 @@
-function buscador_interno(){
-
-}
-
-

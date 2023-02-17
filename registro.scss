@@ -1,0 +1,10 @@
+@import"--parcial.scss";
+
+
+#lg_fondo {
+    @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgb(255, 255, 255,0.5)),
+    url("")), $wth:100%,$hght: 100vh,$margin:0rem); 
+    a , i{
+        @extend %iconos;
+    }
+}

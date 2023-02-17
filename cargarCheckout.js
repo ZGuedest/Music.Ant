@@ -8,7 +8,7 @@ arrayCk=chcktEsp;
 cargarCheckout(arrayCk)
 
 function cargarCheckout(){
-    debugger
+    
     let main = document.getElementsByTagName("main")[0]
     main.innerHTML = `<div class="col-md-7">
     <section id="tipo-envio">
