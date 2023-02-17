@@ -5,9 +5,13 @@ let idiomaSelect="Español";
 
 let arrayM=cambiarIdioma(idiomaSelect)
 
-var date = new Date();
-var fechaactual =date.getDate()+"/"+(date.getMonth()+1)+"/"+ date.getFullYear();
-	//document.getElementById("fecha").innerHTML = fechaactual;
+let date = new Date();
+let dia = date.toLocaleString('es', {weekday: 'long'});
+let mes =date.toLocaleString('es-es', { month: 'long' })
+var fechaactual =dia+"-"+date.getHours()+":"+date.getMinutes()+":"+"-"+mes+"-"+ date.getFullYear();
+//var dias = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+//var diaSemana = dias[date.getDay()];
+ 
 cargarMenu(arrayM)
 cargarFooter(arrayM)
 

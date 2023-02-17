@@ -2,8 +2,12 @@
 //    --------idiomas navegador----------
 let idiomaSelect="Español";
 let arrayM=cambiarIdioma(idiomaSelect,[],[],[])
-var date = new Date();
-var fechaActual =date.getDate()+"/"+(date.getMonth()+1)+"/"+ date.getFullYear();
+// var date = new Date();
+// var fechaActual =date.getDate()+"/"+(date.getMonth()+1)+"/"+ date.getFullYear();
+let date = new Date();
+let dia = date.toLocaleString('es', {weekday: 'long'});
+let mes =date.toLocaleString('es-es', { month: 'long' })
+var fechaActual =dia+"-"+date.getHours()+":"+date.getMinutes()+"-"+mes+"-"+ date.getFullYear();
 cargarMenu(arrayM)
 cargarFooter(arrayM)
 
