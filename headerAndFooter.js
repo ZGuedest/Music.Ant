@@ -7,7 +7,9 @@ let arrayM=cambiarIdioma(idiomaSelect,[],[],[])
 let date = new Date();
 let dia = date.toLocaleString('es', {weekday: 'long'});
 let mes =date.toLocaleString('es-es', { month: 'long' })
-var fechaActual =dia+"-"+date.getHours()+":"+date.getMinutes()+"-"+mes+"-"+ date.getFullYear();
+let mm = date.getMinutes();
+let minutos = ("0" + mm).slice(-2);
+let fechaActual =dia+"-"+date.getHours()+":"+minutos+"-"+mes+"-"+ date.getFullYear();
 cargarMenu(arrayM)
 cargarFooter(arrayM)
 
