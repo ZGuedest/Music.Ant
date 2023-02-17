@@ -10,7 +10,7 @@ cargarLogin(arrayLog)
 
 function cargarLogin(arrayLog){
 
-  debugger
+  
 
   let caja = document.getElementById("lg_fondo");
 
@@ -48,7 +48,7 @@ function cargarLogin(arrayLog){
     
                       <div class="d-flex align-items-center justify-content-center pb-4">
                         <p class="mb-0 me-2">${arrayLog[7]}</p>
-                        <button type="button" class="btn">${arrayLog[8]}</button>
+                       <a href="registro.html"> <button type="button" class="btn">${arrayLog[8]}</button></a>
                       </div>
     
                     </form>

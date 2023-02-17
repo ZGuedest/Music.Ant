@@ -1,0 +1,124 @@
+#lg_fondo a, #lg_fondo i, * header nav #menu-iconers a, * header nav #menu-iconers i {
+  font-size: 1em;
+  color: black;
+  cursor: pointer;
+}
+
+* {
+  font-family: sans-serif, Arial, Verdana, Tahoma;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+}
+* header {
+  background-image: linear-gradient(rgb(56, 115, 115), rgba(56, 115, 115, 0.8), rgba(255, 255, 255, 0.5)), url("./img/fondo2.jpg");
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+  background-size: cover;
+}
+* header nav {
+  background-color: transparent;
+  font-weight: 900;
+}
+* header nav #logo {
+  background-image: url("./img/logo.png");
+  width: 20%;
+  height: 5rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+  background-color: transparent;
+  margin: 0rem;
+}
+* header nav #buscador {
+  width: 15rem;
+  height: 2rem;
+}
+* header nav #menu-interior {
+  width: 40%;
+}
+* header nav #menu-iconers {
+  width: 30%;
+}
+* header nav #ven {
+  display: none;
+}
+* header #frase_imaginacion {
+  font-size: 45px;
+  font-family: Blackadder ITC;
+  padding-top: 6rem;
+  padding-left: 5rem;
+}
+* .btn-primary {
+  background-color: #387373;
+  width: 10rem;
+  color: white;
+  font-weight: 900;
+}
+* .btn-primary:hover {
+  background-color: #E4F2E7;
+  color: black;
+}
+* .corazon-vacio {
+  font-size: 2.3em;
+  padding-left: 0.7rem;
+}
+* .cardH {
+  margin: 3rem;
+  width: 16rem;
+}
+* footer {
+  padding-top: 4rem;
+  background-color: #387373;
+}
+* footer .btn {
+  background-color: #387373;
+  width: 7rem;
+  color: white;
+  font-weight: 900;
+}
+* footer .btn:hover {
+  background-color: #E4F2E7;
+  color: black;
+}
+* footer #appel-store {
+  background-image: url("./img/appel.png");
+  width: 35%;
+  height: 7rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 1rem;
+}
+* footer #play-store {
+  background-image: url("./img/play-store.png");
+  width: 35%;
+  height: 7rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 1rem;
+}
+* footer #copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#lg_fondo {
+  background-image: linear-gradient(rgb(56, 115, 115), rgba(56, 115, 115, 0.8), rgba(255, 255, 255, 0.5)), url("");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+}/*# sourceMappingURL=registro.css.map */
