@@ -1,6 +1,12 @@
 
 //    --------idiomas navegador----------
-let idiomaSelect="Español";
+let idiomaSelect= localStorage.getItem("idioma")
+if(idiomaSelect==null){
+    idiomaSelect="Español";
+}
+
+cargarBD(idiomaSelect)
+
 let arrayM=cambiarIdioma(idiomaSelect,[],[],[])
 var date = new Date();
 var fechaActual =date.getDate()+"/"+(date.getMonth()+1)+"/"+ date.getFullYear();
