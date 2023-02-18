@@ -4,6 +4,16 @@
   cursor: pointer;
 }
 
+* body .img {
+  width: 80%;
+  height: 15rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}
+
 * {
   font-family: sans-serif, Arial, Verdana, Tahoma;
   font-size: 17px;

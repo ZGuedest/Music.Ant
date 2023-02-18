@@ -239,7 +239,8 @@ function pintarCatalogo(shopContent,prod){
   let content = document.createElement ("div");
   content.className = "col-2 card cardH";
   content.innerHTML = `
-      <img class="" src="${p.src}">
+      <div class="img" style="background-image:url(${p.src}); height: 200px"></div>
+
       <div class="d-flex flex-row align-items-center">
           <h5 class="card-title">${p.name}  ${p.precio}€</h5>
       </div>
@@ -253,7 +254,6 @@ function pintarCatalogo(shopContent,prod){
 
   shopContent.append(content);
   })
-
   activarClickComprar(prod)
   eventoCorazon()
 }

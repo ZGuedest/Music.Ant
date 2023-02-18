@@ -20,6 +20,16 @@ $fontWH2:600;
     cursor: pointer;
 }
 
+%imagen{
+    width: 80%;
+    height: 15rem;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 2rem;
+}
+
 //MIXINS
 @mixin button ($bg-color:$color_VerdeOsc, $wth: 30rem, $colorletra:$color_blanco){
     background-color: $bg-color;
@@ -44,6 +54,8 @@ $fontWH2:600;
     background-size: contain;
     margin: $margin;
 }
+
+
 
 @mixin lineas($marginR: 1rem,$marginL: 1rem){
     border-top: 0.1rem solid gray;
@@ -137,9 +149,6 @@ $fontWH2:600;
         #copyright{
             background-color: rgba(0, 0, 0, 0.2);
         }
-
-        // @include img($url: (linear-gradient(rgb(255, 255, 255,0.5), rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8)),
-        // url("")), $wth:100%,$hght: auto,$margin:0rem);
         background-color: $color_VerdeOsc;
     }
 }

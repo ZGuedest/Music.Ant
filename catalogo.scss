@@ -52,7 +52,7 @@ body{
     }
 
     .img{
-        width: 90%;
+        @extend %imagen
     }
 }
     

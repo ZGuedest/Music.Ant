@@ -27,7 +27,9 @@
             }
         }
 
-        
+        .img{
+            @extend %imagen
+        }
 
 
         #imgN1{
@@ -125,7 +127,3 @@
 .ventana{
     display: none;
 }
-
-// #header nav #menu-iconers {
-//     width: 20%;
-//   }

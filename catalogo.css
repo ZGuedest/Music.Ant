@@ -4,6 +4,16 @@
   cursor: pointer;
 }
 
+body .img {
+  width: 90%;
+  height: 20rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}
+
 * {
   font-family: sans-serif, Arial, Verdana, Tahoma;
   font-size: 17px;
@@ -175,7 +185,4 @@ body #ico-electronico {
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0rem;
-}
-body .img {
-  width: 90%;
 }/*# sourceMappingURL=catalogo.css.map */
