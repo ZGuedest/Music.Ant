@@ -50,11 +50,9 @@ function cargarcarrito(arrayc,productos){
     pintarCarrito(productos)
 }
 
-
-
-function actualizarPrecioPorCantidad(productos, event){
+function actualizarPrecioPorCantidad(productos, event, input){
     let foundP= productos.find((element) => element.id==event.target.id);
-    foundP.cantidad = parseFloat(inputs[inp].value)
+    foundP.cantidad = parseFloat(input.value)
     productos.map ((prod) => {
         if (prod.id === foundP.id) {
             prod.cantidad = foundP.cantidad
@@ -64,34 +62,19 @@ function actualizarPrecioPorCantidad(productos, event){
     });
 }
 
-function activarEventoInputNumber(){
-    let inputs= document.getElementsByTagName("input")
+function activarEventoInputNumber(productos){
+    let inputs= document.getElementsByClassName("aumentar")
     for(let inp=0; inp<inputs.length;inp++){
         inputs[inp].addEventListener("change",(event)=>{
-            actualizarPrecioPorCantidad(productos, event)
+            debugger
+            actualizarPrecioPorCantidad(productos, event, inputs[inp])
             cacularTotal()
     
         })
     }
 }
 
-// function cargarDelLocalStorage(){
-
-//     let aux;
-//     let productos =[];
-//     for(let i=0; i<36;i++){
-
-//         aux= localStorage.getItem(i)
-//         aux = JSON.parse(aux)
-//         productos.push(aux)
-//     }
-
-//     return productos;
-
-// }
-
-
-function limpiarContenedor(){
+function limpiarContenedor(shopContent){
     while (shopContent.firstChild) {
         shopContent.removeChild(shopContent.firstChild);
     }
@@ -133,23 +116,23 @@ function pintarCarrito(productos){
 
     });
 
-    activarEventoBasura()
+    activarEventoBasura(productos,shopContent)
+    activarEventoInputNumber(productos)
 }
 
 
-function activarEventoBasura(productos){
+function activarEventoBasura(productos, shopContent){
     let bas= document.getElementsByClassName("cr_basura")
 
     for(let b=0; b<bas.length;b++){
         bas[b].addEventListener("click",(event)=>{
-
             let fP= productos.find((element) => element.id==(event.target.id).slice(1));
             productos.map ((prod) => {
                 if (prod.id === fP.id) {
                     prod.cantidad = 0
                     cargarLocalStorage(productos)
-                    limpiarContenedor()
-                    pintarCarrito()
+                    limpiarContenedor(shopContent)
+                    pintarCarrito(productos)
                     cacularTotal()
                 }
             });
@@ -157,6 +140,7 @@ function activarEventoBasura(productos){
         })
     }
 }
+
 function cacularTotal(){
     let pc = document.getElementsByClassName("pc");
     let total = document.getElementById("cr_precio_total");
