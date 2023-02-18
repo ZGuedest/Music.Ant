@@ -20,7 +20,7 @@ function iniciarCatalogo(idiomaSelect){
 
 }
 
-function cargarMenuCatalogo(arrayCata,idiomaSelect, ctlgEsp, ctlgEng, ctlgEus,productos){
+function cargarMenuCatalogo(arrayCata, ctlgEsp, ctlgEng, ctlgEus,productos){
 
   let cajaCatalogo = document.getElementById("cont-radio-check");
 
@@ -136,7 +136,7 @@ function cargarMenuCatalogo(arrayCata,idiomaSelect, ctlgEsp, ctlgEng, ctlgEus,pr
   const cajas_checkouts= document.getElementsByClassName("caja_check")
   const arraycheckout = document.getElementsByClassName("ck");
   const shopContent= document.getElementById("shopContent")
-  debugger
+  
   let rCk=localStorage.getItem("radio")
   if(rCk!=null){
     radios[rCk].checked=true
@@ -302,7 +302,7 @@ function productosPorCategoria(categoria, productos){
 function eventoCargarProductoPorCheckout(arraycheckout,productos){
   for(let i = 0; i<arraycheckout.length; i++){
       arraycheckout[i].addEventListener ("change", ()=>{
-        debugger
+        
         let categoria= arraycheckout[i].getAttribute("data-bs-c")
         let prodchecked = cargarProductoPorCheckout(categoria,productos,arraycheckout)
         let shopContent= document.getElementById("shopContent")

@@ -12,7 +12,6 @@ function cargarHome(idiomaSelect){
 
     let novedades_caja= document.getElementById("novedades_caja")
     let ofertas_caja= document.getElementById("ofertas_caja")
-    cargarBD(idiomaSelect)
     let productos=cargarDelLocalStorage()
     let prodNew = filtrarProductos("novedad",productos)
     let prodOf = filtrarProductos("oferta",productos)

@@ -2,15 +2,12 @@
 iniciarCarrito(idiomaSelect)
 function iniciarCarrito(idiomaSelect){
 
-    let espc = ["Resumen del Pedido", "Comprar", "Aceptar"];
+    let espc = ["Resumen del Pedido", "Comprar", "Aceptamos"];
     let ingc = ["Order Summary", "Buy", "Accept"];
     let eusc = ["Eskaeraren laburpena", "Erosi", "Onartu"];
     let arrayc=cambiarIdioma(idiomaSelect, espc, ingc, eusc)
-    //arrayc = espc;
-    debugger
-    let productos = cargarDelLocalStorage(idiomaSelect);
+    let productos = cargarDelLocalStorage();
     cargarcarrito(arrayc,productos);
-    //pintarCarrito(productos)
     cacularTotal()
 }
 
@@ -25,28 +22,30 @@ function cargarcarrito(arrayc,productos){
         </div>
         <div id= "cr_comprar_pedido" class="card p-3 col-4">
             <div class="Pedido">
-                <h5 class="card-title">${arrayc[0]}</h5>
+                <h5 class="card-title">${arrayc[arrayc.length-1][0]}</h5>
                 <div class="d-flex  flex-column align-items-center gap-0 row-gap-3">
                     <div class="d-flex gap-0 column-gap-3 align-items-center">
                         <i id="cr_carrito"class="fa-solid fa-cart-shopping"></i>
                         <p id="cr_precio_total" class="card-text precios">  0 €</p>
                     </div>
                     
-                    <a href="checkout.html" class="btn btn-primary" >${arrayc[1]}</a>
+                    <a href="checkout.html" class="btn btn-primary" >${arrayc[arrayc.length-1][1]}</a>
                 </div>
                 
-                <h5 class="card-title pt-4">${arrayc[2]}</h5>
+                <h5 class="card-title pt-4">${arrayc[arrayc.length-1][2]}</h5>
                 <div class="d-flex gap-0 column-gap-3">
                     <i id="cr_visa"class="fa-brands fa-cc-visa"></i>
                     <i id="cr_paypal"class="fa-brands fa-cc-paypal"></i>
                     <i id="cr_mastercard"class="fa-brands fa-cc-mastercard"></i>
                     
                 </div>
+                <a href="checkout.html" class="btn btn-primary" >vaciar</a>
             
             </div>
         </div>
-    </div>`
-    //eventoCambiarIdioma(ctlgEsp, ctlgEng, ctlgEus)
+    </div
+    `
+    
     pintarCarrito(productos)
 }
 
@@ -66,7 +65,7 @@ function activarEventoInputNumber(productos){
     let inputs= document.getElementsByClassName("aumentar")
     for(let inp=0; inp<inputs.length;inp++){
         inputs[inp].addEventListener("change",(event)=>{
-            debugger
+    
             actualizarPrecioPorCantidad(productos, event, inputs[inp])
             cacularTotal()
     
@@ -79,6 +78,8 @@ function limpiarContenedor(shopContent){
         shopContent.removeChild(shopContent.firstChild);
     }
 }
+
+
 function pintarCarrito(productos){
     let shopContent = document.getElementById("cr_caja_producto");
     productos.forEach((product)=> {
@@ -120,7 +121,6 @@ function pintarCarrito(productos){
     activarEventoInputNumber(productos)
 }
 
-
 function activarEventoBasura(productos, shopContent){
     let bas= document.getElementsByClassName("cr_basura")
 
@@ -148,7 +148,7 @@ function cacularTotal(){
     for(let i = 0; i<pc.length; i++) {
         suma += parseFloat(pc[i].textContent)
     }
-    total.innerHTML = suma;
+    total.innerHTML = suma + " €";
     localStorage.setItem('total', suma)
 
 }

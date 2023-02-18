@@ -159,7 +159,7 @@ header #ofertas, header #novedades, header #frase_imaginacion {
 }
 #cr_contenedor_principal #cr_comprar_pedido {
   width: 20rem;
-  height: 250px;
+  height: 300px;
 }
 #cr_contenedor_principal #cr_comprar_pedido #cr_precio_total {
   color: #387373;
