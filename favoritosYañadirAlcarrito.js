@@ -30,30 +30,28 @@ function activarClickComprar(productos){
       botonesComprar[i].addEventListener("click",(event)=>{
           debugger
           event.preventDefault()
-          cantidadDelIconoCarrito()
+          
           let idBtn= event.target.id;
           añadirAlCarrito(idBtn,productos)
+          cantidadDelIconoCarrito()
+
       })
     }
-  }
+}
 
-  // function cargarLocalStorage(productos){
-  //   for(let i=0; i<productos.length;i++){
-  //     localStorage.setItem( i,  JSON.stringify(productos[i]))
-  //   }
-  
-  // }
-
-
-  function cantidadDelIconoCarrito(){
+ 
+function cantidadDelIconoCarrito(){
     let span= document.getElementById("cantidadCarrito");
-    let num= parseInt(span.getAttribute("value"))+1;
+    let num= localStorage.getItem("cantCarrito")
+    num =! null ? num= parseInt(JSON.parse(num)+1) : num= parseInt(1)
     span.setAttribute("value",String(num))
     span.innerHTML=num;
-  }
-  
-  function añadirAlCarrito(idBtn, productos){
+    localStorage.setItem("cantCarrito",JSON.stringify(num))
+    
+}
+
+function añadirAlCarrito(idBtn, productos){
     productos[idBtn-1].cantidad++
     cargarLocalStorage(productos);
-  
-  }
+
+}

@@ -1,26 +1,24 @@
-//    --------idiomas navegador----------
 let idiomaSelect= localStorage.getItem("idioma")
-if(idiomaSelect==null){
-    idiomaSelect="Español";
+    if(idiomaSelect==null){
+        idiomaSelect="Español";
+    }
+   
+iniciarHeaderAndFooter()
+setInterval(mostrarFecha, 1000);
+
+function iniciarHeaderAndFooter(){
+    debugger
+    cargarBD(idiomaSelect)
+    let idioma= idiomaFecha()
+    let date = new Date();
+    let dia = date.toLocaleString(idioma, {weekday: 'long'});
+    let mes =date.toLocaleString(idioma+ '-'+idioma, { month: 'long' })
+    let arrayM=cambiarIdioma(idiomaSelect,[],[],[])
+    cargarMenu(arrayM,idiomaSelect,dia,mes,date)
+    cargarFooter(arrayM)
 }
 
-cargarBD(idiomaSelect)
-
-let arrayM=cambiarIdioma(idiomaSelect,[],[],[])
-// var date = new Date();
-// var fechaActual =date.getDate()+"/"+(date.getMonth()+1)+"/"+ date.getFullYear();
-let date = new Date();
-let dia = date.toLocaleString('es', {weekday: 'long'});
-let mes =date.toLocaleString('es-es', { month: 'long' })
-let mm = date.getMinutes();
-let minutos = ("0" + mm).slice(-2);
-let fechaActual =dia+"-"+date.getHours()+":"+minutos+"-"+mes+"-"+ date.getFullYear();
-cargarMenu(arrayM)
-cargarFooter(arrayM)
-
-
-
-function cargarMenu(arrayM){
+function cargarMenu(arrayM,idiomaSelect,dia,mes,date){
 
     let header= document.getElementsByTagName("header")[0]
     header.innerHTML = `
@@ -76,11 +74,11 @@ function cargarMenu(arrayM){
 
 
                 <li ><i class="pt-4 fa-solid fa-heart"></i></li>
-                <li ><a href="carrito.html"><i class="pt-4 fa-solid fa-cart-shopping"></i></a><span id="cantidadCarrito" class="cantidad-carrito" value="0"></span></li>
+                <li ><a href="carrito.html"><i class="pt-4 fa-solid fa-cart-shopping"></i></a><span id="cantidadCarrito" class="cantidad-carrito" value="0"> ${localStorage.getItem("cantCarrito") !=null? localStorage.getItem("cantCarrito"):0 } </span></li>
                 
 
             </ul>  
-            <div <li ><p class="pt-4">${fechaActual}</p></li> </div>  
+            <div <li ><p id="fecha" class="pt-4"> ${dia} <span id="hora"></span>${mes} - ${date.getFullYear()} </p></li> </div>  
         </div>
     </nav>`
 
@@ -92,7 +90,8 @@ function cargarMenu(arrayM){
     header.append(p)
 
     eventoCambiarIdioma()
-
+    validarLogin()
+    
 }
 
 function cargarFooter(arrayM){
@@ -220,34 +219,56 @@ function cargarFooter(arrayM){
     `
 }
 
-////////VALIDACION DEL LOGIN/////////
-let black=document.getElementById("login");
-black.addEventListener('click',(event)=>{
-    
-    event.preventDefault()
-
-    if(localStorage.getItem('gmail') ===" " || localStorage.getItem('gmail') == null){
-        window.location.href="login.html"
-    }else{
-        abrir();
+function idiomaFecha(){
+    let idioma;
+    if(idiomaSelect=="Español"){
+        idioma="es"
     }
-    
-    
- });
+    else if( idiomaSelect=="Inglés"){
+        idioma="en"
+    }
+    else if(idiomaSelect=="Euskera") {
+        idioma="eu"
+    }
+    return idioma
+}
 
-let cerrar= document.getElementById("cerrar")
-cerrar.addEventListener("click",()=>{
 
+function mostrarFecha(){
+    let d = new Date()
+    let mm = d.getMinutes();
+    let min = ("0" + mm).slice(-2);
+    let ss = d.getSeconds();
+    let seg = ("0" + ss).slice(-2);
+    let hora= document.getElementById("hora")
+    hora.innerHTML= "-"+d.getHours()+":"+min+"-"+seg+"-"
+}
+
+function validarLogin(){
+    let black=document.getElementById("login");
+    black.addEventListener('click',(event)=>{
+        
+        event.preventDefault()
+    
+        if(localStorage.getItem('gmail') ===" " || localStorage.getItem('gmail') == null){
+            window.location.href="login.html"
+        }else{
+            cerrar();
+        }
+        
+        
+     });
+}
+
+function cerrar(){
+    document.getElementById("ven").style.display="block";
+    let cerrar= document.getElementById("cerrar")
+    cerrar.addEventListener("click",()=>{
     localStorage.clear()
     localStorage.setItem('gmail'," ");
-
     window.location.href="Index.html"
 })
-
-function abrir(){
-    document.getElementById("ven").style.display="block";
 }
-////////FIN  VALIDACION DEL LOGIN/////////
 
 
 

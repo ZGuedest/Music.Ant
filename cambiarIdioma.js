@@ -6,10 +6,7 @@ function eventoCambiarIdioma(ctlgEsp, ctlgEng, ctlgEus){
             debugger
             idiomaSelect=event.target.textContent
             localStorage.setItem("idioma",idiomaSelect)
-            arrayM=cambiarIdioma(idiomaSelect, ctlgEsp, ctlgEng, ctlgEus)
-            cargarMenu(arrayM)
-            cargarFooter(arrayM)
-            cargarBD(idiomaSelect)
+            iniciarHeaderAndFooter()
             let aux=window.location.href
             if(aux.substring(aux.length-("Index.html").length,aux.length)=="Index.html" ||
             aux.substring(aux.length-("Index.html").length,aux.length)=="ndex.html#"){

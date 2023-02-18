@@ -57,6 +57,7 @@ function eventoVaciarCarrito(productos){
     vaciar.addEventListener("click", ()=>{
         vaciarCarrito(productos)
         pintarCarrito(productos)
+        localStorage.setItem("cantCarrito", 0)
     })
 }
 
@@ -144,9 +145,14 @@ function activarEventoBasura(productos, shopContent){
 
     for(let b=0; b<bas.length;b++){
         bas[b].addEventListener("click",(event)=>{
+            debugger
             let fP= productos.find((element) => element.id==(event.target.id).slice(1));
             productos.map ((prod) => {
                 if (prod.id === fP.id) {
+                    let nume=parseInt(JSON.parse(localStorage.getItem("cantCarrito")))-fP.cantidad
+                    nume==0?nume=-1: nume=nume-1
+                    localStorage.setItem("cantCarrito", JSON.stringify(nume))
+                    cantidadDelIconoCarrito()
                     prod.cantidad = 0
                     cargarLocalStorage(productos)
                     limpiarContenedor(shopContent)
@@ -154,6 +160,7 @@ function activarEventoBasura(productos, shopContent){
                     cacularTotal()
                 }
             });
+
 
         })
     }
