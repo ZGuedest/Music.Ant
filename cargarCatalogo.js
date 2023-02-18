@@ -6,21 +6,13 @@ function iniciarCatalogo(idiomaSelect){
   const ctlgEsp = ["Cuerda","Guitarra","Violín","Bajo","Viento","Trompeta","Flauta","Trompa","Percusión","Batería","Bongó","Miscelanea","Electrónico","Mezcladora","Amplificador", "Microfono"]
   const ctlgEng = ["Strings","Guitar","Violin","Bass","Wind","Trumpet","Flute","Horn","Percussion","Drums","Bongo","Miscellaneous"," Electronic","Mixer","Amplifier", "Microphone"]
   const ctlgEus = ["Hariak","Gitarra","Biolina","Baxua","Haizea","Tronpeta","Flauta","Tronpa","Perkusioa","Bateria","Bongo","Denetariko"," Elektronika","Nahastailea","Anplifikadorea","Mikrofonoa"]
-  let productos = cargarDelLocalStorage();
   let arrayM=cambiarIdioma(idiomaSelect, ctlgEsp, ctlgEng, ctlgEus)
-
-  cargarMenuCatalogo(arrayM,idiomaSelect, ctlgEsp, ctlgEng, ctlgEus,productos)
-
-  const radios= document.getElementsByClassName("radio")
-  const cajas_checkouts= document.getElementsByClassName("caja_check")
-  const arraycheckout = document.getElementsByClassName("ck");
-  const shopContent= document.getElementById("shopContent")
-  
-  yesnoCheck(radios,cajas_checkouts,shopContent,arraycheckout,productos)
+  let radios=cargarMenuCatalogo(arrayM)  
+  yesnoCheck(radios)
 
 }
 
-function cargarMenuCatalogo(arrayCata, ctlgEsp, ctlgEng, ctlgEus,productos){
+function cargarMenuCatalogo(arrayCata){
 
   let cajaCatalogo = document.getElementById("cont-radio-check");
 
@@ -131,12 +123,7 @@ function cargarMenuCatalogo(arrayCata, ctlgEsp, ctlgEng, ctlgEus,productos){
       </div>
   </div>
   `
-  eventoCambiarIdioma(ctlgEsp, ctlgEng, ctlgEus)
   const radios= document.getElementsByClassName("radio")
-  const cajas_checkouts= document.getElementsByClassName("caja_check")
-  const arraycheckout = document.getElementsByClassName("ck");
-  const shopContent= document.getElementById("shopContent")
-  
   let rCk=localStorage.getItem("radio")
   if(rCk!=null){
     radios[rCk].checked=true
@@ -144,25 +131,31 @@ function cargarMenuCatalogo(arrayCata, ctlgEsp, ctlgEng, ctlgEus,productos){
     radios[0].checked=true
     localStorage.setItem("radio",0)
   }
-  eventoRadios(radios,cajas_checkouts,shopContent,arraycheckout,productos)
-
+  eventoRadios(radios)
+  return radios
 }
-function eventoRadios(radios,cajas_checkouts,shopContent,arraycheckout,productos){
 
-  for(let i=0;i<radios.length;i++){
+function eventoRadios(radios){
+  for(let i=0; i<radios.length ;i++){
     radios[i].addEventListener("change",()=>{
-      yesnoCheck(radios,cajas_checkouts,shopContent,arraycheckout,productos)
+  
+      yesnoCheck(radios)
     } )
 
   }
 
 }
 
-function yesnoCheck(radios,cajas_checkouts,shopContent,arraycheckout,productos) {
+function yesnoCheck(radios) {
+  const cajas_checkouts= document.getElementsByClassName("caja_check")
+  const arraycheckout = document.getElementsByClassName("ck");
+  const shopContent= document.getElementById("shopContent")
+  let productosCat = cargarDelLocalStorage();
+
   let prodCat=[]
   if (radios[0].checked == true) {
     cambiarDisplayRadioButton(cajas_checkouts[0],cajas_checkouts[1],cajas_checkouts[2],cajas_checkouts[3])
-    prodCat= productosPorCategoria("cuerda",productos)
+    prodCat= productosPorCategoria("cuerda",productosCat)
     pintarCatalogo(shopContent,prodCat)
     descheckearProductos("cuerda",arraycheckout)
     localStorage.setItem("radio",0)
@@ -171,7 +164,7 @@ function yesnoCheck(radios,cajas_checkouts,shopContent,arraycheckout,productos) 
   } else if (radios[1].checked == true) {
 
     cambiarDisplayRadioButton(cajas_checkouts[1],cajas_checkouts[0],cajas_checkouts[2],cajas_checkouts[3])
-    prodCat= productosPorCategoria("viento",productos)
+    prodCat= productosPorCategoria("viento",productosCat)
     pintarCatalogo(shopContent,prodCat)
     descheckearProductos("viento",arraycheckout)
     localStorage.setItem("radio",1)
@@ -179,7 +172,7 @@ function yesnoCheck(radios,cajas_checkouts,shopContent,arraycheckout,productos) 
 
   } else if (radios[2].checked == true) {
     cambiarDisplayRadioButton(cajas_checkouts[2],cajas_checkouts[0],cajas_checkouts[1],cajas_checkouts[3])
-    prodCat= productosPorCategoria("percusion",productos)
+    prodCat= productosPorCategoria("percusion",productosCat)
     pintarCatalogo(shopContent,prodCat)
     descheckearProductos("percusion",arraycheckout)
     localStorage.setItem("radio",2)
@@ -188,18 +181,13 @@ function yesnoCheck(radios,cajas_checkouts,shopContent,arraycheckout,productos) 
 
   } else if (radios[3].checked == true) {
     cambiarDisplayRadioButton(cajas_checkouts[3],cajas_checkouts[1],cajas_checkouts[2],cajas_checkouts[0])
-    prodCat= productosPorCategoria("electronico",productos)
+    prodCat= productosPorCategoria("electronico",productosCat)
     pintarCatalogo(shopContent,prodCat)
-    descheckearProductos("electronico,arraycheckout")
+    descheckearProductos("electronico",arraycheckout)
     localStorage.setItem("radio",3)
-
-
-
   }
 
-  eventoCargarProductoPorCheckout(arraycheckout,productos)
-  activarClickComprar(productos)
-  eventoCorazon()
+  eventoCargarProductoPorCheckout(arraycheckout,productosCat)
 }
 
 /*Esta funcion recibe las 4 cajas contenedoras de los checkouts por cada categoria
@@ -265,12 +253,15 @@ function pintarCatalogo(shopContent,prod){
 
   shopContent.append(content);
   })
+
+  activarClickComprar(prod)
+  eventoCorazon()
 }
 
-function productosPorCategoria(categoria, productos){
+function productosPorCategoria(categoria, productosCat){
   let prodCat=[];
 
-   productos.forEach((product)=> {
+  productosCat.forEach((product)=> {
 
      if(categoria=="cuerda"){
 
@@ -299,31 +290,26 @@ function productosPorCategoria(categoria, productos){
    return prodCat
  }
 
-function eventoCargarProductoPorCheckout(arraycheckout,productos){
+function eventoCargarProductoPorCheckout(arraycheckout,productosCat){
   for(let i = 0; i<arraycheckout.length; i++){
       arraycheckout[i].addEventListener ("change", ()=>{
         
         let categoria= arraycheckout[i].getAttribute("data-bs-c")
-        let prodchecked = cargarProductoPorCheckout(categoria,productos,arraycheckout)
+        let prodchecked = cargarProductoPorCheckout(categoria,productosCat,arraycheckout)
         let shopContent= document.getElementById("shopContent")
         pintarCatalogo(shopContent,prodchecked)
       })
   }
-
-  // activarClickComprar(productos)
-  // eventoCorazon()
-
-
 }
 
-function cargarProductoPorCheckout (categoria,productos,arraycheckout){
+function cargarProductoPorCheckout (categoria,productosCat,arraycheckout){
     let prodchecked = [];
     let arrayckCat = cargarCheckoutPorCategoria(categoria);
     for(let ck=0; ck<arraycheckout.length; ck++){
         if(ck == arrayckCat[0] || ck == arrayckCat[1] || ck == arrayckCat[2]) {
             if(arraycheckout[ck].checked == true){
 
-                let aux=elegirProdPorCheck(arraycheckout[ck],productos);
+                let aux=elegirProdPorCheck(arraycheckout[ck],productosCat);
                 for(let j=0; j<aux.length;j++){
                   prodchecked.push(aux[j]);
                 }
@@ -333,7 +319,7 @@ function cargarProductoPorCheckout (categoria,productos,arraycheckout){
     }
 
     if((arraycheckout[arrayckCat[0]].checked == false)&&(arraycheckout[arrayckCat[1]].checked == false)&&(arraycheckout[arrayckCat[2]].checked == false)){
-      prodchecked= productosPorCategoria(categoria,productos)
+      prodchecked= productosPorCategoria(categoria,productosCat)
     }
 
     return prodchecked
@@ -344,13 +330,12 @@ function cargarProductoPorCheckout (categoria,productos,arraycheckout){
 accede a la propiedad varname de cada producto, como esta propiedad tiene un numero al final, elimina ese numero
 y compara el resultado obtenido con el value del checkbox, si son iguales, coje el producto y lo guarda en el arreglo
 prodsCk y lo retorna*/
-function elegirProdPorCheck(check,productos){
+function elegirProdPorCheck(check,productosCat){
     let valueCk= check.value
     let prodsCk=[]
-    for( let i=0; i<productos.length;i++){
-        let au=productos[i].varname
-        if( productos[i].varname.slice(0, -1)==valueCk) {
-            prodsCk.push(productos[i])
+    for( let i=0; i<productosCat.length;i++){
+        if( productosCat[i].varname.slice(0, -1)==valueCk) {
+            prodsCk.push(productosCat[i])
         }
     }
 

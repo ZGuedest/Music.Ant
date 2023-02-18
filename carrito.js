@@ -2,13 +2,12 @@
 iniciarCarrito(idiomaSelect)
 function iniciarCarrito(idiomaSelect){
 
-    let espc = ["Resumen del Pedido", "Comprar", "Aceptamos"];
+    let espc = ["Resumen del Pedido", "Comprar","Vaciar", "Aceptamos"];
     let ingc = ["Order Summary", "Buy", "Accept"];
     let eusc = ["Eskaeraren laburpena", "Erosi", "Onartu"];
     let arrayc=cambiarIdioma(idiomaSelect, espc, ingc, eusc)
     let productos = cargarDelLocalStorage();
     cargarcarrito(arrayc,productos);
-    cacularTotal()
 }
 
 
@@ -28,25 +27,44 @@ function cargarcarrito(arrayc,productos){
                         <i id="cr_carrito"class="fa-solid fa-cart-shopping"></i>
                         <p id="cr_precio_total" class="card-text precios">  0 €</p>
                     </div>
-                    
-                    <a href="checkout.html" class="btn btn-primary" >${arrayc[arrayc.length-1][1]}</a>
+                    <div class="d-flex flex-row flex-wrap ">
+                        <a href="checkout.html" class="btn  m-1" >${arrayc[arrayc.length-1][1]}</a>
+                        <a id= "vaciar" href="" class="btn  m-1 " >  ${arrayc[arrayc.length-1][2]} <i class="fa-solid fa-cart-shopping"></i> </a>
+                    </div>
                 </div>
                 
-                <h5 class="card-title pt-4">${arrayc[arrayc.length-1][2]}</h5>
+                <h5 class="card-title pt-4">${arrayc[arrayc.length-1][3]}</h5>
                 <div class="d-flex gap-0 column-gap-3">
                     <i id="cr_visa"class="fa-brands fa-cc-visa"></i>
                     <i id="cr_paypal"class="fa-brands fa-cc-paypal"></i>
                     <i id="cr_mastercard"class="fa-brands fa-cc-mastercard"></i>
                     
                 </div>
-                <a href="checkout.html" class="btn btn-primary" >vaciar</a>
             
             </div>
         </div>
     </div
     `
-    
     pintarCarrito(productos)
+    eventoVaciarCarrito(productos)
+    cacularTotal()
+}
+
+function eventoVaciarCarrito(productos){
+
+    let vaciar= document.getElementById("vaciar")
+
+    vaciar.addEventListener("click", ()=>{
+        vaciarCarrito(productos)
+        pintarCarrito(productos)
+    })
+}
+
+function vaciarCarrito(productos){
+    productos.forEach((prod)=>{
+        prod.cantidad=0
+    })
+    cargarLocalStorage(productos)
 }
 
 function actualizarPrecioPorCantidad(productos, event, input){

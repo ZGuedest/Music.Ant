@@ -46,7 +46,7 @@ header{
     
     #cr_comprar_pedido{
         width: 20rem;
-        height:300px;
+        height:250;
         #cr_carrito{
             @extend %iconos;
         }
@@ -56,8 +56,8 @@ header{
             color:$color_VerdeOsc;
         }
     
-        #cr_comprar_ahora{
-            @include button ( $wth: 12rem);
+        .btn{
+            @include button ( $wth: 7rem);
             font-weight: bold;
         }
     
