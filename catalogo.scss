@@ -1,16 +1,12 @@
 
 @import "--parcial";
 
-// header{   
-//     @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgb(255, 255, 255,0.5)),
-//     url("")), $wth:100%,$hght: 100px,$margin:0rem);
-//  }
 
 header{
     #inicio{
         display: block;
     }
-    #catalogo, #ofertas,#novedades{
+    #catalogo, #m-ofertas,#m-novedades{
         display: none;
     }
 

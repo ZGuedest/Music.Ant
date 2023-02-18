@@ -32,35 +32,6 @@
         }
 
 
-        #imgN1{
-            @include img($url:url("./img/guitarra1.jpg"),$wth:80%,$hght: 15rem,$margin: 2rem);
-        }
-
-        #imgN2{
-            @include img($url:url("./img/violin.webp"),$wth:80%,$hght: 15rem,$margin: 2rem);
-
-        }
-
-        #imgN3{
-            @include img($url:url("./img/tambor.jpeg"),$wth:80%,$hght: 15rem,$margin: 2rem);
-
-        }
-
-        #imgO1{
-            @include img($url:url("./img/lanikai-mas-t-ukelele-caoba-tenor.jpg"),$wth:80%,$hght: 15rem,$margin: 2rem);
-
-        }
-
-        #imgO2{
-            @include img($url:url("./img/piano.jpeg"),$wth:80%,$hght: 15rem,$margin: 2rem);
-
-        }
-
-        #imgO3{
-            @include img($url:url("./img/electronico1.webp"),$wth:80%,$hght: 15rem,$margin: 2rem);
-
-        }
-
         #img4{
             @include img($url:url("./img/img4.jpg"),$wth:80%,$hght: 5rem,$margin: 2rem);
 

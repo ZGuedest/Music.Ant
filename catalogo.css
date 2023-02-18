@@ -5,8 +5,8 @@
 }
 
 body .img {
-  width: 90%;
-  height: 20rem;
+  width: 80%;
+  height: 15rem;
   background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -125,7 +125,7 @@ body .img {
 header #inicio {
   display: block;
 }
-header #catalogo, header #ofertas, header #novedades {
+header #catalogo, header #m-ofertas, header #m-novedades {
   display: none;
 }
 

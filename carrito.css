@@ -130,7 +130,7 @@ header {
 header #inicio, header #catalogo {
   display: block;
 }
-header #ofertas, header #novedades, header #frase_imaginacion {
+header #m-ofertas, header #m-novedades, header #frase_imaginacion, header #buscador {
   display: none;
 }
 

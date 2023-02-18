@@ -198,8 +198,7 @@ function cargarCheckout(){
 
     </section>
     <section id="boton-pedido d-flex justify-content-center" class="m-4">
-        <!-- <button id="ck_btnpedido" type="button" class="btn btn-info mx-auto m-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Realizar Pedido</button> -->
-        <a id="ck_btnpedido"  href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">  <i class="fa-solid fa-cart-shopping"></i> ${arrayCk[43]} </a>
+        <a id="ck_btnpedido"  href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> ${arrayCk[43]} </a>
 
         
         <!-- Modal -->

@@ -11,7 +11,7 @@ let cupon = document.getElementById("inputcupon");
 
 let codigoReal= "250X"
  
-totalP.value = localStorage.getItem('total');
+let totalP = localStorage.getItem('total');
 totalP.innerHTML = localStorage.getItem('total');
 gastosDeEnvio()
 totalGastos()

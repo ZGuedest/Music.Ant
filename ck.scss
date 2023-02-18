@@ -6,7 +6,7 @@ header{
     #inicio,#catalogo{
         display: block;
     }
-    #ofertas,#novedades,#frase_imaginacion{
+    #m-ofertas,#m-novedades,#frase_imaginacion, #buscador{
         display: none;
     }
 } 
@@ -15,9 +15,7 @@ header{
      background-color: $color_verdeCl;
  }
 
-// input{
-//     background-color: $color_verdeCl;
-// }
+
 #ck_btnpedido{
     width: 15rem;
 }
