@@ -74,6 +74,16 @@
   margin: 3rem;
   width: 16rem;
 }
+* .img {
+  background-image: url("./img/guitarra1.jpg");
+  width: 80%;
+  height: 15rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}
 * footer {
   padding-top: 4rem;
   background-color: #387373;

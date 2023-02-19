@@ -130,6 +130,10 @@ $fontWH2:600;
         width: 16rem;
     }
 
+    .img{
+        @include img()
+    }
+
     footer{
         padding-top: 4rem;
 

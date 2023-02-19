@@ -6,13 +6,16 @@ header{
     #inicio,#catalogo{
         display: block;
     }
-    #ofertas,#novedades{
+    #m-ofertas,#m-novedades{
         display: none;
     }
  }
 
 i{
-   // width: 10%;
     font-size: x-large;
     padding-right: 0.5rem;
+}
+
+.img{
+    @include img($url:url("./img/guitarra1.jpg"),$wth:40%,$hght: 30rem,$margin: 2rem)
 }

@@ -29,7 +29,7 @@ function cargarNovedadesOfertas(CajaContent, prod, titulo){
       let content = document.createElement ("div");
       content.className = "col-2 card cardH";
       content.innerHTML = `
-          <div class="img" style="background-image:url(${p.src}); height: 200px"></div>
+          <a href="producto.html"><div id=${p.id} class="img imgP" style="background-image:url(${p.src}); height: 200px"></div></a>
           <div class="d-flex flex-row align-items-center">
               <h5 class="card-title">${p.name}  ${p.precio}€</h5>
           </div>
@@ -43,6 +43,8 @@ function cargarNovedadesOfertas(CajaContent, prod, titulo){
   
       CajaContent.append(content);
     })
+
+    eventoCargarUnProducto(prod)
 }
 
 function agregarCajasNovedadOfertaMarcas(contenedor_principal,marca){

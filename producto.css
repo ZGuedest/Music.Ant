@@ -74,6 +74,16 @@
   margin: 3rem;
   width: 16rem;
 }
+* .img {
+  background-image: url("./img/guitarra1.jpg");
+  width: 80%;
+  height: 15rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}
 * footer {
   padding-top: 4rem;
   background-color: #387373;
@@ -115,11 +125,22 @@
 header #inicio, header #catalogo {
   display: block;
 }
-header #ofertas, header #novedades {
+header #m-ofertas, header #m-novedades {
   display: none;
 }
 
 i {
   font-size: x-large;
   padding-right: 0.5rem;
+}
+
+.img {
+  background-image: url("./img/guitarra1.jpg");
+  width: 40%;
+  height: 30rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
 }/*# sourceMappingURL=producto.css.map */

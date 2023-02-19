@@ -239,15 +239,15 @@ function pintarCatalogo(shopContent,prod){
   let content = document.createElement ("div");
   content.className = "col-2 card cardH";
   content.innerHTML = `
-      <div class="img" style="background-image:url(${p.src}); height: 200px"></div>
+      <a href="producto.html"><div id=${p.id} class="img imgP" style="background-image:url(${p.src})"></div></a>
 
       <div class="d-flex flex-row align-items-center">
           <h5 class="card-title">${p.name}  ${p.precio}€</h5>
       </div>
       <p class="card-text description">${p.description}</p>
       <div class="d-flex flex-row align-items-center">
-          <a  id =${p.id} data-producto =${p.id}  href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> Añadir</a>
-          <i class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
+          <a  id =${p.id}   href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> Añadir</a>
+          <i   id =${p.id} class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
       </div>
 
   `;
@@ -256,6 +256,8 @@ function pintarCatalogo(shopContent,prod){
   })
   activarClickComprar(prod)
   eventoCorazon()
+  debugger
+  eventoCargarUnProducto(prod)
 }
 
 function productosPorCategoria(categoria, productosCat){
@@ -341,6 +343,8 @@ function elegirProdPorCheck(check,productosCat){
 
     return prodsCk;
  }
+
+
 
 
 

@@ -39,7 +39,6 @@ function activarClickComprar(productos){
     }
 }
 
- 
 function cantidadDelIconoCarrito(){
     let span= document.getElementById("cantidadCarrito");
     let num= localStorage.getItem("cantCarrito")
@@ -54,4 +53,33 @@ function añadirAlCarrito(idBtn, productos){
     productos[idBtn-1].cantidad++
     cargarLocalStorage(productos);
 
+}
+
+
+////////// PRODUCTO //////////////
+function eventoCargarUnProducto(productos){
+    let cajasProd= document.getElementsByClassName("imgP")
+    for (let i=0; i<cajasProd.length;i++){
+  
+      cajasProd[i].addEventListener("click",(event)=>{
+        debugger
+        cargarUnProducto(productos,event)
+    
+      })
+  
+    }
+    
+  
+  
+  }
+  
+function cargarUnProducto(productos,event){
+
+let data_p = event.target.id
+productos.forEach((prod)=>{
+    if(prod.id==data_p){
+    localStorage.setItem("prodctSelect", JSON.stringify(prod))
+
+    }
+})
 }

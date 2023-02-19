@@ -7,7 +7,6 @@ iniciarHeaderAndFooter()
 setInterval(mostrarFecha, 1000);
 
 function iniciarHeaderAndFooter(){
-    debugger
     cargarBD(idiomaSelect)
     let idioma= idiomaFecha()
     let date = new Date();
