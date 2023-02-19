@@ -19,7 +19,7 @@ function cargarProducto(arrayPr, p){
 
             <div id="cr_caja_contenedora_text_producto" class="col p-3">
                 <h5 class="card-title ">${p.name}</h5>
-                <p class="card-text ">${p.description}</p>
+                <p class="card-text">${p.description}</p>
                 <p class="fs-3 fw-bold">${p.precio} €</p>
 
                 <div class="d-flex flex-row align-items-center">

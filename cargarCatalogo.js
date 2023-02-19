@@ -135,6 +135,35 @@ function cargarMenuCatalogo(arrayCata){
   return radios
 }
 
+function pintarCatalogo(shopContent,prod){
+  while (shopContent.firstChild) {
+    shopContent.removeChild(shopContent.firstChild);
+  }
+
+  prod.forEach((p)=>{
+  let content = document.createElement ("div");
+  content.className = "col-2 card cardH";
+  content.innerHTML = `
+      <a href="producto.html"><div id=${p.id} class="img imgP" style="background-image:url(${p.src})"></div></a>
+
+      <div class="d-flex flex-row align-items-center">
+          <h5 class="card-title">${p.name}  ${p.precio}€</h5>
+      </div>
+      <p class="card-text description cardTextCM">${p.description}</p>
+      <div class="d-flex flex-row align-items-center">
+          <a  id =${p.id}   href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> Añadir</a>
+          <i   id =${p.id} class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
+      </div>
+
+  `;
+
+  shopContent.append(content);
+  })
+  activarClickComprar(prod)
+  eventoCorazon()
+  eventoCargarUnProducto(prod)
+}
+
 function eventoRadios(radios){
   for(let i=0; i<radios.length ;i++){
     radios[i].addEventListener("change",()=>{
@@ -190,8 +219,6 @@ function yesnoCheck(radios) {
   eventoCargarProductoPorCheckout(arraycheckout,productosCat)
 }
 
-/*Esta funcion recibe las 4 cajas contenedoras de los checkouts por cada categoria
- la primera caja que se pase la muestra y las demás las oculta*/
 function cambiarDisplayRadioButton(ck1,ck2,ck3,ck4){
     ck1.style.display = "block";
     ck2.style.display = "none";
@@ -227,37 +254,6 @@ function cargarCheckoutPorCategoria(categoria){
     }
 
     return arrayAux;
-}
-
-
-function pintarCatalogo(shopContent,prod){
-  while (shopContent.firstChild) {
-    shopContent.removeChild(shopContent.firstChild);
-  }
-
-  prod.forEach((p)=>{
-  let content = document.createElement ("div");
-  content.className = "col-2 card cardH";
-  content.innerHTML = `
-      <a href="producto.html"><div id=${p.id} class="img imgP" style="background-image:url(${p.src})"></div></a>
-
-      <div class="d-flex flex-row align-items-center">
-          <h5 class="card-title">${p.name}  ${p.precio}€</h5>
-      </div>
-      <p class="card-text description">${p.description}</p>
-      <div class="d-flex flex-row align-items-center">
-          <a  id =${p.id}   href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> Añadir</a>
-          <i   id =${p.id} class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
-      </div>
-
-  `;
-
-  shopContent.append(content);
-  })
-  activarClickComprar(prod)
-  eventoCorazon()
-  debugger
-  eventoCargarUnProducto(prod)
 }
 
 function productosPorCategoria(categoria, productosCat){
@@ -327,11 +323,6 @@ function cargarProductoPorCheckout (categoria,productosCat,arraycheckout){
     return prodchecked
 }
 
-
-/* Esta función recibe un checkbox, guarda su value, recorre el arreglo de productos generales y
-accede a la propiedad varname de cada producto, como esta propiedad tiene un numero al final, elimina ese numero
-y compara el resultado obtenido con el value del checkbox, si son iguales, coje el producto y lo guarda en el arreglo
-prodsCk y lo retorna*/
 function elegirProdPorCheck(check,productosCat){
     let valueCk= check.value
     let prodsCk=[]

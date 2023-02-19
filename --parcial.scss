@@ -128,6 +128,12 @@ $fontWH2:600;
     .cardH{
         margin: 3rem;
         width: 16rem;
+
+        .cardTexCM{
+            height: 15rem;
+            overflow: scroll;
+        }
+        
     }
 
     .img{

@@ -74,6 +74,10 @@
   margin: 3rem;
   width: 16rem;
 }
+* .cardH .cardTexCM {
+  height: 15rem;
+  overflow: scroll;
+}
 * .img {
   background-image: url("./img/guitarra1.jpg");
   width: 80%;

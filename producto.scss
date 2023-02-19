@@ -17,5 +17,5 @@ i{
 }
 
 .img{
-    @include img($url:url("./img/guitarra1.jpg"),$wth:40%,$hght: 30rem,$margin: 2rem)
+    @include img($wth:40%,$hght: 30rem,$margin: 2rem)
 }
