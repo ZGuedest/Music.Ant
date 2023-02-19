@@ -61,18 +61,74 @@
   width: 10rem;
   color: white;
   font-weight: 900;
+  border: #387373 solid;
+  margin-bottom: 0.7rem;
 }
 * .btn-primary:hover {
   background-color: #E4F2E7;
   color: black;
+  border: #387373 solid;
 }
 * .corazon-vacio {
   font-size: 2.3em;
   padding-left: 0.7rem;
+  margin-bottom: 1rem;
 }
 * .cardH {
-  margin: 3rem;
-  width: 16rem;
+  margin: 2rem;
+  width: 18rem;
+  height: auto;
+}
+* .cardH .card-titleCM {
+  height: 4rem;
+}
+* .cardH .cardTextCM {
+  height: 12rem;
+  overflow: scroll;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+* .cardH .cardTextCM::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+* .cardH .cardTextCM::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+* .cardH .cardTextCM::-webkit-scrollbar-button:increment, * .cardH .cardTextCM::-webkit-scrollbar-button {
+  display: none;
+}
+* .cardH .cardTextCM::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+* .cardH .cardTextCM::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+* .cardH .cardTextCM::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+* .img {
+  background-image: url("./img/guitarra1.jpg");
+  width: 80%;
+  height: 15rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}
+* .imgCF {
+  background-image: url("./img/guitarra1.jpg");
+  width: 30%;
+  height: 12rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 * footer {
   padding-top: 4rem;
@@ -83,10 +139,13 @@
   width: 7rem;
   color: white;
   font-weight: 900;
+  border: #387373 solid;
+  margin-bottom: 0.7rem;
 }
 * footer .btn:hover {
   background-color: #E4F2E7;
   color: black;
+  border: #387373 solid;
 }
 * footer #appel-store {
   background-image: url("./img/appel.png");
@@ -110,6 +169,9 @@
 }
 * footer #copyright {
   background-color: rgba(0, 0, 0, 0.2);
+}
+* footer .fab {
+  font-size: 2em;
 }
 
 #cr_contenedor_principal #cr_comprar_pedido #cr_precio_total, #cr_contenedor_principal #cr_caja_producto .cr_precio_producto, #cr_contenedor_principal #cr_caja_producto .cr_precio_cantidad {
@@ -159,7 +221,7 @@ header #m-ofertas, header #m-novedades, header #frase_imaginacion, header #busca
 }
 #cr_contenedor_principal #cr_comprar_pedido {
   width: 20rem;
-  height: 250;
+  height: 250px;
 }
 #cr_contenedor_principal #cr_comprar_pedido #cr_precio_total {
   color: #387373;
@@ -169,11 +231,14 @@ header #m-ofertas, header #m-novedades, header #frase_imaginacion, header #busca
   width: 7rem;
   color: white;
   font-weight: 900;
+  border: #387373 solid;
+  margin-bottom: 0.7rem;
   font-weight: bold;
 }
 #cr_contenedor_principal #cr_comprar_pedido .btn:hover {
   background-color: #E4F2E7;
   color: black;
+  border: #387373 solid;
 }
 #cr_contenedor_principal #cr_comprar_pedido #cr_visa, #cr_contenedor_principal #cr_comprar_pedido #cr_paypal, #cr_contenedor_principal #cr_comprar_pedido #cr_mastercard {
   font-size: x-large;

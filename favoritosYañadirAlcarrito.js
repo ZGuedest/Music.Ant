@@ -33,19 +33,28 @@ function activarClickComprar(productos){
           
           let idBtn= event.target.id;
           añadirAlCarrito(idBtn,productos)
-          cantidadDelIconoCarrito()
+          cantidadDelIconoCarritoCorazon("cantCarrito")
 
       })
     }
 }
 
-function cantidadDelIconoCarrito(){
-    let span= document.getElementById("cantidadCarrito");
-    let num= localStorage.getItem("cantCarrito")
+function cantidadDelIconoCarritoCorazon(idIco){
+    let num
+    let span= document.getElementById(idIco);
+    if(idIco=="cantCarrito"){
+        num= localStorage.getItem("cantCarrito")
+    }
+    else if(idIco=="cantFav"){
+        num= localStorage.getItem("cantFav")
+
+    }
     num =! null ? num= parseInt(JSON.parse(num)+1) : num= parseInt(1)
+
+    
     span.setAttribute("value",String(num))
     span.innerHTML=num;
-    localStorage.setItem("cantCarrito",JSON.stringify(num))
+    localStorage.setItem(idIco,JSON.stringify(num))
     
 }
 

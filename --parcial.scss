@@ -134,6 +134,8 @@ $fontWH2:600;
         margin: 2rem;
         width: 18rem;
         height: auto;
+
+        
         .card-titleCM{
             height: 4rem;
         }
@@ -174,6 +176,12 @@ $fontWH2:600;
 
     .img{
         @include img()
+    }
+
+    .imgCF{
+        @include img($wth:30%,$hght: 12rem,$margin: 0rem);
+        margin-top: 1rem;
+        margin-bottom:2rem;
     }
 
     footer{

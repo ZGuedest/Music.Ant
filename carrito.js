@@ -69,13 +69,15 @@ function vaciarCarrito(productos){
 }
 
 function actualizarPrecioPorCantidad(productos, event, input){
-    let foundP= productos.find((element) => element.id==event.target.id);
-    foundP.cantidad = parseFloat(input.value)
-    productos.map ((prod) => {
-        if (prod.id === foundP.id) {
-            prod.cantidad = foundP.cantidad
-            document.getElementById("S+"+foundP.id).innerHTML = String(`${ prod.cantidad * prod.precio }`)
+    productos.forEach ((prod) => {
+        if (prod.id == event.target.id) {
+            let nume=parseInt(JSON.parse(localStorage.getItem("cantCarrito")))-prod.cantidad+parseFloat(input.value)
+            nume=nume-1
+            localStorage.setItem("cantCarrito", JSON.stringify(nume))
+            prod.cantidad = parseFloat(input.value)
+            document.getElementById("S+"+prod.id).innerHTML = String(`${ prod.cantidad * prod.precio }`)
             cargarLocalStorage(productos)
+            
         }
     });
 }
@@ -86,6 +88,8 @@ function activarEventoInputNumber(productos){
         inputs[inp].addEventListener("change",(event)=>{
     
             actualizarPrecioPorCantidad(productos, event, inputs[inp])
+            
+            cantidadDelIconoCarritoCorazon("cantCarrito")
             cacularTotal()
     
         })
@@ -109,7 +113,8 @@ function pintarCarrito(productos){
 
         if(product.cantidad>0){
             content.innerHTML = `
-            <img class="cr_imagen_producto" src="${product.src}">
+            <div id=${product.id} class="imgCF" style="background-image:url(${product.src})"></div>
+
 
             <div id="cr_caja_contenedora_text_producto" class="col p-3">
                 <h5 class="card-title">${product.name}</h5>
@@ -152,7 +157,7 @@ function activarEventoBasura(productos, shopContent){
                     let nume=parseInt(JSON.parse(localStorage.getItem("cantCarrito")))-fP.cantidad
                     nume==0?nume=-1: nume=nume-1
                     localStorage.setItem("cantCarrito", JSON.stringify(nume))
-                    cantidadDelIconoCarrito()
+                    cantidadDelIconoCarritoCorazon("cantCarrito")
                     prod.cantidad = 0
                     cargarLocalStorage(productos)
                     limpiarContenedor(shopContent)
