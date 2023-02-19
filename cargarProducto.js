@@ -1,14 +1,16 @@
-const prdtEsp = ["AÑADIR", "Envio gratuito","Devoluciones o cambios permitidos"]
-const prdtEng = ["ADD", "Free shipping","Returns or changes allowed"]
-const prdtEus = ["GEHITU", "Doako bidalketa", "Itzulketak edo aldaketak onartzen dira"]
-let arrayPr = []
-arrayPr=prdtEsp;
 
-let p= JSON.parse(localStorage.getItem("prodctSelect"))
+iniciarProducto()
 
-
-
-cargarProducto(arrayPr,p)
+function iniciarProducto(){
+    const prdtEsp = ["AÑADIR", "Envio gratuito","Devoluciones o cambios permitidos"]
+    const prdtEng = ["ADD", "Free shipping","Returns or changes allowed"]
+    const prdtEus = ["GEHITU", "Doako bidalketa", "Itzulketak edo aldaketak onartzen dira"]
+    let arrayPr = []
+    debugger
+    arrayPr=cambiarIdioma(idiomaSelect, prdtEsp, prdtEng, prdtEus)
+    let p= productoIdioma()
+    cargarProducto(arrayPr,p)
+}
 
 function cargarProducto(arrayPr, p){
     let main = document.getElementsByTagName("main")[0]
@@ -23,15 +25,27 @@ function cargarProducto(arrayPr, p){
                 <p class="fs-3 fw-bold">${p.precio} €</p>
 
                 <div class="d-flex flex-row align-items-center">
-                    <a href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> ${arrayPr[0]}</a>
+                    <a href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> ${arrayPr[arrayPr.length-1][0]}</a>
                     <i class="fa-regular fa-heart corazon-vacio"></i>
                 </div>
 
                 <div class="cajaenvio-devol mt-5">
-                    <div><p><i class="fa-sharp fa-solid fa-truck"></i></i></i>${arrayPr[1]}</p></div>
-                    <div><i class="fa-regular fa-square-check"></i>${arrayPr[2]}</div>
+                    <div><p><i class="fa-sharp fa-solid fa-truck"></i></i></i>${arrayPr[arrayPr.length-1][1]}</p></div>
+                    <div><i class="fa-regular fa-square-check"></i>${arrayPr[arrayPr.length-1][2]}</div>
                 </div>
             </div>
         </div>
     </div>`
+}
+
+function productoIdioma() {
+    let p= JSON.parse(localStorage.getItem("prodctSelect"))
+    let productos= cargarDelLocalStorage()
+    productos.forEach((pro)=>{
+        if(pro.id==p.id){
+            p.name=pro.name
+            p.description=pro.description
+        }
+    })
+    return p
 }

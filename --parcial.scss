@@ -178,7 +178,7 @@ $fontWH2:600;
 
     footer{
         padding-top: 4rem;
-
+        background-color: $color_VerdeOsc;
         .btn{
             @include button( $wth: 7rem);    
         }
@@ -195,7 +195,13 @@ $fontWH2:600;
         #copyright{
             background-color: rgba(0, 0, 0, 0.2);
         }
-        background-color: $color_VerdeOsc;
+
+        .fab{
+            font-size: 2em;
+
+        }
+
+
     }
 }
  
