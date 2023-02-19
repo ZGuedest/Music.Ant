@@ -1,26 +1,40 @@
 
 /////// FAVORITOS /////
 
-function eventoCorazon(){
+function eventoCorazon(productos){
     let corazones= document.getElementsByClassName("corazon-vacio")
     for( let i=0; i< corazones.length; i++){
 
-        corazones[i].addEventListener("click", ()=>{
+        corazones[i].addEventListener("click", (event)=>{
+            event.preventDefault()
+            let idCora= event.target.id
+            añadirFav(corazones[i],idCora, productos)
 
-            cambiar(corazones[i]);
         })
     }
 }
 
-function cambiar(corazon) {
+function añadirFav(corazon,idCora, productos) {
     let valor =  corazon.getAttribute("class");
     if (valor == "fa-regular fa-heart corazon-vacio") {
-        corazon.setAttribute("class", "fa-solid fa-heart-circle-check corazon-vacio");
+        corazon.setAttribute("class", "fa-solid fa-heart-circle-check corazon-vacio")
+        productos[idCora-1].favorito ="true"
+        cantidadDelIconoCarritoCorazon("cantFav")
+
     } else {
-        corazon.setAttribute("class", "fa-regular fa-heart corazon-vacio");
+        corazon.setAttribute("class", "fa-regular fa-heart corazon-vacio")
+        eliminarFavorito(idCora,productos)
     }
+
+    cargarLocalStorage(productos);
+
 }
 
+function eliminarFavorito(idCora,productos){
+    productos[idCora-1].favorito ="false"
+    localStorage.setItem("cantFav",localStorage.getItem("cantFav")-2)
+    cantidadDelIconoCarritoCorazon("cantFav")
+}
 
 ////// CARRITO ///////
 
@@ -28,9 +42,7 @@ function activarClickComprar(productos){
     let botonesComprar = document.getElementsByClassName("btn-primary");
     for(let i=0; i<botonesComprar.length;i++){
       botonesComprar[i].addEventListener("click",(event)=>{
-          debugger
           event.preventDefault()
-          
           let idBtn= event.target.id;
           añadirAlCarrito(idBtn,productos)
           cantidadDelIconoCarritoCorazon("cantCarrito")
@@ -64,7 +76,6 @@ function añadirAlCarrito(idBtn, productos){
 
 }
 
-
 ////////// PRODUCTO //////////////
 function eventoCargarUnProducto(productos){
     let cajasProd= document.getElementsByClassName("imgP")
@@ -91,4 +102,10 @@ productos.forEach((prod)=>{
 
     }
 })
+}
+///////////////////////////////////////////////
+function limpiarContenedor(shopContent){
+    while (shopContent.firstChild) {
+        shopContent.removeChild(shopContent.firstChild);
+    }
 }

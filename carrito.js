@@ -2,14 +2,13 @@
 iniciarCarrito(idiomaSelect)
 function iniciarCarrito(idiomaSelect){
 
-    let espc = ["Resumen del Pedido", "Comprar","Vaciar", "Aceptamos"];
-    let ingc = ["Order Summary", "Buy", "Accept"];
-    let eusc = ["Eskaeraren laburpena", "Erosi", "Onartu"];
+    let espc = ["Resumen del Pedido", "Comprar","Vaciar", "Aceptamos", "precio del producto", "precio por cantidad"];
+    let ingc = ["Order Summary", "Buy","Clean","Accept","product price","price by quantity"];
+    let eusc = ["Eskaeraren laburpena", "Erosi","Garbitu", "Onartu","produktuaren prezioa","prezioa kantitatearen arabera"];
     let arrayc=cambiarIdioma(idiomaSelect, espc, ingc, eusc)
     let productos = cargarDelLocalStorage();
     cargarcarrito(arrayc,productos);
 }
-
 
 function cargarcarrito(arrayc,productos){
     let main = document.getElementsByTagName("main")[0];
@@ -45,7 +44,7 @@ function cargarcarrito(arrayc,productos){
         </div>
     </div
     `
-    pintarCarrito(productos)
+    pintarCarrito(arrayc,productos)
     eventoVaciarCarrito(productos)
     cacularTotal()
 }
@@ -56,7 +55,7 @@ function eventoVaciarCarrito(productos){
 
     vaciar.addEventListener("click", ()=>{
         vaciarCarrito(productos)
-        pintarCarrito(productos)
+        pintarCarrito(arrayc, productos)
         localStorage.setItem("cantCarrito", 0)
     })
 }
@@ -96,14 +95,9 @@ function activarEventoInputNumber(productos){
     }
 }
 
-function limpiarContenedor(shopContent){
-    while (shopContent.firstChild) {
-        shopContent.removeChild(shopContent.firstChild);
-    }
-}
 
 
-function pintarCarrito(productos){
+function pintarCarrito(arrayc,productos){
     let shopContent = document.getElementById("cr_caja_producto");
     productos.forEach((product)=> {
 
@@ -121,10 +115,10 @@ function pintarCarrito(productos){
                 <p class="card-text">${product.description}</p>
 
                 <div class="d-flex flex-row justify-content-around">
-                    <p  class="card-text cr_precio_producto">precio del producto: <small id="" class="text-muted">${product.precio}</small> €</p>
+                    <p  class="card-text cr_precio_producto"> ${arrayc[arrayc.length-1][4]} : <small id="" class="text-muted">${product.precio}</small> €</p>
 
                     <input  type="number" class="aumentar" id=${product.id} value=${product.cantidad} name="aumentar" min="1" max="10">
-                    <p class="card-text px-2 cr_precio_cantidad"> precio por cantidad: <small id="S+${product.id}" class=" pc text-muted">${product.cantidad * product.precio}</small> €</p>
+                    <p class="card-text px-2 cr_precio_cantidad"> ${arrayc[arrayc.length-1][5]}  : <small id="S+${product.id}" class=" pc text-muted">${product.cantidad * product.precio}</small> €</p>
                 </div>
                 <div class="d-flex gap-0 column-gap-3">
                     <i id="B+${product.id}" class="cr_basura fa-solid fa-trash"></i>
@@ -141,11 +135,12 @@ function pintarCarrito(productos){
 
     });
 
-    activarEventoBasura(productos,shopContent)
+    activarEventoBasura(arrayc, productos,shopContent)
     activarEventoInputNumber(productos)
+    cambiarAFavoritos(arrayc, productos, shopContent)
 }
 
-function activarEventoBasura(productos, shopContent){
+function activarEventoBasura(arrayc, productos, shopContent){
     let bas= document.getElementsByClassName("cr_basura")
 
     for(let b=0; b<bas.length;b++){
@@ -161,7 +156,7 @@ function activarEventoBasura(productos, shopContent){
                     prod.cantidad = 0
                     cargarLocalStorage(productos)
                     limpiarContenedor(shopContent)
-                    pintarCarrito(productos)
+                    pintarCarrito(arrayc,productos)                    
                     cacularTotal()
                 }
             });
@@ -183,6 +178,39 @@ function cacularTotal(){
 
 }
 
+function cambiarAFavoritos(arrayc, productos, shopContent){
+
+    let fav= document.getElementsByClassName("cr_corazon")
+
+    for(let b=0; b<fav.length;b++){
+        fav[b].addEventListener("click",(event)=>{
+            debugger
+            let fP= productos.find((element) => element.id==(event.target.id).slice(1));
+            productos.map ((prod) => {
+                if (prod.id === fP.id) {
+                    let nume=parseInt(JSON.parse(localStorage.getItem("cantCarrito")))-fP.cantidad
+                    nume==0?nume=-1: nume=nume-1
+                    localStorage.setItem("cantCarrito", JSON.stringify(nume))
+                    cantidadDelIconoCarritoCorazon("cantCarrito")
+                    let numeF=parseInt(JSON.parse(localStorage.getItem("cantFav")))-fP.cantidad
+                    numeF==0?nume=-1: numeF=nume-1
+                    localStorage.setItem("cantFav", JSON.stringify(nume))
+                    cantidadDelIconoCarritoCorazon("cantFav")
+
+                    prod.cantidad = 0
+                    prod.favorito="true"
+                    cargarLocalStorage(productos)
+                    limpiarContenedor(shopContent)
+                    pintarCarrito(arrayc,productos)                   
+                    cacularTotal()
+                }
+            });
+
+
+        })
+    }
+
+}
 
 
 

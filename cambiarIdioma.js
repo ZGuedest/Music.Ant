@@ -24,6 +24,10 @@ function eventoCambiarIdioma(ctlgEsp, ctlgEng, ctlgEus){
              aux.substring(aux.length-("producto.html").length,aux.length)=="roducto.html#"){
                 iniciarProducto(idiomaSelect)
             }
+            if(aux.substring(aux.length-("favoritos.html").length,aux.length)=="favoritos.html" ||
+             aux.substring(aux.length-("favoritos.html").length,aux.length)=="avoritos.html#"){
+                iniciarFavoritos(idiomaSelect)
+            }
         })
     }
 }

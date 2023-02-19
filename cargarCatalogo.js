@@ -160,7 +160,7 @@ function pintarCatalogo(shopContent,prod){
   shopContent.append(content);
   })
   activarClickComprar(prod)
-  eventoCorazon()
+  eventoCorazon(prod)
   eventoCargarUnProducto(prod)
 }
 

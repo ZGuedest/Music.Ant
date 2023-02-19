@@ -198,7 +198,7 @@ function cargarFooter(arrayM){
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">${arrayM[10+6]}</h6>
                     
-                    <div class="d-flex flex-colum flex-wrap">
+                    <div class="d-flex flex-colum flex-wrap m-4">
                         <p class="col-12 text-md-start"><i class="fas fa-home me-3"></i>${arrayM[11+6]}</p>
                         <p class="col-12 text-md-start"><i class="fas fa-envelope me-3"></i>${arrayM[12+6]}</p>
                         <p class="col-12 text-md-start"><i class="fas fa-phone me-3"></i>+ 01 234 567 88</p>

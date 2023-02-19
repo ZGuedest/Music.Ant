@@ -20,7 +20,7 @@ function cargarHome(idiomaSelect){
     titulo=cargarTitulo(idiomaSelect,titOf)
     cargarNovedadesOfertas(ofertas_caja, prodOf, titulo)
     activarClickComprar(productos)
-    eventoCorazon()
+    eventoCorazon(productos)
 }
 
 function cargarNovedadesOfertas(CajaContent, prod, titulo){
@@ -36,7 +36,7 @@ function cargarNovedadesOfertas(CajaContent, prod, titulo){
           <p class="card-text description cardTextCM">${p.description}</p>
           <div class="d-flex flex-row align-items-center">
               <a  id =${p.id} data-producto =${p.id}  href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> Añadir</a>
-              <i class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
+              <i id =${p.id}  class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>
           </div>
   
       `;

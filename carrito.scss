@@ -34,7 +34,8 @@ header{
             @extend %precio;
         }
        
-        .cr_basura,.cr_corazon{
+        .cr_basura,.cr_corazon, .cr_carrito
+        {
             @extend %iconos;
             font-size: x-large;
         }
