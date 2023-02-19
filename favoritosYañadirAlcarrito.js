@@ -109,3 +109,15 @@ function limpiarContenedor(shopContent){
         shopContent.removeChild(shopContent.firstChild);
     }
 }
+
+
+function pintarFavoritos(p){
+    let corazones= document.getElementsByClassName("corazon-vacio")
+    for( let i=0; i< corazones.length; i++){
+
+        if(p.favorito=="true" && corazones[i].getAttribute("id")==p.id){
+            corazones[i].setAttribute("class", "fa-solid fa-heart-circle-check corazon-vacio")
+        }
+
+    }
+}

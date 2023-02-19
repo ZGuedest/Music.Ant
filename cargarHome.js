@@ -42,6 +42,7 @@ function cargarNovedadesOfertas(CajaContent, prod, titulo){
       `;
   
       CajaContent.append(content);
+      pintarFavoritos(p)
     })
 
     eventoCargarUnProducto(prod)

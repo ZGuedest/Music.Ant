@@ -139,7 +139,7 @@ function pintarCatalogo(shopContent,prod){
   while (shopContent.firstChild) {
     shopContent.removeChild(shopContent.firstChild);
   }
-
+  debugger
   prod.forEach((p)=>{
   let content = document.createElement ("div");
   content.className = "col-2 card cardH";
@@ -156,8 +156,9 @@ function pintarCatalogo(shopContent,prod){
       </div>
 
   `;
-
   shopContent.append(content);
+  pintarFavoritos(p)
+
   })
   activarClickComprar(prod)
   eventoCorazon(prod)
