@@ -18,7 +18,7 @@ function cargarProducto(arrayPr, p){
             <div id=${p.id} class="img imgP" style="background-image:url(${p.src})"></div>
 
             <div id="cr_caja_contenedora_text_producto" class="col p-3">
-                <h5 class="card-title ">${p.name}</h5>
+                <h5 class="card-title card-titleCM ">${p.name}</h5>
                 <p class="card-text">${p.description}</p>
                 <p class="fs-3 fw-bold">${p.precio} €</p>
 

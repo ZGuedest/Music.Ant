@@ -31,9 +31,9 @@ function cargarNovedadesOfertas(CajaContent, prod, titulo){
       content.innerHTML = `
           <a href="producto.html"><div id=${p.id} class="img imgP" style="background-image:url(${p.src}); height: 200px"></div></a>
           <div class="d-flex flex-row align-items-center">
-              <h5 class="card-title">${p.name}  ${p.precio}€</h5>
+              <h5 class="card-title card-titleCM">${p.name}  ${p.precio}€</h5>
           </div>
-          <p class="card-text description">${p.description}</p>
+          <p class="card-text description cardTextCM">${p.description}</p>
           <div class="d-flex flex-row align-items-center">
               <a  id =${p.id} data-producto =${p.id}  href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> Añadir</a>
               <i class="fa-regular fa-heart corazon-vacio" style="cursor: pointer"></i>

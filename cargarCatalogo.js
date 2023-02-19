@@ -147,7 +147,7 @@ function pintarCatalogo(shopContent,prod){
       <a href="producto.html"><div id=${p.id} class="img imgP" style="background-image:url(${p.src})"></div></a>
 
       <div class="d-flex flex-row align-items-center">
-          <h5 class="card-title">${p.name}  ${p.precio}€</h5>
+          <h5 class="card-title card-titleCM">${p.name}  ${p.precio}€</h5>
       </div>
       <p class="card-text description cardTextCM">${p.description}</p>
       <div class="d-flex flex-row align-items-center">

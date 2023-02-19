@@ -36,10 +36,13 @@ $fontWH2:600;
     width: $wth;
     color: $colorletra ;
     font-weight: $fontWGeneral;
+    border: $color_VerdeOsc solid;
+    margin-bottom: 0.7rem;
 
     &:hover{
         background-color: $color_verdeCl;
         color: $color_negro ;
+        border: $color_VerdeOsc solid;
     }
 }
 
@@ -123,16 +126,49 @@ $fontWH2:600;
     .corazon-vacio{
         font-size: 2.3em;
         padding-left: 0.7rem;
+        margin-bottom: 1rem;
+        
     }
 
     .cardH{
-        margin: 3rem;
-        width: 16rem;
-
-        .cardTexCM{
-            height: 15rem;
-            overflow: scroll;
+        margin: 2rem;
+        width: 18rem;
+        height: auto;
+        .card-titleCM{
+            height: 4rem;
         }
+        .cardTextCM{
+            height: 12rem;
+            overflow: scroll;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            &::-webkit-scrollbar {
+                -webkit-appearance: none;
+            }
+            
+            &::-webkit-scrollbar:vertical {
+                width:10px;
+            }
+            
+            &::-webkit-scrollbar-button:increment,&::-webkit-scrollbar-button {
+                display: none;
+            } 
+            
+            &::-webkit-scrollbar:horizontal {
+                height: 10px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background-color: #797979;
+                border-radius: 20px;
+                border: 2px solid #f1f2f3;
+            }
+            
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;  
+            }
+        }   
         
     }
 
