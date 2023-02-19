@@ -1,7 +1,6 @@
 
 iniciarCarrito(idiomaSelect)
 function iniciarCarrito(idiomaSelect){
-
     let espc = ["Resumen del Pedido", "Comprar","Vaciar", "Aceptamos", "precio del producto", "precio por cantidad"];
     let ingc = ["Order Summary", "Buy","Clean","Accept","product price","price by quantity"];
     let eusc = ["Eskaeraren laburpena", "Erosi","Garbitu", "Onartu","produktuaren prezioa","prezioa kantitatearen arabera"];
@@ -45,15 +44,16 @@ function cargarcarrito(arrayc,productos){
     </div
     `
     pintarCarrito(arrayc,productos)
-    eventoVaciarCarrito(productos)
+    eventoVaciarCarrito(arrayc,productos)
     cacularTotal()
 }
 
-function eventoVaciarCarrito(productos){
+function eventoVaciarCarrito(arrayc,productos){
 
     let vaciar= document.getElementById("vaciar")
 
     vaciar.addEventListener("click", ()=>{
+        debugger
         vaciarCarrito(productos)
         pintarCarrito(arrayc, productos)
         localStorage.setItem("cantCarrito", 0)
@@ -192,9 +192,8 @@ function cambiarAFavoritos(arrayc, productos, shopContent){
                     nume==0?nume=-1: nume=nume-1
                     localStorage.setItem("cantCarrito", JSON.stringify(nume))
                     cantidadDelIconoCarritoCorazon("cantCarrito")
-                    let numeF=parseInt(JSON.parse(localStorage.getItem("cantFav")))-fP.cantidad
-                    numeF==0?nume=-1: numeF=nume-1
-                    localStorage.setItem("cantFav", JSON.stringify(nume))
+                    let numeF=parseInt(JSON.parse(localStorage.getItem("cantFav")))
+                    localStorage.setItem("cantFav", JSON.stringify(numeF))
                     cantidadDelIconoCarritoCorazon("cantFav")
 
                     prod.cantidad = 0

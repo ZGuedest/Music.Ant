@@ -2,7 +2,6 @@
 iniciarFavoritos(idiomaSelect)
 
 function iniciarFavoritos(idiomaSelect){
-    debugger
     let precioProd;
     let productos=cargarDelLocalStorage()
 
@@ -24,7 +23,6 @@ function iniciarFavoritos(idiomaSelect){
 
 function productosFavoritos(productos){
     let prodsFav=[];
-    debugger
     productos.forEach((p)=>{
         if(p.favorito=="true"){
             prodsFav.push(p)
@@ -61,7 +59,7 @@ function pintarFavoritos(idiomaSelect,prodsFav,productos,precioProd){
         
     });
     eventBasuraFavorito(idiomaSelect, shopContent, productos)
-    eventoCarritoFavorito(productos, idiomaSelect, shopContent)
+    eventoCarritoFavorito( idiomaSelect, shopContent)
 }
 
 function eventBasuraFavorito(idiomaSelect, shopContent, productos){
@@ -90,13 +88,12 @@ function eliminarFavoritoEnFavorito(productos, idiomaSelect, shopContent, event)
 }
 
 
-function eventoCarritoFavorito(productos, idiomaSelect, shopContent){
-
+function eventoCarritoFavorito( idiomaSelect, shopContent){
     let car= document.getElementsByClassName("cr_carrito")
 
     for(let b=0; b<car.length;b++){
         car[b].addEventListener("click",(event)=>{
-            debugger
+            let productos=cargarDelLocalStorage()
             eliminarFavoritoEnFavorito(productos, idiomaSelect, shopContent, event)
             let idBtn= (event.target.id).slice(1);
             añadirAlCarrito(idBtn,productos)
