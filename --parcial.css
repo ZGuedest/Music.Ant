@@ -49,6 +49,7 @@
 }
 * header nav #ven {
   display: none;
+  cursor: pointer;
 }
 * header #frase_imaginacion {
   font-size: 45px;

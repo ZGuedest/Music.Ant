@@ -70,12 +70,9 @@ function cargarMenu(arrayM,idiomaSelect,dia,mes,date){
                     </div>
                 </div>                  
 
-
-
                 <li ><a href="favoritos.html"><i class="pt-4 fa-solid fa-heart"></i></a><span id="cantFav" class="cantidad-fav" value="0">${localStorage.getItem("cantFav") !=null? localStorage.getItem("cantFav"):0 }</span></li>
                 <li ><a href="carrito.html"><i class="pt-4 fa-solid fa-cart-shopping"></i></a><span id="cantCarrito" class="cantidad-carrito" value="0">${localStorage.getItem("cantCarrito") !=null? localStorage.getItem("cantCarrito"):0 } </span></li>
                 
-
             </ul>  
             <div <li ><p id="fecha" class="pt-4"> ${dia} <span id="hora"></span>${mes} - ${date.getFullYear()} </p></li> </div>  
         </div>

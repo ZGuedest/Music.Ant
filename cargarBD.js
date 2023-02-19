@@ -916,8 +916,6 @@ function construirBDIdioma(productos, arrayIdio){
     return prodtos
 }
 
-
-
 function cargarBD(idiomaSelect){
     
     let prodIdioma=[] 

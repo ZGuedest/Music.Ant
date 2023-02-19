@@ -1,5 +1,5 @@
 
-function eventoCambiarIdioma(ctlgEsp, ctlgEng, ctlgEus){
+function eventoCambiarIdioma(){
     let opciones = document.getElementsByClassName("idioma");
     for (let a = 0 ; a<opciones.length; a++){
         opciones[a].addEventListener("click", (event)=>{ 
@@ -28,6 +28,11 @@ function eventoCambiarIdioma(ctlgEsp, ctlgEng, ctlgEus){
              aux.substring(aux.length-("favoritos.html").length,aux.length)=="avoritos.html#"){
                 iniciarFavoritos(idiomaSelect)
             }
+            if(aux.substring(aux.length-("checkout.html").length,aux.length)=="checkout.html" ||
+             aux.substring(aux.length-("checkout.html").length,aux.length)=="heckout.html#"){
+                iniciarCheckout(idiomaSelect)            
+            }
+            
         })
     }
 }

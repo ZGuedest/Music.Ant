@@ -6,10 +6,10 @@ function iniciarCarrito(idiomaSelect){
     let eusc = ["Eskaeraren laburpena", "Erosi","Garbitu", "Onartu","produktuaren prezioa","prezioa kantitatearen arabera"];
     let arrayc=cambiarIdioma(idiomaSelect, espc, ingc, eusc)
     let productos = cargarDelLocalStorage();
-    cargarcarrito(arrayc,productos);
+    cargarcarrito(arrayc,productos,idiomaSelect);
 }
 
-function cargarcarrito(arrayc,productos){
+function cargarcarrito(arrayc,productos,idiomaSelect){
     let main = document.getElementsByTagName("main")[0];
     main.innerHTML = `
 
@@ -26,7 +26,7 @@ function cargarcarrito(arrayc,productos){
                         <p id="cr_precio_total" class="card-text precios">  0 €</p>
                     </div>
                     <div class="d-flex flex-row flex-wrap ">
-                        <a href="checkout.html" class="btn  m-1" >${arrayc[arrayc.length-1][1]}</a>
+                        <a id="ck" href="" class="btn  m-1" >${arrayc[arrayc.length-1][1]}</a>
                         <a id= "vaciar" href="" class="btn  m-1 " >  ${arrayc[arrayc.length-1][2]} <i class="fa-solid fa-cart-shopping"></i> </a>
                     </div>
                 </div>
@@ -46,6 +46,7 @@ function cargarcarrito(arrayc,productos){
     pintarCarrito(arrayc,productos)
     eventoVaciarCarrito(arrayc,productos)
     cacularTotal()
+    validarCheckout(idiomaSelect)
 }
 
 function eventoVaciarCarrito(arrayc,productos){
@@ -211,7 +212,35 @@ function cambiarAFavoritos(arrayc, productos, shopContent){
 
 }
 
+function fraseIdioma(idiomaSelect){
+    let frase
+    if(idiomaSelect == "Español"){
+        frase="Debe iniciar sesión para tramitar su pedido"
+    }else if(idiomaSelect=="Inglés"){
+        frase= "You must log in to process your order"
+    }
+    else if(idiomaSelect=="Euskera"){
+        frase="Eskaera tramitatzeko saioa hasi behar du"
+    }
+    return frase
+}
 
+function validarCheckout(idiomaSelect){
+    let black=document.getElementById("ck");
+    black.addEventListener('click',(event)=>{
+        
+        event.preventDefault()
+        let frase=fraseIdioma(idiomaSelect)
+        if(localStorage.getItem('gmail') ===" " || localStorage.getItem('gmail') == null){
+            alert(frase)
+            window.location.href="login.html"
+        }else{
+            window.location.href="checkout.html"
+        }
+        
+        
+     });
+}
 
 
 
