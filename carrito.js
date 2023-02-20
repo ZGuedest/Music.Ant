@@ -54,7 +54,7 @@ function eventoVaciarCarrito(arrayc,productos){
     let vaciar= document.getElementById("vaciar")
 
     vaciar.addEventListener("click", ()=>{
-        debugger
+        
         vaciarCarrito(productos)
         pintarCarrito(arrayc, productos)
         localStorage.setItem("cantCarrito", 0)
@@ -74,6 +74,8 @@ function actualizarPrecioPorCantidad(productos, event, input){
             let nume=parseInt(JSON.parse(localStorage.getItem("cantCarrito")))-prod.cantidad+parseFloat(input.value)
             nume=nume-1
             localStorage.setItem("cantCarrito", JSON.stringify(nume))
+
+
             prod.cantidad = parseFloat(input.value)
             document.getElementById("S+"+prod.id).innerHTML = String(`${ prod.cantidad * prod.precio }`)
             cargarLocalStorage(productos)
@@ -88,15 +90,13 @@ function activarEventoInputNumber(productos){
         inputs[inp].addEventListener("change",(event)=>{
     
             actualizarPrecioPorCantidad(productos, event, inputs[inp])
-            
-            cantidadDelIconoCarritoCorazon("cantCarrito")
             cacularTotal()
+
+            cantidadDelIconoCarritoCorazon("cantCarrito")
     
         })
     }
 }
-
-
 
 function pintarCarrito(arrayc,productos){
     let shopContent = document.getElementById("cr_caja_producto");
@@ -146,7 +146,6 @@ function activarEventoBasura(arrayc, productos, shopContent){
 
     for(let b=0; b<bas.length;b++){
         bas[b].addEventListener("click",(event)=>{
-            debugger
             let fP= productos.find((element) => element.id==(event.target.id).slice(1));
             productos.map ((prod) => {
                 if (prod.id === fP.id) {
@@ -168,7 +167,7 @@ function activarEventoBasura(arrayc, productos, shopContent){
 }
 
 function cacularTotal(){
-    let pc = document.getElementsByClassName("pc");
+    let pc = document.getElementsByClassName("pc"); //precio  por cantidad
     let total = document.getElementById("cr_precio_total");
     let suma = 0;
     for(let i = 0; i<pc.length; i++) {

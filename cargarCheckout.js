@@ -242,19 +242,14 @@ function eventoRadios(){
 
 }
 
-
 function eventoCupones(frase){
     let cupon = document.getElementById("inputcupon")
     cupon.addEventListener("keyup",(event)=>{
-        debugger
         calcularDescuentos(frase, cupon, event)
     })
 }
 
-
-
 function gastosDeEnvio(radios){
-    debugger
     let gastosE = document.getElementById("ck_ge")
 
     if (radios[0].checked)
@@ -313,7 +308,6 @@ function calcularDescuentos( frase, cupon, event){
 
     descuento.innerHTML = dtoT
     descuento.setAttribute("value",dtoT)
-    console.log(descuento.getAttribute("value"))
     let dtoTotal = totatP.getAttribute("value") - dtoT
     total.setAttribute("value",dtoTotal)
     total.innerHTML= dtoTotal
@@ -322,7 +316,7 @@ function calcularDescuentos( frase, cupon, event){
 
 function eventoTramitarPedido(){
     let boton=document.getElementById("ck_btnpedido")
-    boton.addEventListener("click",(event)=>{
+    boton.addEventListener("click",()=>{
         limpiarBD()
         localStorage.setItem("cantCarrito",0)
         cantidadDelIconoCarritoCorazon("cantCarrito")

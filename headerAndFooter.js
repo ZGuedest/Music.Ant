@@ -30,7 +30,6 @@ function cargarMenu(arrayM,idiomaSelect,dia,mes,date){
         <div id="logo"></div>
 
         <div id="navbarNav" class="collapse navbar-collapse justify-content-around" >
-            <input id="buscador" class="mt-3 form-control" type="search" placeholder=${arrayM[1]} aria-label="Buscar">
             <ul id="menu-interior"class="navbar-nav justify-content-around">
                 <li id="inicio" class="nav-item pt-3">
                     <a class="nav-link" href="Index.html">${arrayM[0]}</a>
@@ -65,7 +64,7 @@ function cargarMenu(arrayM,idiomaSelect,dia,mes,date){
                     <li ><a id="login" href="login.html"><i class="pt-4 fa-regular fa-circle-user"></i></a></li>
 
                     <div class="ventana" id="ven" style="background-color: white; width: 4rem;height: 1.5rem; color: black; display: none;">
-                        <span id="cerrar">Cerrar<span> 
+                        <span id="cerrar">${arrayM[21]}<span> 
 
                     </div>
                 </div>                  

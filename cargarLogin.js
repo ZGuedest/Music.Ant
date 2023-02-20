@@ -28,8 +28,6 @@ function iniciarLogin(idiomaSelect){
 }
 
 
-
-
 function cargarLogin(idiomaSelect,arrayLog, date, dia, mes){
 
   
