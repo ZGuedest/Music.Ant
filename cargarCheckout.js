@@ -246,7 +246,7 @@ function eventoRadios(){
 function eventoCupones(frase){
     let cupon = document.getElementById("inputcupon")
     cupon.addEventListener("keyup",(event)=>{
-        debugger
+    
         calcularDescuentos(frase, cupon, event)
     })
 }
@@ -254,7 +254,7 @@ function eventoCupones(frase){
 
 
 function gastosDeEnvio(radios){
-    debugger
+    
     let gastosE = document.getElementById("ck_ge")
 
     if (radios[0].checked)
