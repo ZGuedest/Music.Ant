@@ -245,11 +245,13 @@ function eventoRadios(){
 function eventoCupones(frase){
     let cupon = document.getElementById("inputcupon")
     cupon.addEventListener("keyup",(event)=>{
+    
         calcularDescuentos(frase, cupon, event)
     })
 }
 
 function gastosDeEnvio(radios){
+    
     let gastosE = document.getElementById("ck_ge")
 
     if (radios[0].checked)

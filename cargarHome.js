@@ -1,3 +1,5 @@
+debugger
+
 cargarHome(idiomaSelect)
 
 function cargarHome(idiomaSelect){
