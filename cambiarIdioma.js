@@ -32,6 +32,11 @@ function eventoCambiarIdioma(){
              aux.substring(aux.length-("checkout.html").length,aux.length)=="heckout.html#"){
                 iniciarCheckout(idiomaSelect)            
             }
+
+            if(aux.substring(aux.length-("login.html").length,aux.length)=="login.html" ||
+             aux.substring(aux.length-("login.html").length,aux.length)=="ogin.html#"){
+                iniciarLogin(idiomaSelect)            
+            }
             
         })
     }
