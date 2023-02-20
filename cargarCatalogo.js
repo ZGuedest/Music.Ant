@@ -18,7 +18,7 @@ function cargarMenuCatalogo(arrayCata){
 
   cajaCatalogo.innerHTML = `
 
-  <div id="radiocatalogo" class="d-flex justify-content-around" >
+  <div id="radiocatalogo" class="d-flex flex-row flex-wrap justify-content-around" >
 
       <div id="cuerda" class="form-check form-check-inline">
 

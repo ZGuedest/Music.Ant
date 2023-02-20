@@ -11,6 +11,12 @@
         #inicio{
             display: none;
         }
+
+        #popap{
+            display: none;
+            border-radius: 5%;
+            @include img($url:url("./img/descuento.png"),$wth:80%,$hght: 15rem,$margin: 2rem);
+        }
     }
 
     body{
@@ -31,6 +37,22 @@
             @extend %imagen
         }
 
+
+        #imgN1{
+            @include img($url:url("./img/guitarra1.jpg"),$wth:80%,$hght: 15rem,$margin: 2rem);
+        }
+
+        #imgN2{
+            @include img($url:url("./img/violin.webp"),$wth:80%,$hght: 15rem,$margin: 2rem);
+
+        }
+
+        #imgN3{
+            @include img($url:url("./img/tambor.jpeg"),$wth:80%,$hght: 15rem,$margin: 2rem);
+
+        }
+
+        
 
         #img4{
             @include img($url:url("./img/img4.jpg"),$wth:80%,$hght: 5rem,$margin: 2rem);

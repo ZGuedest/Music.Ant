@@ -25,18 +25,18 @@ body{
     }
 
     #cuerda,#viento,#percusion,#electronico{
-        width: 25%;
+        width: 20%;
     }
 
     #caja-radio-percusion, #caja-radio-electronico{
         width: 10rem;
     }
     #ico-cuerda{
-        @include img($url:url("./img/ico-guitarra.jpeg"),$wth:30%,$hght: 50px,$margin:0rem);
+        @include img($url:url("./img/ico-guitarra.jpeg"),$wth:20%,$hght: 50px,$margin:0rem);
         background-size: cover;
     }
     #ico-viento{
-        @include img($url:url("./img/trompa-ico.jpg"),$wth:30%,$hght: 50px,$margin:0rem);
+        @include img($url:url("./img/trompa-ico.jpg"),$wth:20%,$hght: 50px,$margin:0rem);
     }
 
     #ico-percusion{
@@ -55,4 +55,11 @@ body{
 }
     
 
+
+@include media-breakpoint-only(xs) {
    
+    #cuerda,#viento,#percusion,#electronico{
+        width: 100% !important;
+    }
+
+}

@@ -48,6 +48,7 @@ function cargarNovedadesOfertas(CajaContent, prod, titulo){
     })
 
     eventoCargarUnProducto(prod)
+    
 }
 
 function agregarCajasNovedadOfertaMarcas(contenedor_principal,marca){
@@ -180,4 +181,24 @@ function limpiarContenedor(shopContent){
     while (shopContent.firstChild) {
         shopContent.removeChild(shopContent.firstChild);
     }
+}
+
+
+function crearPopap(){
+    let html= document.getElementsByTagName("html")[0]
+    let popap= document.getElementById("popap")
+
+    html.addEventListener("mouseleave",()=>{
+        popap.style.display="block"
+        popap.style.zIndex="6000"
+    })
+}
+
+function cerrarPopap(){
+    let popap= document.getElementById("popap")
+
+    popap.addEventListener("click",()=>{
+        popap.style.display="none"
+        popap.style.zIndex="0"
+    })
 }

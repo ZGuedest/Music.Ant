@@ -30,6 +30,7 @@
   background-size: contain;
   margin: 0rem;
   background-size: cover;
+  z-index: 4000;
 }
 * header nav {
   background-color: transparent;
@@ -44,7 +45,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   margin: 2rem;
-  background-color: transparent;
   margin: 0rem;
 }
 * header nav #buscador {
@@ -59,6 +59,7 @@
 }
 * header nav #ven {
   display: none;
+  cursor: pointer;
 }
 * header #frase_imaginacion {
   font-size: 45px;
@@ -128,6 +129,18 @@
   background-size: contain;
   margin: 2rem;
 }
+* .imgCF {
+  background-image: url("./img/guitarra1.jpg");
+  width: 30%;
+  height: 12rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 * footer {
   padding-top: 4rem;
   background-color: #387373;
@@ -172,6 +185,29 @@
   font-size: 2em;
 }
 
+@media (max-width: 575.98px) {
+  #logo {
+    background-image: url("./img/logo.png");
+    width: 80% !important;
+    height: 20rem;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 2rem;
+    margin: 0rem;
+  }
+  #frase_imaginacion {
+    padding-top: 0rem !important;
+    padding-left: 1rem !important;
+    font-size: 30px !important;
+  }
+  #menu-iconers {
+    width: 80% !important;
+    padding-top: 0rem !important;
+    justify-content: space-between !important;
+  }
+}
 * {
   font-family: sans-serif, Arial, Verdana, Tahoma;
   font-size: 17px;
@@ -180,6 +216,18 @@
 }
 * header #inicio {
   display: none;
+}
+* header #popap {
+  display: none;
+  border-radius: 5%;
+  background-image: url("./img/descuento.png");
+  width: 80%;
+  height: 15rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
 }
 * body .caja-h2 {
   padding-top: 2rem;
@@ -194,6 +242,36 @@
   width: 22rem;
   margin-right: 1rem;
   margin-left: 1rem;
+}
+* body #imgN1 {
+  background-image: url("./img/guitarra1.jpg");
+  width: 80%;
+  height: 15rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}
+* body #imgN2 {
+  background-image: url("./img/violin.webp");
+  width: 80%;
+  height: 15rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}
+* body #imgN3 {
+  background-image: url("./img/tambor.jpeg");
+  width: 80%;
+  height: 15rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
 }
 * body #img4 {
   background-image: url("./img/img4.jpg");

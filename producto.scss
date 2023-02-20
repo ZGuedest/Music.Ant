@@ -1,4 +1,4 @@
-@import "--parcial";
+@import"--parcial.scss";
 
 
 header{   
@@ -18,4 +18,18 @@ i{
 
 .img{
     @include img($wth:40%,$hght: 30rem,$margin: 2rem)
+}
+
+
+@include media-breakpoint-only(xs) {
+   
+    .img {
+        width: 80% !important; 
+        height: 20rem !important;
+    }
+
+    .card{
+        width: 80% !important;
+    }
+
 }

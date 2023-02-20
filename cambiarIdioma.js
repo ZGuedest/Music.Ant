@@ -1,5 +1,6 @@
 
 function eventoCambiarIdioma(){
+    debugger
     let opciones = document.getElementsByClassName("idioma");
     for (let a = 0 ; a<opciones.length; a++){
         opciones[a].addEventListener("click", (event)=>{ 

@@ -25,8 +25,8 @@ function cargarProducto(arrayPr, p){
                 <p class="fs-3 fw-bold">${p.precio} €</p>
 
                 <div class="d-flex flex-row align-items-center">
-                    <a href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> ${arrayPr[arrayPr.length-1][0]}</a>
-                    <i class="fa-regular fa-heart corazon-vacio"></i>
+                    <a id=${p.id} href="#" class="btn btn-primary" >  <i class="fa-solid fa-cart-shopping"></i> ${arrayPr[arrayPr.length-1][0]}</a>
+                    <i id=${p.id} class="fa-regular fa-heart corazon-vacio"></i>
                 </div>
 
                 <div class="cajaenvio-devol mt-5">
@@ -36,6 +36,9 @@ function cargarProducto(arrayPr, p){
             </div>
         </div>
     </div>`
+    let productos=cargarDelLocalStorage()
+    activarClickComprar(productos)
+    eventoCorazon(productos)
 }
 
 function productoIdioma() {

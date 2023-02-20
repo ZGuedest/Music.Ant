@@ -10,8 +10,8 @@ function iniciarHeaderAndFooter(){
     cargarBD(idiomaSelect)
     let idioma= idiomaFecha()
     let date = new Date();
-    let dia = date.toLocaleString(idioma, {weekday: 'long'});
-    let mes =date.toLocaleString(idioma+ '-'+idioma, { month: 'long' })
+    let dia = date.toLocaleString( idioma , {weekday: 'long'});
+    let mes =date.toLocaleString( idioma + '-'+idioma, { month: 'long' })
     let arrayM=cambiarIdioma(idiomaSelect,[],[],[])
     cargarMenu(arrayM,idiomaSelect,dia,mes,date)
     cargarFooter(arrayM)
@@ -47,7 +47,7 @@ function cargarMenu(arrayM,idiomaSelect,dia,mes,date){
         </div>
 
 
-            <ul id="menu-iconers"class="nav pt-3 justify-content-around">
+            <ul id="menu-iconers"class="nav flex-row pt-3 justify-content-around">
                         
                 <li > <div class="dropdown ">
                     <button class="btn btn-secondary d-flex flex-row text-center align-items-center dropdown-toggle bg-transparent border-0 text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -75,17 +75,20 @@ function cargarMenu(arrayM,idiomaSelect,dia,mes,date){
             </ul>  
             <div <li ><p id="fecha" class="pt-4"> ${dia} <span id="hora"></span>${mes} - ${date.getFullYear()} </p></li> </div>  
         </div>
-    </nav>`
+    </nav>
+    <div class="d-flex flex-row justify-content-around">
+        <p id="frase_imaginacion">${arrayM[5]}</p>
+        <div id="popap" style="width: 300px; height: 300px; display:none ">
 
-
-    //--------idiomas frase logo----------
-    let p= document.createElement("p")
-    p.id="frase_imaginacion"
-    p.innerHTML=`"${arrayM[5]}"`
-    header.append(p)
-
+        </div>
+    </div>
+    
+    
+    `
     eventoCambiarIdioma()
     validarLogin()
+    crearPopap()
+    cerrarPopap()
     
 }
 
@@ -265,5 +268,22 @@ function cerrar(){
 })
 }
 
+function crearPopap(){
+    let html= document.getElementsByTagName("html")[0]
+    let popap= document.getElementById("popap")
 
+    html.addEventListener("mouseleave",()=>{
+        popap.style.display="block"
+        popap.style.zIndex="6000"
+    })
+}
+
+function cerrarPopap(){
+    let popap= document.getElementById("popap")
+
+    popap.addEventListener("click",()=>{
+        popap.style.display="none"
+        popap.style.zIndex="0"
+    })
+}
 

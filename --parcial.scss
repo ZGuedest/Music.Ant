@@ -1,3 +1,8 @@
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/variables";
+
+
 //VARIABLES
 $color_verdeCl:#E4F2E7; //Este es el verde clarito
 $color_VerdeOsc:#387373;
@@ -9,6 +14,18 @@ $fontSizeGeneral: 17px;
 $fontSizeH2: 27px;
 $fontWGeneral: 900;
 $fontWH2:600;
+
+
+  $grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+  );
+
+
 //CLASES
 %iconos{
     font-size: 1em;
@@ -54,6 +71,28 @@ $fontWH2:600;
     margin: $margin;
 }
 
+// @include media-breakpoint-down(sm) {
+//      #logo{
+//          @include img ($url:url("./img/logo.png"),$wth:80%,$hght: 5rem);
+//          margin: 0rem;
+//      }
+// }
+// @include media-breakpoint-up(sm) { #logo{
+//     @include img ($url:url("./img/logo.png"),$wth:80%,$hght: 5rem);
+//     margin: 0rem;
+// } }
+// @include media-breakpoint-down(md) { ... }
+// @include media-breakpoint-down(lg) { ... }
+// @include media-breakpoint-down(xl) { ... }
+// @include media-breakpoint-down(xxl) { ... }
+
+
+// @include media-breakpoint-only(xs) { ... }
+
+// @include media-breakpoint-only(md) { ... }
+// @include media-breakpoint-only(lg) { ... }
+// @include media-breakpoint-only(xl) { ... }
+// @include media-breakpoint-only(xxl) { ... }
 
 
 @mixin lineas($marginR: 1rem,$marginL: 1rem){
@@ -66,24 +105,24 @@ $fontWH2:600;
 *{
     font-family:$tipografía;
     font-size: $fontSizeGeneral;
-    
+
     margin: 0;
     padding: 0;
 
     header{
-        
+
         @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgb(255, 255, 255,0.5)),
         url("./img/fondo2.jpg")), $wth:100%,$hght: 500px,$margin:0rem);
         background-size: cover;
+        z-index: 4000;
 
 
         nav{
         background-color:transparent;
         font-weight: $fontWGeneral;
-        
+
             #logo{
                 @include img ($url:url("./img/logo.png"),$wth:20%,$hght: 5rem);
-                background-color: transparent;
                 margin: 0rem;
             }
 
@@ -110,7 +149,7 @@ $fontWH2:600;
         }
 
         #frase_imaginacion{
-            font-size: 45px; 
+            font-size: 45px;
             font-family: Blackadder ITC;
             padding-top: 6rem;
             padding-left: 5rem;
@@ -118,13 +157,13 @@ $fontWH2:600;
     }
 
     .btn-primary{
-        @include button( $wth: 10rem);    
+        @include button( $wth: 10rem);
     }
     .corazon-vacio{
         font-size: 2.3em;
         padding-left: 0.7rem;
         margin-bottom: 1rem;
-        
+
     }
 
     .cardH{
@@ -132,7 +171,7 @@ $fontWH2:600;
         width: 18rem;
         height: auto;
 
-        
+
         .card-titleCM{
             height: 4rem;
         }
@@ -145,30 +184,30 @@ $fontWH2:600;
             &::-webkit-scrollbar {
                 -webkit-appearance: none;
             }
-            
+
             &::-webkit-scrollbar:vertical {
                 width:10px;
             }
-            
+
             &::-webkit-scrollbar-button:increment,&::-webkit-scrollbar-button {
                 display: none;
-            } 
-            
+            }
+
             &::-webkit-scrollbar:horizontal {
                 height: 10px;
             }
-            
+
             &::-webkit-scrollbar-thumb {
                 background-color: #797979;
                 border-radius: 20px;
                 border: 2px solid #f1f2f3;
             }
-            
+
             &::-webkit-scrollbar-track {
-                border-radius: 10px;  
+                border-radius: 10px;
             }
-        }   
-        
+        }
+
     }
 
     .img{
@@ -185,16 +224,16 @@ $fontWH2:600;
         padding-top: 4rem;
         background-color: $color_VerdeOsc;
         .btn{
-            @include button( $wth: 7rem);    
+            @include button( $wth: 7rem);
         }
 
         #appel-store{
             @include img($url:url("./img/appel.png"),$wth:35%,$hght: 7rem,$margin: 1rem );
-    
+
         }
         #play-store{
             @include img($url:url("./img/play-store.png"),$wth:35%,$hght: 7rem,$margin: 1rem );
-    
+
         }
 
         #copyright{
@@ -208,5 +247,27 @@ $fontWH2:600;
 
 
     }
+
+    
 }
- 
+
+
+@include media-breakpoint-only(xs) {
+    #logo{
+    @include img ($url:url("./img/logo.png"),$wth:80% !important,$hght: 20rem);
+        margin: 0rem;
+    } 
+
+    #frase_imaginacion{
+        padding-top: 0rem !important;
+        padding-left: 1rem !important;
+        font-size: 30px !important;
+    }
+
+    #menu-iconers{
+        width: 80% !important;
+        padding-top: 0rem !important;
+        justify-content: space-between!important;
+    }
+
+}

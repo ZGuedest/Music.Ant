@@ -8,8 +8,12 @@
 }
 
 header{   
-    @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgb(255, 255, 255,0.5)),
+    @include img($url: (linear-gradient( rgba(56, 115, 115, 1),rgba(56, 115, 115, 0.8), rgba(255, 255, 255, 0.943)),
     url("")), $wth:100%,$hght: 100px,$margin:0rem);
+
+    background-color: white !important;
+    position: relative;
+    z-index: 4000;
 
     #inicio,#catalogo{
         display: block;
@@ -72,6 +76,16 @@ header{
 
 
 
+ @include media-breakpoint-only(xs) {
+   
+    header{
+        height: 300px !important;
+    }
 
+    .imgCF {
+        width: 100% !important; 
+    }
+
+}
 
 

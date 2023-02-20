@@ -24,6 +24,13 @@ header{
 }
 
 
+@include media-breakpoint-only(xs) {
+   
+    header{
+        height: 300px !important;
+    }
+
+}
     
 
 

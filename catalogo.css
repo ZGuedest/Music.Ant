@@ -30,6 +30,7 @@ body .img {
   background-size: contain;
   margin: 0rem;
   background-size: cover;
+  z-index: 4000;
 }
 * header nav {
   background-color: transparent;
@@ -44,7 +45,6 @@ body .img {
   background-repeat: no-repeat;
   background-size: contain;
   margin: 2rem;
-  background-color: transparent;
   margin: 0rem;
 }
 * header nav #buscador {
@@ -59,6 +59,7 @@ body .img {
 }
 * header nav #ven {
   display: none;
+  cursor: pointer;
 }
 * header #frase_imaginacion {
   font-size: 45px;
@@ -128,6 +129,18 @@ body .img {
   background-size: contain;
   margin: 2rem;
 }
+* .imgCF {
+  background-image: url("./img/guitarra1.jpg");
+  width: 30%;
+  height: 12rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 * footer {
   padding-top: 4rem;
   background-color: #387373;
@@ -172,6 +185,29 @@ body .img {
   font-size: 2em;
 }
 
+@media (max-width: 575.98px) {
+  #logo {
+    background-image: url("./img/logo.png");
+    width: 80% !important;
+    height: 20rem;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 2rem;
+    margin: 0rem;
+  }
+  #frase_imaginacion {
+    padding-top: 0rem !important;
+    padding-left: 1rem !important;
+    font-size: 30px !important;
+  }
+  #menu-iconers {
+    width: 80% !important;
+    padding-top: 0rem !important;
+    justify-content: space-between !important;
+  }
+}
 header #inicio {
   display: block;
 }
@@ -190,14 +226,14 @@ body #cont-radio-check {
   margin-top: 3rem;
 }
 body #cuerda, body #viento, body #percusion, body #electronico {
-  width: 25%;
+  width: 20%;
 }
 body #caja-radio-percusion, body #caja-radio-electronico {
   width: 10rem;
 }
 body #ico-cuerda {
   background-image: url("./img/ico-guitarra.jpeg");
-  width: 30%;
+  width: 20%;
   height: 50px;
   background-position: center;
   background-color: transparent;
@@ -208,7 +244,7 @@ body #ico-cuerda {
 }
 body #ico-viento {
   background-image: url("./img/trompa-ico.jpg");
-  width: 30%;
+  width: 20%;
   height: 50px;
   background-position: center;
   background-color: transparent;
@@ -235,4 +271,9 @@ body #ico-electronico {
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0rem;
+}
+@media (max-width: 575.98px) {
+  #cuerda, #viento, #percusion, #electronico {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=catalogo.css.map */

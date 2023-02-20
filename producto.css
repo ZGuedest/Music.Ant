@@ -20,6 +20,7 @@
   background-size: contain;
   margin: 0rem;
   background-size: cover;
+  z-index: 4000;
 }
 * header nav {
   background-color: transparent;
@@ -34,7 +35,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   margin: 2rem;
-  background-color: transparent;
   margin: 0rem;
 }
 * header nav #buscador {
@@ -49,6 +49,7 @@
 }
 * header nav #ven {
   display: none;
+  cursor: pointer;
 }
 * header #frase_imaginacion {
   font-size: 45px;
@@ -118,6 +119,18 @@
   background-size: contain;
   margin: 2rem;
 }
+* .imgCF {
+  background-image: url("./img/guitarra1.jpg");
+  width: 30%;
+  height: 12rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 * footer {
   padding-top: 4rem;
   background-color: #387373;
@@ -158,10 +171,33 @@
 * footer #copyright {
   background-color: rgba(0, 0, 0, 0.2);
 }
-* footer i {
-  font-size: 2.3em;
+* footer .fab {
+  font-size: 2em;
 }
 
+@media (max-width: 575.98px) {
+  #logo {
+    background-image: url("./img/logo.png");
+    width: 80% !important;
+    height: 20rem;
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 2rem;
+    margin: 0rem;
+  }
+  #frase_imaginacion {
+    padding-top: 0rem !important;
+    padding-left: 1rem !important;
+    font-size: 30px !important;
+  }
+  #menu-iconers {
+    width: 80% !important;
+    padding-top: 0rem !important;
+    justify-content: space-between !important;
+  }
+}
 header #inicio, header #catalogo {
   display: block;
 }
@@ -183,4 +219,14 @@ i {
   background-repeat: no-repeat;
   background-size: contain;
   margin: 2rem;
+}
+
+@media (max-width: 575.98px) {
+  .img {
+    width: 80% !important;
+    height: 20rem !important;
+  }
+  .card {
+    width: 80% !important;
+  }
 }/*# sourceMappingURL=producto.css.map */
