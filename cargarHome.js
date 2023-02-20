@@ -141,7 +141,6 @@ function seleccionarTitulo(idiomaSelect, array){
 
 function filtrarProductos(opcion, productos){
     let prods=[]
-    //let productos=cargarDelLocalStorage(opcion)
     for(let i=0; i<productos.length;i++){
         if(opcion=="novedad" && productos[i].novedad=="true"){
             prods.push(productos[i])
