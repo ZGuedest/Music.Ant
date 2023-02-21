@@ -184,6 +184,7 @@ function yesnoCheck(radios) {
 
   let prodCat=[]
   if (radios[0].checked == true) {
+    
     cambiarDisplayRadioButton(cajas_checkouts[0],cajas_checkouts[1],cajas_checkouts[2],cajas_checkouts[3])
     prodCat= productosPorCategoria("cuerda",productosCat)
     pintarCatalogo(shopContent,prodCat)

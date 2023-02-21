@@ -123,7 +123,7 @@ function cargarTitulo(idiomaSelect, array){
       tit.className = "caja-h2 d-flex flex-row align-items-center justify-content-center";
       tit.innerHTML = `
         <div class="linea1"></div>
-        <h2 id="novedades">${titulo}</h2> 
+        <h2 id= ${titulo}>${titulo}</h2> 
         <div class="linea2"></div>`
 
     return tit

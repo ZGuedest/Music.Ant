@@ -71,12 +71,14 @@ function vaciarCarrito(productos){
 function actualizarPrecioPorCantidad(productos, event, input){
     productos.forEach ((prod) => {
         if (prod.id == event.target.id) {
+
             let nume=parseInt(JSON.parse(localStorage.getItem("cantCarrito")))-prod.cantidad+parseFloat(input.value)
             nume=nume-1
             localStorage.setItem("cantCarrito", JSON.stringify(nume))
 
 
-            prod.cantidad = parseFloat(input.value)
+            prod.cantidad = parseInt(input.value)
+            //se captura la cajita donde se muestra el precio por cantidad y lo muestra
             document.getElementById("S+"+prod.id).innerHTML = String(`${ prod.cantidad * prod.precio }`)
             cargarLocalStorage(productos)
             
@@ -215,7 +217,7 @@ function validarCheckout(arrayc){
     
     let black=document.getElementById("ck");
     black.addEventListener('click',(event)=>{
-    debugger
+    
     let cantC= document.getElementById("cantCarrito")
         event.preventDefault()
         if(localStorage.getItem('gmail') ===" " || localStorage.getItem('gmail') == null){

@@ -185,7 +185,7 @@ body .img {
   font-size: 2em;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   #logo {
     background-image: url("./img/logo.png");
     width: 80% !important;
@@ -272,7 +272,31 @@ body #ico-electronico {
   background-size: contain;
   margin: 0rem;
 }
-@media (max-width: 575.98px) {
+body #offer {
+  background-image: url("./img/oferta.png");
+  width: 80%;
+  height: 15rem;
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+  height: 400px;
+  width: 400px;
+  border-radius: 5%;
+  margin-left: 700px;
+  margin-top: 0px;
+  margin-bottom: -900px;
+  z-index: 9000;
+  position: relative;
+}
+
+@media (max-width: 991.98px) {
+  #cuerda, #viento, #percusion, #electronico {
+    width: 40% !important;
+  }
+}
+@media (max-width: 767.98px) {
   #cuerda, #viento, #percusion, #electronico {
     width: 100% !important;
   }

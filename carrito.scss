@@ -76,7 +76,7 @@ header{
 
 
 
- @include media-breakpoint-only(xs) {
+@include media-breakpoint-down(lg) {
    
     header{
         height: 300px !important;

@@ -275,7 +275,6 @@ function gastosDeEnvio(radios){
     return gastosE
 }
 
-
 function totalGastos(gastosE){
 
     //sumar y restar al total

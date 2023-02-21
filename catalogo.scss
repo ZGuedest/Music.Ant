@@ -48,7 +48,20 @@ body{
     }
 
     .img{
-        @extend %imagen
+        @extend %imagen;
+    }
+
+    #offer{
+
+        @include img($url:url("./img/oferta.png"));
+        height: 400px;
+        width: 400px;
+        border-radius: 5%;
+        margin-left: 700px;
+        margin-top: 0px;
+        margin-bottom: -900px;
+        z-index: 9000;
+        position: relative;
     }
 
    
@@ -56,10 +69,15 @@ body{
     
 
 
-@include media-breakpoint-only(xs) {
-   
+
+@include media-breakpoint-down(lg) {
+    #cuerda,#viento,#percusion,#electronico{
+        width: 40% !important;
+    }
+ }
+
+ @include media-breakpoint-down(md) {
     #cuerda,#viento,#percusion,#electronico{
         width: 100% !important;
     }
-
-}
+ }
