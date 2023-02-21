@@ -54,7 +54,7 @@ function cargarMenu(arrayM,idiomaSelect,dia,mes,date){
                         <p id="idio-select" value="espanol" class="pt-3">${idiomaSelect}</p>
                         <i class="fa-solid fa-earth-americas text-dark ms-1"></i>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" >
                         <li value="espanol"><a value="espanol" class=" idioma px-1 py-1 dropdown-item" href="#">Español</a></li>
                         <li value="ingles"><a value="ingles" class=" idioma px-1 py-1 dropdown-item" href="#">Inglés</a></li>
                         <li value="euskera"><a value="euskera" class=" idioma px-1 py-1 dropdown-item" href="#">Euskera</a></li>
@@ -63,7 +63,7 @@ function cargarMenu(arrayM,idiomaSelect,dia,mes,date){
                 <div class="d-flex flex-column aling-items-center">
                     <li ><a id="login" href="login.html"><i class="pt-4 fa-regular fa-circle-user"></i></a></li>
 
-                    <div class="ventana" id="ven" style="background-color: white; width: 4rem;height: 1.5rem; color: black; display: none;">
+                    <div class="ventana" id="ven" style="background-color: trasparent; width: 4rem;height: 1.5rem; color: black; display: none;">
                         <span id="cerrar">${arrayM[21]}<span> 
 
                     </div>

@@ -2,9 +2,9 @@
 
 iniciarLogin(idiomaSelect)
 function iniciarLogin(idiomaSelect){
-  const lgnEsp = ["regresar","Deja tu imaginación volar... sientre la música","Por favor entre los datos de su cuenta","correo","contraseña","Entrar","¿Has olvidado tu contraseña?","Si no tienes cuenta","Regístrate","Somos más que una empresa","Somos un grupo de entusiastas de la música que tiene la suerte de compartir su pasión con personas afines, guiando, aconsejando y también aprendiendo de nuestros clientes. Bienvenidos a nuestra familia: !Viva la música!", "Nombre", "Apellidos","Teléfono", "Correo", "Contraseña","Ciudad", "Dirección","Acepto los terminos y condiciones","Registrarse", "C.P" ]
-  const lgnEng = ["back","Let your imagination fly... feel the music","Please enter your account information","email","password","Log_in","Have you forgotten your password?"," If you don't have an account","Register","We are more than a company","We are a group of music enthusiasts lucky enough to share their passion with like-minded people, guiding, advising and also learning from our customers. Welcome to our family: Long live the music!", "First Name", "Last Name", "Phone", "Mail", "Password","City", "Address","I accept the terms and conditions","Register", "ZIP"]
-  const lgnEus = ["itzuli","Utzi zure irudimena hegan egiten... sentitu musika","Mesedez sartu zure kontuaren informazioa","posta elektronikoa","pasahitza","Sartu","Pasahitza ahaztu al duzu?","Ez baduzu 'ez daukazu konturik","Erregistratu","Enpresa bat baino gehiago gara","Musika zaleen talde bat gara bere pasioa gogokoekin partekatzeko zortea, gure bezeroak gidatuz, aholkatuz eta baita ikasten ere. Ongi etorri gure familiara: Bizi musika!", "Izena","Abizenak","Telefonoa","Posta elektronikoa","Pasahitza", "Hiria", "Helbidea","Baldintzak eta terminoak onartzen ditut","Erregistratzea", "ZIP"]
+  const lgnEsp = ["regresar","Deja tu imaginación volar... sientre la música","Por favor entre los datos de su cuenta","correo","contraseña","Entrar","¿Has olvidado tu contraseña?","Si no tienes cuenta","Regístrate","Somos más que una empresa","Somos un grupo de entusiastas de la música que tiene la suerte de compartir su pasión con personas afines, guiando, aconsejando y también aprendiendo de nuestros clientes. Bienvenidos a nuestra familia: !Viva la música!", "Nombre", "Apellidos","Teléfono", "Correo", "Contraseña","Ciudad", "Dirección","Acepto los terminos y condiciones","Registrarse", "C.P", "datos incorrectos","Datos registrados con éxito, puede iniciar sesión" ]
+  const lgnEng = ["back","Let your imagination fly... feel the music","Please enter your account information","email","password","Log_in","Have you forgotten your password?"," If you don't have an account","Register","We are more than a company","We are a group of music enthusiasts lucky enough to share their passion with like-minded people, guiding, advising and also learning from our customers. Welcome to our family: Long live the music!", "First Name", "Last Name", "Phone", "Mail", "Password","City", "Address","I accept the terms and conditions","Register", "ZIP","Incorrect data", "Data recorded successfully, you can log in"]
+  const lgnEus = ["itzuli","Utzi zure irudimena hegan egiten... sentitu musika","Mesedez sartu zure kontuaren informazioa","posta elektronikoa","pasahitza","Sartu","Pasahitza ahaztu al duzu?","Ez baduzu 'ez daukazu konturik","Erregistratu","Enpresa bat baino gehiago gara","Musika zaleen talde bat gara bere pasioa gogokoekin partekatzeko zortea, gure bezeroak gidatuz, aholkatuz eta baita ikasten ere. Ongi etorri gure familiara: Bizi musika!", "Izena","Abizenak","Telefonoa","Posta elektronikoa","Pasahitza", "Hiria", "Helbidea","Baldintzak eta terminoak onartzen ditut","Erregistratzea", "ZIP","Datu okerrak" ,"Arrakastaz erregistratutako datuak, saioa has dezake"]
 
   let arrayLog=cambiarIdioma(idiomaSelect, lgnEsp, lgnEng, lgnEus)
 
@@ -18,7 +18,8 @@ function iniciarLogin(idiomaSelect){
     "contraseña":"5678",
     "admin":"false"
   }]
-  debugger
+
+
   let idioma=  idiomaFecha()
   let date = new Date();
   let dia = date.toLocaleString(idioma, {weekday: 'long'});
@@ -94,16 +95,16 @@ function cargarLogin(idiomaSelect,arrayLog, date, dia, mes){
                     </form>
 
                     <form id="form_registro">
-                        <input type="text" class="form-control mb-4 " id="rg_inputnombre" placeholder=${arrayLog[arrayLog.length-1][11]} required> 
-                        <input type="text" class="form-control mb-4" id="rg_inputapellidos" placeholder=${arrayLog[arrayLog.length-1][12]} required>
-                        <input type="text" class="form-control mb-4" id="rg_inputTl" placeholder=${arrayLog[arrayLog.length-1][13]} required>
-                        <input type="email" class="form-control mb-4" id="rg_inputEmail" placeholder=${arrayLog[arrayLog.length-1][14]} required>
-                        <input type="password" class="form-control mb-4" id="rg_inputPassword" placeholder=${arrayLog[arrayLog.length-1][15]} required>
+                        <input id="nombre" type="text" class="form-control mb-4 " id="rg_inputnombre" placeholder=${arrayLog[arrayLog.length-1][11]} required> 
+                        <input id="apellidos" type="text" class="form-control mb-4" id="rg_inputapellidos" placeholder=${arrayLog[arrayLog.length-1][12]} required>
+                        <input id="telefono" type="text" class="form-control mb-4" id="rg_inputTl" placeholder=${arrayLog[arrayLog.length-1][13]} required>
+                        <input id="gmail" type="email" class="form-control mb-4" id="rg_inputEmail" placeholder=${arrayLog[arrayLog.length-1][14]} required>
+                        <input id="pass" type="password" class="form-control mb-4" id="rg_inputPassword" placeholder=${arrayLog[arrayLog.length-1][15]} required>
                         <div class="d-flex flex-row">
-                          <input type="text" class="form-control mb-4 mx-1 " id="rg_inputCity" placeholder=${arrayLog[arrayLog.length-1][16]} required>
-                          <input type="text" class="form-control mb-4" my-1 id="rg_inputcp" placeholder=${arrayLog[arrayLog.length-1][20]} required>
+                          <input id="ciudad" type="text" class="form-control mb-4 mx-1 " id="rg_inputCity" placeholder=${arrayLog[arrayLog.length-1][16]} required>
+                          <input id="cp" type="text" class="form-control mb-4" my-1 id="rg_inputcp" placeholder=${arrayLog[arrayLog.length-1][20]} required>
                         </div>
-                        <input type="text" class="form-control mb-4" id="rg_inputdireccion" placeholder=${arrayLog[arrayLog.length-1][17]} required>
+                        <input id="direccion" type="text" class="form-control mb-4" id="rg_inputdireccion" placeholder=${arrayLog[arrayLog.length-1][17]} required>
                         <div class="form-check d-flex justify-content-center mb-4">
                           <input class="form-check-input me-2" type="checkbox" value=${arrayLog[arrayLog.length-1][18]} id="form2Example33" checked/ required>
                           <label class="form-check-label" for="form2Example33">
@@ -128,32 +129,41 @@ function cargarLogin(idiomaSelect,arrayLog, date, dia, mes){
           </div>
         </div> `
         eventoCambiarIdioma()
+        eventoLogin(arrayLog)
+        GuardarDatosRegistro(arrayLog)
+
+}
+
+function eventoLogin(arrayLog){
+
+  let btn= document.getElementById("button")
+  btn.addEventListener("click", (event)=>{
+
+    event.preventDefault()
+    validarPassword (arrayLog)
+})
 
 }
 
 
 
-let btn= document.getElementById("button")
-btn.addEventListener("click", (event)=>{
 
-    event.preventDefault()
-    validarPassword ()
-})
+function validarPassword (arrayLog){
 
-
-function validarPassword (){
-
-    var email, password
+    let email, password
 
     email = document.getElementById("form2Example11").value;
     password = document.getElementById("form2Example22").value;
 
-    if (email == "prueba@gmail.com" && password == "1234"){
+    let emailLocalS= localStorage.getItem("gmail")
+    let passLocal= localStorage.getItem("pass")
+
+    if ((email == "prueba@gmail.com" && password == "1234")|| (email == emailLocalS && password == passLocal)){
         localStorage.setItem('gmail',email);
-        localStorage.setItem('password',password);
+        localStorage.setItem('pass',password);
         window.location.assign ("Index.html");
     }else{
-        alert ("Datos incorrectos")
+        alert (arrayLog[arrayLog.length-1][21])
 
     }
 
@@ -171,6 +181,39 @@ function eventoRegistrarse(){
       form_registro.style.display = "block";
       form_login.style.display = "none";
 
+
+  })
+}
+
+
+function GuardarDatosRegistro(arrayLog){
+  let b= document.getElementById("button2")
+  b.addEventListener("click",()=>{
+    debugger
+      let aux= document.getElementById("nombre").value
+      localStorage.setItem("nombre",aux)
+      
+      aux= document.getElementById("apellidos").value
+      localStorage.setItem("apellidos",aux)
+
+      aux= document.getElementById("telefono").value
+      localStorage.setItem("telefono",aux)
+
+      aux= document.getElementById("gmail").value
+      localStorage.setItem("gmail",aux)
+
+      aux= document.getElementById("pass").value
+      localStorage.setItem("pass",aux)
+
+      aux= document.getElementById("ciudad").value
+      localStorage.setItem("ciudad",aux)
+
+      aux= document.getElementById("cp").value
+      localStorage.setItem("cp",aux)
+
+      aux= document.getElementById("direccion").value
+      localStorage.setItem("direccion",aux)
+      alert(arrayLog[arrayLog.length-1][22])
 
   })
 }

@@ -1,9 +1,9 @@
 
 iniciarCarrito(idiomaSelect)
 function iniciarCarrito(idiomaSelect){
-    let espc = ["Resumen del Pedido", "Comprar","Vaciar", "Aceptamos", "precio del producto", "precio por cantidad"];
-    let ingc = ["Order Summary", "Buy","Clean","Accept","product price","price by quantity"];
-    let eusc = ["Eskaeraren laburpena", "Erosi","Garbitu", "Onartu","produktuaren prezioa","prezioa kantitatearen arabera"];
+    let espc = ["Resumen del Pedido", "Comprar","Vaciar", "Aceptamos", "precio del producto", "precio por cantidad","Debe iniciar sesión para tramitar su pedido","Carrito vacío, añada productos al carrito para poder comprar" ];
+    let ingc = ["Order Summary", "Buy","Clean","Accept","product price","price by quantity","You must log in to process your order","Empty cart, add products to cart to be able to buy"];
+    let eusc = ["Eskaeraren laburpena", "Erosi","Garbitu", "Onartu","produktuaren prezioa","prezioa kantitatearen arabera","Eskaera tramitatzeko saioa hasi behar du","Karro hutsa, gehitu produktuak gurditxoari erosi ahal izateko"];
     let arrayc=cambiarIdioma(idiomaSelect, espc, ingc, eusc)
     let productos = cargarDelLocalStorage();
     cargarcarrito(arrayc,productos,idiomaSelect);
@@ -46,7 +46,7 @@ function cargarcarrito(arrayc,productos,idiomaSelect){
     pintarCarrito(arrayc,productos)
     eventoVaciarCarrito(arrayc,productos)
     cacularTotal()
-    validarCheckout(idiomaSelect)
+    validarCheckout(arrayc)
 }
 
 function eventoVaciarCarrito(arrayc,productos){
@@ -211,30 +211,26 @@ function cambiarAFavoritos(arrayc, productos, shopContent){
 
 }
 
-function fraseIdioma(idiomaSelect){
-    let frase
-    if(idiomaSelect == "Español"){
-        frase="Debe iniciar sesión para tramitar su pedido"
-    }else if(idiomaSelect=="Inglés"){
-        frase= "You must log in to process your order"
-    }
-    else if(idiomaSelect=="Euskera"){
-        frase="Eskaera tramitatzeko saioa hasi behar du"
-    }
-    return frase
-}
-
-function validarCheckout(idiomaSelect){
+function validarCheckout(arrayc){
+    
     let black=document.getElementById("ck");
     black.addEventListener('click',(event)=>{
-        
+    debugger
+    let cantC= document.getElementById("cantCarrito")
         event.preventDefault()
-        let frase=fraseIdioma(idiomaSelect)
         if(localStorage.getItem('gmail') ===" " || localStorage.getItem('gmail') == null){
-            alert(frase)
+            alert(arrayc[arrayc.length-1][6])
             window.location.href="login.html"
-        }else{
-            window.location.href="checkout.html"
+        }
+        
+        else{
+
+            if(cantC.textContent=="0 "){
+                alert(arrayc[arrayc.length-1][7])
+
+            }else{
+                window.location.href="checkout.html"
+            }
         }
         
         

@@ -52,35 +52,35 @@ function cargarCheckout(arrayCk){
 
             <div id="ck_formulario" class="col-md-4 ">
                 <label for="inputnombre" class="form-label"></label>
-                <input type="text" class="form-control" id="ck_inputnombre" placeholder="${arrayCk[arrayCk.length-1][11]}">
+                <input type="text" class="form-control" id="ck_inputnombre" value=${localStorage.getItem("nombre")} placeholder="${arrayCk[arrayCk.length-1][11]}">
             </div>
             <div class="col-md-4">
                 <label for="inputapellidos" class="form-label"></label>
-                <input type="text" class="form-control" id="ck_inputapellidos" placeholder="${arrayCk[arrayCk.length-1][12]}">
+                <input type="text" class="form-control" id="ck_inputapellidos" value=${localStorage.getItem("apellidos")}  placeholder="${arrayCk[arrayCk.length-1][12]}">
             </div>
             <div class="col-md-4">
                 <label for="inputTl" class="form-label"></label>
-                <input type="text" class="form-control" id="ck_inputTl" placeholder="${arrayCk[arrayCk.length-1][13]}">
+                <input type="text" class="form-control" id="ck_inputTl" value=${localStorage.getItem("telefono")}  placeholder="${arrayCk[arrayCk.length-1][13]}">
             </div>
             <div class="col-md-4">
                 <label for="inputCity" class="form-label"></label>
-                <input type="text" class="form-control" id="ck_inputCity" placeholder="${arrayCk[arrayCk.length-1][14]}">
+                <input type="text" class="form-control" id="ck_inputCity" value=${localStorage.getItem("ciudad")}  placeholder="${arrayCk[arrayCk.length-1][14]}">
             </div>
             <div class="col-md-4">
                 <label for="inputdirecion" class="form-label"></label>
-                <input type="text" class="form-control" id="ck_inputdireccion" placeholder="${arrayCk[arrayCk.length-1][15]}">
+                <input type="text" class="form-control" id="ck_inputdireccion" value=${localStorage.getItem("direccion")}  placeholder="${arrayCk[arrayCk.length-1][15]}">
             </div>
             <div class="col-md-4">
                 <label for="inputCp" class="form-label"></label>
-                <input type="text" class="form-control" id="ck_inputCp" placeholder="${arrayCk[arrayCk.length-1][16]}">
+                <input type="text" class="form-control" id="ck_inputCp"value=${localStorage.getItem("cp")}  placeholder="${arrayCk[arrayCk.length-1][16]}">
             </div>
             <div class="col-md-6">
                 <label for="inputEmail" class="form-label"></label>
-                <input type="email" class="form-control" id="ck_inputEmail" placeholder="${arrayCk[arrayCk.length-1][17]}">
+                <input type="email" class="form-control" id="ck_inputEmail" value=${localStorage.getItem("gmail")}  placeholder="${arrayCk[arrayCk.length-1][17]}">
             </div>
             <div class="col-md-6">
                 <label for="inputPassword" class="form-label"></label>
-                <input type="password" class="form-control" id="ck_inputPassword" placeholder="${arrayCk[arrayCk.length-1][18]}">
+                <input type="password" class="form-control" id="ck_inputPassword" value=${localStorage.getItem("pass")}  placeholder="${arrayCk[arrayCk.length-1][18]}">
             </div> 
         </form>
     </section>
