@@ -16,7 +16,7 @@ const productos=[
 
     {
 
-        "id":2,
+        "id":2, 
         "varname":"guitarra2",
         "name": "Ibanez GRG121DX-BKF - Guitarra Eléctrica",
         "description": "Cuerpo de álamo. Mástil de arce GRG .Diapasón de corazón púrpura. Inlays de 'Dientes de tiburón', 24 trastes Jumbo, 2 pastillas humbucker IBZ-6. Puente fijo. Herrajes negros. Acabado: Negro liso", 
